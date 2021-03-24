@@ -3,12 +3,37 @@ using System.Collections.Generic;
 
 namespace cinema_app
 {
+    
     class Program
     {
+        public static void Searchbar(Movie[] movielist)
+        {
+            Console.WriteLine("\n\nWhat would you like to search for?: ");
+            string search = (Console.ReadLine()).ToLower();
+            List<Movie> results = new List<Movie>();
+            for (int i = 0; i < movielist.Length; i++)
+            {
+                if (search == movielist[i].Name.ToLower() || search == movielist[i].Year)
+                {
+                    results.Add(movielist[i]);
+                }
+            }
+            foreach (Movie i in results)
+            {
+
+
+                Console.WriteLine($"Movie name: \n {i.Name}\n");
+                Console.WriteLine($"Year of origin: \n {i.Year}\n");
+                Console.WriteLine($"Movie information: \n {i.Info}\n");
+            }
+        }
 
         static void Main()
         {
-            void WelcomeScreen()
+        Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
+        var movielist = new Movie[] { Wolverine };
+        
+        void WelcomeScreen()
             {
                 
                 Console.WriteLine("Welcome to Fictorama! \n" +
@@ -23,7 +48,8 @@ namespace cinema_app
                     "1. See available movies\n" +
                     "2. Login\n" +
                     "3. Register\n" +
-                    "4. Exit program\n"
+                    "4. Exit program\n"+
+                    "5. Search movies\n"
                     );
                     answer = Console.ReadLine();
 
@@ -49,6 +75,10 @@ namespace cinema_app
                     else if (answer == "4")
                     {
                         ExitScreen();
+                    }
+                    else if (answer == "5")
+                    {
+                        Searchbar(movielist);
                     }
                     else
                     { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }

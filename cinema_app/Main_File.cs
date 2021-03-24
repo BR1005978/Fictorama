@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace cinema_app
 {
-    
+
     class Program
     {
         public static void Searchbar(Movie[] movielist)
@@ -28,14 +28,97 @@ namespace cinema_app
             }
         }
 
+        public static void MovieBrowser()
+        {
+
+            List<string> options = new List<string> { "1", "2", "3", "4", "5" };
+            string answer = "";
+            while (!options.Contains(answer))
+            {
+                Console.WriteLine(
+                "\nYou picked \"1. See available movies\" \n\n" +
+
+
+                "NOW PLAYING: \n" +
+
+                "1. Star Wars: The Rise of Skywalker (2019) \n" +
+                "2. Archive (2020)\n" +
+                "3. Underwater  (2020)\n" +
+                "4. The Martian (2015)\n" +
+                "5. Guardians of the Galaxy Vol 2\n"
+                );
+
+                Console.WriteLine(
+                    "Select a movie to learn more about it..."
+                    );
+                answer = Console.ReadLine();
+                if (answer == "1")
+                {
+                    // Hier misschien een method genaamd StarWarsTheRiseOfTheSkyWalker()
+                    // Met daarmee een call naar die film waarin je weer losse info kan zetten
+
+                    Console.WriteLine("1.Star Wars: The Rise of Skywalker(2019) \n" +
+                        "No information available yet.");
+
+                }
+                else if (answer == "2")
+                {
+
+                    Console.WriteLine("2. Archive (2020)\n" +
+                        "No information available yet.");
+
+                }
+                else if (answer == "3")
+                {
+
+                    Console.WriteLine("3. Underwater  (2020)\n" +
+                        "No information available yet.");
+
+                }
+                else if (answer == "4")
+                {
+                    Console.WriteLine("4. The Martian (2015)\n" +
+                        "No information available yet.");
+                }
+                else if (answer == "5")
+                {
+                    Console.WriteLine("5. Guardians of the Galaxy Vol 2\n" +
+                        "No information available yet.");
+                }
+                else
+                { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
+
+            }
+
+        }
+        static void LoginScreen()
+        {
+            Console.WriteLine("You picked \"2. Login\" \n" +
+                    "WORK IN PROGRESS - Please come back later");
+        }
+
+        static void RegisterScreen()
+        {
+            Console.WriteLine("You picked \"3. Register\" \n" +
+                "WORK IN PROGRESS - Please come back later");
+        }
+        static void ExitScreen()
+        {
+            Console.WriteLine("Shutting down...");
+        }
+        /// <summary>
+        /// Hier begint main. Alles hierboven zijn functies, alles hier beneden
+        /// is de functionaliteit van het programma. 
+        /// </summary>
         static void Main()
         {
-        Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
-        var movielist = new Movie[] { Wolverine };
-        
-        void WelcomeScreen()
+            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
+            var movielist = new Movie[] { Wolverine };
+
+            void WelcomeScreen()
+                // Het eerste welkomscherm 
             {
-                
+
                 Console.WriteLine("Welcome to Fictorama! \n" +
                     "This is Fictoram Interface 0.02\n\n");
 
@@ -48,7 +131,7 @@ namespace cinema_app
                     "1. See available movies\n" +
                     "2. Login\n" +
                     "3. Register\n" +
-                    "4. Exit program\n"+
+                    "4. Exit program\n" +
                     "5. Search movies\n"
                     );
                     answer = Console.ReadLine();
@@ -86,88 +169,7 @@ namespace cinema_app
                 Console.WriteLine("Shutting down ...");
             }
 
-
-            void MovieBrowser()
-            {
-
-                List<string> options = new List<string> { "1", "2", "3", "4", "5" };
-                string answer = "";
-                while (!options.Contains(answer))
-                {
-                    Console.WriteLine(
-                    "\nYou picked \"1. See available movies\" \n\n" +
-
-
-                    "NOW PLAYING: \n" +
-
-                    "1. Star Wars: The Rise of Skywalker (2019) \n" +
-                    "2. Archive (2020)\n" +
-                    "3. Underwater  (2020)\n" +
-                    "4. The Martian (2015)\n" +
-                    "5. Guardians of the Galaxy Vol 2\n"
-                    );
-
-                    Console.WriteLine(
-                        "Select a movie to learn more about it..."
-                        );
-                    answer = Console.ReadLine();
-                    if (answer == "1")
-                    {
-                        // Hier misschien een method genaamd StarWarsTheRiseOfTheSkyWalker()
-                        // Met daarmee een call naar die film waarin je weer losse info kan zetten
-
-                        Console.WriteLine("1.Star Wars: The Rise of Skywalker(2019) \n" +
-                            "No information available yet.");
-
-                    }
-                    else if (answer == "2")
-                    {
-
-                        Console.WriteLine("2. Archive (2020)\n" +
-                            "No information available yet.");
-
-                    }
-                    else if (answer == "3")
-                    {
-
-                        Console.WriteLine("3. Underwater  (2020)\n" +
-                            "No information available yet.");
-
-                    }
-                    else if (answer == "4")
-                    {
-                        Console.WriteLine("4. The Martian (2015)\n" +
-                            "No information available yet.");
-                    }
-                    else if (answer == "5")
-                    {
-                        Console.WriteLine("5. Guardians of the Galaxy Vol 2\n" +
-                            "No information available yet.");
-                    }
-                    else
-                    { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
-
-                }
-
-
-
-            }
-            void LoginScreen()
-            {
-                Console.WriteLine("You picked \"2. Login\" \n" +
-                        "WORK IN PROGRESS - Please come back later");
-            }
-
-            void RegisterScreen()
-            {
-                Console.WriteLine("You picked \"3. Register\" \n" +
-                    "WORK IN PROGRESS - Please come back later");
-            }
-            void ExitScreen()
-            {
-                Console.WriteLine("Shutting down...");
-            }
-
+            ///Hiermee wordt WelcomeScreen aangeroepen en het programma dus geïnstantieerd
             WelcomeScreen();
         }
     }

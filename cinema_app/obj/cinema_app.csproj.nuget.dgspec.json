@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj": {}
+    "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\cinema_app.csproj": {}
   },
   "projects": {
-    "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj": {
+    "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\cinema_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
+        "projectUniqueName": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\cinema_app.csproj",
         "projectName": "cinema_app",
-        "projectPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
-        "packagesPath": "C:\\Users\\Younes\\.nuget\\packages\\",
-        "outputPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\obj\\",
+        "projectPath": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\cinema_app.csproj",
+        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Younes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

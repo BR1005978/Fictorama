@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace cinema_app
+﻿namespace cinema_app
 {
     public class Movie
     {
+
         public string Name { get; set; }
         public string Info { get; set; }
         public string Year { get; set; }
@@ -16,9 +13,5 @@ namespace cinema_app
             Year = year;
         }
     }
-
-  
-    
-    
 }
 

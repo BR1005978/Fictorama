@@ -4,119 +4,32 @@ using System.Collections.Generic;
 namespace cinema_app
 {
 
-    class Program
+    class MainProgram
     {
-        public static void Searchbar(Movie[] movielist)
-        {
-            Console.WriteLine("\n\nWhat would you like to search for?: ");
-            string search = (Console.ReadLine()).ToLower();
-            List<Movie> results = new List<Movie>();
-            for (int i = 0; i < movielist.Length; i++)
-            {
-                if (search == movielist[i].Name.ToLower() || search == movielist[i].Year)
-                {
-                    results.Add(movielist[i]);
-                }
-            }
-            foreach (Movie i in results)
-            {
-
-
-                Console.WriteLine($"Movie name: \n {i.Name}\n");
-                Console.WriteLine($"Year of origin: \n {i.Year}\n");
-                Console.WriteLine($"Movie information: \n {i.Info}\n");
-            }
-        }
-
-        public static void MovieBrowser()
-        {
-
-            List<string> options = new List<string> { "1", "2", "3", "4", "5" };
-            string answer = "";
-            while (!options.Contains(answer))
-            {
-                Console.WriteLine(
-                "\nYou picked \"1. See available movies\" \n\n" +
-
-
-                "NOW PLAYING: \n" +
-
-                "1. Star Wars: The Rise of Skywalker (2019) \n" +
-                "2. Archive (2020)\n" +
-                "3. Underwater  (2020)\n" +
-                "4. The Martian (2015)\n" +
-                "5. Guardians of the Galaxy Vol 2\n"
-                );
-
-                Console.WriteLine(
-                    "Select a movie to learn more about it..."
-                    );
-                answer = Console.ReadLine();
-                if (answer == "1")
-                {
-                    // Hier misschien een method genaamd StarWarsTheRiseOfTheSkyWalker()
-                    // Met daarmee een call naar die film waarin je weer losse info kan zetten
-
-                    Console.WriteLine("1.Star Wars: The Rise of Skywalker(2019) \n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "2")
-                {
-
-                    Console.WriteLine("2. Archive (2020)\n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "3")
-                {
-
-                    Console.WriteLine("3. Underwater  (2020)\n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "4")
-                {
-                    Console.WriteLine("4. The Martian (2015)\n" +
-                        "No information available yet.");
-                }
-                else if (answer == "5")
-                {
-                    Console.WriteLine("5. Guardians of the Galaxy Vol 2\n" +
-                        "No information available yet.");
-                }
-                else
-                { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
-
-            }
-
-        }
-        static void LoginScreen()
-        {
-            Console.WriteLine("You picked \"2. Login\" \n" +
-                    "WORK IN PROGRESS - Please come back later");
-        }
-
-        static void RegisterScreen()
-        {
-            Console.WriteLine("You picked \"3. Register\" \n" +
-                "WORK IN PROGRESS - Please come back later");
-        }
-        static void ExitScreen()
-        {
-            Console.WriteLine("Shutting down...");
-        }
         /// <summary>
-        /// Hier begint main. Alles hierboven zijn functies, alles hier beneden
-        /// is de functionaliteit van het programma. 
+        /// oke, dus ik heb op 26-3-2021 alle functies verplaatst naar afzonderlijke bestanden, zie solution browser.
+        /// dat houdt in dat we alleen maar in dit bestand hoeven te werken als we iets in het hoofdmenu willen aanpassen.
+        /// in principe kunnen mensen nu alle individuele classes, methods en objects bewerken zonder dat daar in het hoofdmenu
+        /// gewerkt wordt. 
+        /// dit is handig want dan wordt niet met elke push het hoofdmenu overschreven en is de kans op conflicterende pushes kleiner.
+        /// 
+        /// het enige wat nog niet gelukt is, is de movielist in een apart bestand zetten want ik snap niet hoe je een attribute maakt.
+        /// ik denk dat het de bedoeling is dat movielist een attribute moet worden van MovieList.cs ofzo maar ik begrijp niet hoe dat werkt
         /// </summary>
-        static void Main()
+        public static void Main()
         {
-            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
-            var movielist = new Movie[] { Wolverine };
+            // hier staat nog de movielist. ik denk dat het handig is dat we dit verplaatsen naar
+            // MovieList.cs, zodat we main file verder met rust kunnen laten. het lukt mij alleen niet want ik krijg allemaal errors die ik niet begrijp
+            // als ik het probeer. misschien lukt één van jullie het? 
 
-            void WelcomeScreen()
-                // Het eerste welkomscherm 
+            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
+            Movie[] movielist = new Movie[] { Wolverine };
+
+
+            void MainMenu()
+            // Het hoofdmenu
+            // WelcomeScreen is hernoemd naar MainMenu, om het verschil tussen een eventueel welkomstscherm
+            // en het hoofdmenu van de applicatie te behouden
             {
 
                 Console.WriteLine("Welcome to Fictorama! \n" +
@@ -131,8 +44,8 @@ namespace cinema_app
                     "1. See available movies\n" +
                     "2. Login\n" +
                     "3. Register\n" +
-                    "4. Exit program\n" +
-                    "5. Search movies\n"
+                    "4. Search movies\n" +
+                    "5. Exit program\n"
                     );
                     answer = Console.ReadLine();
 
@@ -140,28 +53,28 @@ namespace cinema_app
                     if (answer == "1")
                     {
 
-                        MovieBrowser();
+                        MovieBrowser.MovieBrowserMenu();
 
                     }
                     else if (answer == "2")
                     {
 
-                        LoginScreen();
+                        Login.LoginScreen();
 
                     }
                     else if (answer == "3")
                     {
 
-                        RegisterScreen();
+                        Register.RegisterScreen();
 
                     }
                     else if (answer == "4")
                     {
-                        ExitScreen();
+                        SearchFunction.Searchbar(movielist);
                     }
                     else if (answer == "5")
                     {
-                        Searchbar(movielist);
+                        Console.WriteLine("Shutting down...");
                     }
                     else
                     { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
@@ -169,8 +82,8 @@ namespace cinema_app
                 Console.WriteLine("Shutting down ...");
             }
 
-            ///Hiermee wordt WelcomeScreen aangeroepen en het programma dus geïnstantieerd
-            WelcomeScreen();
+            ///Hiermee wordt MainMenu aangeroepen en het programma dus geïnstantieerd
+            MainMenu();
         }
     }
 }

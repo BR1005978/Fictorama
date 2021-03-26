@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace cinema_app
 {
-
+    /// test comment test test
+    /// test weer een testcomment
     class MainProgram
     {
         /// <summary>

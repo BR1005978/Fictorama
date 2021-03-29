@@ -5,12 +5,12 @@ namespace cinema_app
 {
     class SearchFunction
     {
-        public static void Searchbar(Movie[] movielist)
+        public static void Searchbar(List<Movie> movielist)
         {
             Console.WriteLine("\n\nWhat would you like to search for?: ");
             string search = (Console.ReadLine()).ToLower();
             List<Movie> results = new List<Movie>();
-            for (int i = 0; i < movielist.Length; i++)
+            for (int i = 0; i < movielist.Count; i++)
             {
                 if (search == movielist[i].Name.ToLower() || search == movielist[i].Year)
                 {

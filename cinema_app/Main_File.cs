@@ -22,8 +22,9 @@ namespace cinema_app
             // MovieList.cs, zodat we main file verder met rust kunnen laten. het lukt mij alleen niet want ik krijg allemaal errors die ik niet begrijp
             // als ik het probeer. misschien lukt één van jullie het? 
 
-            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
-            Movie[] movielist = new Movie[] { Wolverine };
+            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009","science-fiction","actor","duration","2007"); //test movie
+            List<Movie> movielist = new List<Movie>();
+            movielist.Add(Wolverine);
 
 
             void MainMenu()

@@ -113,7 +113,8 @@ namespace cinema_app
         static void Main()
         {
             Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
-            var movielist = new Movie[] { Wolverine };
+            Movie Spiderman = new Movie("Spiderman Homecomming", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009"); //test movie
+            var movielist = new Movie[] { Wolverine, Spiderman };
 
             void WelcomeScreen()
                 // Het eerste welkomscherm 
@@ -167,6 +168,18 @@ namespace cinema_app
                     { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
                 }
                 Console.WriteLine("Shutting down ...");
+            }
+
+            
+            var movies = new List<Movie>() { Wolverine, Spiderman };
+            var json = new JsonAdd();
+
+            json.SaveToJsonMovies(movies);
+            movies = json.LoadFromJsonMovies();
+
+            foreach (var movie in movies)
+            {
+                Console.WriteLine(movie.Name);
             }
 
             ///Hiermee wordt WelcomeScreen aangeroepen en het programma dus geïnstantieerd

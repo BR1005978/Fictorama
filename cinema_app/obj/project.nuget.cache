@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qtQiwpCSGo/rV6FhrAg79gHd3jM+1wZrLNAplZ1E0lsYquur8RUfOhRkYCh8T+6zJt6mIG+LNa6T7+Rfj9iJ5w==",
+  "dgSpecHash": "7ChA7QVAR41l9hy+F2DSC8OjccT5mMqBzXizwEDx8N50aLOJUqi9+7bqXVAAB5FT98aBh5484uyBM4KrvVMNoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Project B\\Github\\Fictorama\\cinema_app\\cinema_app.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/achraffaress/Documents/GitHub/Fictorama/cinema_app/cinema_app.csproj",
+  "expectedPackageFiles": [
+    "/Users/achraffaress/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

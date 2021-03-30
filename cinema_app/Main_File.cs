@@ -172,12 +172,16 @@ namespace cinema_app
 
             
             var movies = new List<Movie>() { Wolverine, Spiderman };
-            var json = new JsonAdd();
+            var MovieJson = new JsonAdd("MovieData.json");
 
-            json.SaveToJsonMovies(movies);
-            movies = json.LoadFromJsonMovies();
+            MovieJson.SaveToJson(Movie);
 
-            foreach (var movie in movies)
+
+
+
+            users = json.LoadFromJsonMovies();
+
+            foreach (var movie in users)
             {
                 Console.WriteLine(movie.Name);
             }

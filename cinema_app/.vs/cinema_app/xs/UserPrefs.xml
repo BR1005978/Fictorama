@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JsonAdd.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Main_File.cs">
     <Files>
       <File FileName="JsonAdd.cs" Line="55" Column="1" />
-      <File FileName="Movie.cs" />
-      <File FileName="Main_File.cs" />
+      <File FileName="Movie.cs" Line="1" Column="1" />
+      <File FileName="Main_File.cs" Line="178" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +14,7 @@
                 <Node name="FrameworkReferences" expanded="True" />
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="JsonAdd.cs" selected="True" />
+              <Node name="Main_File.cs" selected="True" />
             </Node>
           </Node>
         </State>

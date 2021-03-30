@@ -169,23 +169,6 @@ namespace cinema_app
                 }
                 Console.WriteLine("Shutting down ...");
             }
-
-            
-            var movies = new List<Movie>() { Wolverine, Spiderman };
-            var MovieJson = new JsonAdd("MovieData.json");
-
-            MovieJson.SaveToJson(Movie);
-
-
-
-
-            users = json.LoadFromJsonMovies();
-
-            foreach (var movie in users)
-            {
-                Console.WriteLine(movie.Name);
-            }
-
             ///Hiermee wordt WelcomeScreen aangeroepen en het programma dus geïnstantieerd
             WelcomeScreen();
         }

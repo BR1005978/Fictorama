@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JsonAdd.cs">
+    <Files>
+      <File FileName="MovieList.cs" Line="19" Column="11" />
+      <File FileName="Register.cs" />
+      <File FileName="SearchFunction.cs" Line="1" Column="1" />
+      <File FileName="JsonAdd.cs" Line="22" Column="1" />
+      <File FileName="Main_File.cs" Line="35" Column="13" />
+      <File FileName="Movie.cs" Line="18" Column="68" />
+      <File FileName="CinemaHall.cs" Line="1" Column="1" />
+      <File FileName="CodeFile1.cs" Line="1" Column="1" />
+      <File FileName="User.cs" Line="28" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cinema_app" expanded="True">
+            <Node name="cinema_app" expanded="True">
+              <Node name="JsonAdd.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.cinema__app PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

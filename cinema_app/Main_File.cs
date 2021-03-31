@@ -18,15 +18,21 @@ namespace cinema_app
         /// </summary>
         public static void Main()
         {
+
             // hier staat nog de movielist. ik denk dat het handig is dat we dit verplaatsen naar
             // MovieList.cs, zodat we main file verder met rust kunnen laten. het lukt mij alleen niet want ik krijg allemaal errors die ik niet begrijp
             // als ik het probeer. misschien lukt één van jullie het? 
-
-            Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009","science-fiction","actor","duration","2007"); //test movie
+            Movie Pixels = new Movie("Pixels", "", "2015", new string[] { "Action", "Comedy", "Animation", "Fantasy", "Science Fiction" }, "Adam Sandler plays Sam Brenner \n Josh gad plays Ludlow Lamonsoff \n Peter Dinklage plays Eddie Plant", "1 H 46 M");
+            Movie CHAPPIE = new Movie("CHAPIE", "", "2015", new string[] { "Science Fiction", "Action", "Crime", "Thriller" }, "Anri du Toit plays Yolandi \n Watkin Tudor Jones plays Ninja \n Hugh Jackman plays Vincent Moore", "2 H");
+            Movie Jurassic_World = new Movie("Jurassic World", "", "2015", new string[] { "Science Fiction", "Action", "Thriller", "Fantasy", "Adventure" }, "Chris Pratt plays Owen Grady \n ", "2 H 4 M");
+            Movie Tron = new Movie("Tron: Lengacy", "", "2010", new string[] { "Science Fiction, Action, Adventure, Fantasy" }, "Garrett Hedlund plays Sam Flynn \n Jeff Bridges plays Kevin Flynn", "2 H 7 M");
+            Movie The_Maze_Runner = new Movie("The Maze Runner", "", "2014", new string[] { "Science Fiction", "Action", "Thriller", "Adventure" }, "Dylan O'Brien plays Thomas \n Thomas Brodie-Sangster plays Newt \n Will Poulter plays Gally", "1 H 54 M");
+            
+                Movie Wolverine = new Movie("X-Men Origins: Wolverine", "The early years of James Logan, featuring his rivalry with his brother Victor Creed, his service in the special forces team Weapon X, and his experimentation into the metal-lined mutant Wolverine.", "2009",new string[] { "science-fiction" }, "actor", "duration"); //test movie
             List<Movie> movielist = new List<Movie>();
             movielist.Add(Wolverine);
 
-
+            
             void MainMenu()
             // Het hoofdmenu
             // WelcomeScreen is hernoemd naar MainMenu, om het verschil tussen een eventueel welkomstscherm

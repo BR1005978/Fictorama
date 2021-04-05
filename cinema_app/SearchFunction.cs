@@ -25,7 +25,7 @@ namespace cinema_app
                 Console.WriteLine($"Year of origin: \n {i.Year}\n");
                 Console.WriteLine($"Movie information: \n {i.Info}\n");
             }
-            MainProgram.Main();
+            MainProgram.MainMenu();
         }
     }
 }

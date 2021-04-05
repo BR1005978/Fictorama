@@ -14,7 +14,7 @@ namespace cinema_app
         public string Duration { get; set; }
         
 
-        public List<Tuple<string, DateTime, Object>> review;
+        public List<Tuple<string, DateTime, User>> review;
         public Movie(string name, string info, string year,string[] genre,string actors,string duration)
         {
             this.Name = name;

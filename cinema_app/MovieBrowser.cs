@@ -8,64 +8,53 @@ namespace cinema_app
         public static void MovieBrowserMenu()
         {
 
-            List<string> options = new List<string> { "1", "2", "3", "4", "5" };
             string answer = "";
-            while (!options.Contains(answer))
-            {
-                Console.WriteLine(
-                "\nYou picked \"1. See available movies\" \n\n" +
+            while (answer != "exit")
+            { 
 
+                int counter = 0;
 
-                "NOW PLAYING: \n" +
+                foreach (Movie film in MovieList.movielist)
+                {
+                    Console.WriteLine($"{counter}: {film.Name}");
+                    counter++;
+                }
 
-                "1. Star Wars: The Rise of Skywalker (2019) \n" +
-                "2. Archive (2020)\n" +
-                "3. Underwater  (2020)\n" +
-                "4. The Martian (2015)\n" +
-                "5. Guardians of the Galaxy Vol 2\n"
-                );
-
-                Console.WriteLine(
-                    "Select a movie to learn more about it..."
-                    );
+                Console.WriteLine("Select a movie to learn more about it, or type 'exit' to go back.");
                 answer = Console.ReadLine();
-                if (answer == "1")
+
+                if (answer == "exit")
                 {
-                    // Hier misschien een method genaamd StarWarsTheRiseOfTheSkyWalker()
-                    // Met daarmee een call naar die film waarin je weer losse info kan zetten
-
-                    Console.WriteLine("1.Star Wars: The Rise of Skywalker(2019) \n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "2")
-                {
-
-                    Console.WriteLine("2. Archive (2020)\n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "3")
-                {
-
-                    Console.WriteLine("3. Underwater  (2020)\n" +
-                        "No information available yet.");
-
-                }
-                else if (answer == "4")
-                {
-                    Console.WriteLine("4. The Martian (2015)\n" +
-                        "No information available yet.");
-                }
-                else if (answer == "5")
-                {
-                    Console.WriteLine("5. Guardians of the Galaxy Vol 2\n" +
-                        "No information available yet.");
+                    MainProgram.MainMenu();
                 }
                 else
-                { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
+                {
+                    int answerint;
+
+                    // hiermee controleer je of het wel een int is
+                    // en of hij niet langer is dan de lengte van de filmlijst
+                    if (int.TryParse(answer, out answerint) && int.Parse(answer) < MovieList.movielist.Count)
+                    {
+
+                        Console.WriteLine(
+                            $"Name: {MovieList.movielist[answerint].Name}\n" +
+                            $"Description: {MovieList.movielist[answerint].Info}\n" +
+                            $"Year of Release:  {MovieList.movielist[answerint].Year}\n" +
+                            $"Genre:  {MovieList.movielist[answerint].Genre}\n" +
+                            $"Actors:  {MovieList.movielist[answerint].Actors}\n" +
+                            $"Duration: {MovieList.movielist[answerint].Duration}\n"
+                           );
+
+                    }
+                    else
+                        Console.WriteLine("\nInput not recognised. Please try again.\n ");
+                }
+                Console.WriteLine("Press any key to continue ...");
+
+                string cont = Console.ReadLine();
 
             }
+            //MovieBrowserMenu();
         }
     }
 }

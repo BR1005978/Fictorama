@@ -48,19 +48,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Younes\\.nuget\\packages\\": {}
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Fictorama\\Github\\Fictorama\\cinema_app\\cinema_app.csproj",
       "projectName": "cinema_app",
-      "projectPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
-      "packagesPath": "C:\\Users\\Younes\\.nuget\\packages\\",
-      "outputPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\obj\\",
+      "projectPath": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Fictorama\\Github\\Fictorama\\cinema_app\\cinema_app.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gebruiker\\OneDrive\\School\\Vakken\\Project\\Fictorama\\Github\\Fictorama\\cinema_app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Younes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -106,7 +106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

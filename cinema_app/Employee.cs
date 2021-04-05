@@ -5,22 +5,20 @@ using static cinema_app.MainProgram;
 
 namespace cinema_app
 {
-    class Admin
+    class Employee
     {
-        public static void AdminPanel()
+        public static void EmployeePanel()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
-            commands.Add("addmovie", "Adds a movie to the list of movies.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
-            commands.Add("stats", "Opens the menu for Fictorama statistics.");
             commands.Add("exit", "Exits the admin panel.");
-            print("[[ADMIN PANEL]]");
-            void AdminMenu()
+            print("[[EMPLOYEE PANEL]]");
+            void EmployeeMenu()
             {
-                List<string> options = new List<string> { "help", "addmovie", "editaccount", "editreview", "stats" };
+                List<string> options = new List<string> { "help", "addmovie", "editaccount", "editreview", };
                 string answer = "";
                 while (!options.Contains(answer))
                 {
@@ -36,30 +34,19 @@ namespace cinema_app
                         {
                             print($"{command.Key} : {command.Value}");
                         }
-                        AdminMenu();
+                        EmployeeMenu();
 
-                    }
-                    else if (answer == "addmovie")
-                    {
-
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
-                        AdminMenu();
                     }
                     else if (answer == "editaccount")
                     {
 
                         print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
-                        AdminMenu();
+                        EmployeeMenu();
                     }
                     else if (answer == "editreview")
                     {
                         print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
-                        AdminMenu();
-                    }
-                    else if (answer == "stats")
-                    {
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
-                        AdminMenu();
+                        EmployeeMenu();
                     }
                     else if (answer == "exit")
                     {
@@ -72,7 +59,7 @@ namespace cinema_app
                     { Console.WriteLine("Invalid command: " + answer); }
                 }
             }
-            AdminMenu();
+            EmployeeMenu();
         }
     }
 }

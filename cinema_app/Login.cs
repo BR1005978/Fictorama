@@ -8,8 +8,32 @@ namespace cinema_app
     {
         public static void LoginScreen()
         {
-            Console.WriteLine("You picked \"2. Login\" \n" +
-                    "WORK IN PROGRESS - Please come back later");
+            Console.WriteLine("You picked \"2. Login\" \n");
+
+            string username = "";
+            string password = "";
+
+            Console.WriteLine("Please enter username: ");
+            username = Console.ReadLine();
+
+            Console.WriteLine("Please enter password");
+            password = Console.ReadLine();
+
+            // primitieve typecheck
+            if (username == "admin" && password == "admin")
+            {
+                Admin.AdminPanel();
+            }
+            else if (username == "employee" && password == "employee")
+            {
+                Employee.EmployeePanel();
+            }
+            else if (username == "customer" && password == "customer")
+            {
+
+            }
+
+
         }
     }
 }

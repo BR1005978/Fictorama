@@ -10,6 +10,8 @@ namespace cinema_app
         //iets te printen. gewoon print("hallo") bijvoorbeeld
         public static void print(string s)
         {
+            Console.WriteLine(s);
+        }
 
 
         public static void MainMenu()
@@ -29,32 +31,32 @@ namespace cinema_app
             while (!options.Contains(answer))
             {
 
-                    Console.WriteLine("Please choose what you want to do: \n" +
-                    "1. See available movies\n" +
-                    "2. Login\n" +
-                    "3. Register\n" +
-                    "4. Search movies\n" +
-                    "5. Exit program\n"
-                    );
-                    answer = Console.ReadLine();
+                Console.WriteLine("Please choose what you want to do: \n" +
+                "1. See available movies\n" +
+                "2. Login\n" +
+                "3. Register\n" +
+                "4. Search movies\n" +
+                "5. Exit program\n"
+                );
+                answer = Console.ReadLine();
 
 
-                    if (answer == "1")
-                    {
+                if (answer == "1")
+                {
+                    Console.WriteLine("\nYou picked \"1. See available movies\" \n\n");
+                    MovieBrowser.MovieBrowserMenu();
 
-                        MovieBrowser.MovieBrowserMenu();
+                }
+                else if (answer == "2")
+                {
 
-                    }
-                    else if (answer == "2")
-                    {
+                    Login.LoginScreen();
 
-                        Login.LoginScreen();
+                }
+                else if (answer == "3")
+                {
 
-                    }
-                    else if (answer == "3")
-                    {
-
-                        Register.RegisterScreen();
+                    Register.RegisterScreen();
 
                 }
                 else if (answer == "4")

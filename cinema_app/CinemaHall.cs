@@ -2,39 +2,36 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace cinema_app
 {
     class CinemaHall
     {
 
         //Movie related data
-        public List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, bool[,]>> HallReservation = new List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, bool[,]>>();
+        public List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, Seats[,]>> HallReservation = new List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, Seats[,]>>();
 
         //Hall related data
         public int Rows;
         public int Colums;
-        public double FirstClassPrice;
-        public double SecondeClassPrice;
-        public double TherdeClassPrice;
-        public double[,] Hallprice;
+        public double Price;
+        public Seats[,] hallSeats;
 
 
-        public CinemaHall(int rows, int colums)
+        public CinemaHall(int rows, int colums, double price)
         {
             this.Rows = rows;
+            this.Price = price;
             this.Colums = colums;
+            this.hallSeats = new Seats[rows, colums];
 
-
-            this.Hallprice = new double[rows, colums];
-            for (int i = 0; i < this.Rows; i++)
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < this.Colums; j++)
+                for (int j = 0; j < colums; j++)
                 {
-                    this.Hallprice[i, j] = 0.16;
+                    this.hallSeats[i, j] = new Seats(price);
                 }
             }
-
-
 
         }
 
@@ -64,8 +61,18 @@ namespace cinema_app
 
             int selsction = Convert.ToInt32(Console.ReadLine());
 
+            Seats[,] newHall = new Seats[this.Rows, this.Colums];
 
-            this.HallReservation.Add(Tuple.Create(Tuple.Create(day, month, year), Tuple.Create(hour, minute), movies[selsction], new bool[Rows, Colums]));
+            for (int i = 0; i < this.Rows; i++)
+            {
+                for (int j = 0; j < this.Colums; j++)
+                {
+                    newHall[i, j] = new Seats(this.Price);
+                }
+            }
+
+            this.HallReservation.Add(Tuple.Create(Tuple.Create(day, month, year), Tuple.Create(hour, minute), movies[selsction], newHall));
+
         }
 
         public string GetHallSeatsScreen()
@@ -90,22 +97,23 @@ namespace cinema_app
 
                 for (int i = 0; i < this.Rows; i++)
                 {
+                    hall += "|";
+
                     for (int j = 0; j < this.Colums; j++)
                     {
-                        if (this.HallReservation[choice].Item4[i, j] == false)
+
+                        hall += this.HallReservation[choice].Item4[i, j].get_status();
+                        if (this.HallReservation[choice].Item4[i, j].Status)
                         {
-                            hall += "| 0 ";
                             count += 1;
                         }
-                        else
-                        {
-                            hall += "| X ";
-                        }
+
+
                     }
                     hall += "|\n";
 
                 }
-
+                Console.WriteLine(hall);
                 hall += "\nThere are " + count + " Seats left. \n'0' stands for seats left. \n'X' stands for seats in use.";
 
 
@@ -138,7 +146,7 @@ namespace cinema_app
 
             for (int i = beginColume; i <= endColume; i++)
             {
-                this.Hallprice[row, i] = price;
+                this.hallSeats[row, i].Change_price(price);
             }
 
         }
@@ -150,7 +158,7 @@ namespace cinema_app
             {
                 for (int j = 0; j < this.Colums; j++)
                 {
-                    hall += "| " + this.Hallprice[i, j];
+                    hall += "| " + this.hallSeats[i, j].Get_price(); ;
 
                 }
                 hall += " |\n";

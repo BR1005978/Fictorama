@@ -16,7 +16,10 @@ namespace cinema_app
 
         public static void MainMenu()
         {
-
+            Console.WriteLine(" \n" +
+"▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +
+"▒█▀▀▀ ▒█░ ▒█░░░ ░▒█░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█▒█▒█ ▒█▄▄█ \n" +
+"▒█░░░ ▄█▄ ▒█▄▄█ ░▒█░░ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█░░▒█ ▒█░▒█ \n");
             Console.WriteLine("\nWelcome to Fictorama! \n" +
                 "This is Fictoram Interface 0.03\n\n");
             //if (UserCheck){

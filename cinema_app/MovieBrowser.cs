@@ -37,7 +37,7 @@ namespace cinema_app
                     {
 
                         Console.WriteLine(
-                            $"Name: {MovieList.movielist[answerint].Name}\n" +
+                            $"\nName: {MovieList.movielist[answerint].Name}\n" +
                             $"Description: {MovieList.movielist[answerint].Info}\n" +
                             $"Year of Release:  {MovieList.movielist[answerint].Year}\n" +
                             $"Genre:  {MovieList.movielist[answerint].Genre}\n" +
@@ -51,7 +51,7 @@ namespace cinema_app
                 }
                 Console.WriteLine("Press any key to continue ...");
 
-                string cont = Console.ReadLine();
+                Console.ReadLine();
 
             }
             //MovieBrowserMenu();

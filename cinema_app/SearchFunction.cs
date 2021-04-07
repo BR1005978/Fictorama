@@ -17,6 +17,7 @@ namespace cinema_app
                     results.Add(movielist[i]);
                 }
             }
+            Console.WriteLine("Search Results: ");
             foreach (Movie i in results)
             {
 
@@ -25,6 +26,8 @@ namespace cinema_app
                 Console.WriteLine($"Year of origin: \n {i.Year}\n");
                 Console.WriteLine($"Movie information: \n {i.Info}\n");
             }
+            Console.WriteLine("Press any key to continue... ");
+            string cont = Console.ReadLine();
             MainProgram.MainMenu();
         }
     }

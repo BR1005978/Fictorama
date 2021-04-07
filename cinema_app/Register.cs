@@ -10,6 +10,9 @@ namespace cinema_app
         {
             Console.WriteLine("You picked \"3. Register\" \n" +
                 "WORK IN PROGRESS - Please come back later");
+            Console.ReadLine();
+            MainProgram.MainMenu();
         }
+        
     }
 }

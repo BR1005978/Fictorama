@@ -4,13 +4,14 @@ using System.Text;
 
 namespace cinema_app
 {
-    class CinemaHall
+    public class CinemaHall
     {
 
         //Movie related data
         public List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, bool[,]>> HallReservation = new List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, bool[,]>>();
 
         //Hall related data
+        public string HallName;
         public int Rows;
         public int Colums;
         public double FirstClassPrice;
@@ -19,10 +20,11 @@ namespace cinema_app
         public double[,] Hallprice;
 
 
-        public CinemaHall(int rows, int colums)
+        public CinemaHall(int rows, int colums, string name)
         {
             this.Rows = rows;
             this.Colums = colums;
+            this.HallName = name;
 
 
             this.Hallprice = new double[rows, colums];

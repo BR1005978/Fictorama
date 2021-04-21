@@ -68,6 +68,19 @@ namespace cinema_app
         }
         public static void Main()
         {
+            CinemaAssets CinemaData = new CinemaAssets(); ;
+            var Json = new JsonAdd("CinemaAssets.json");
+
+            try
+            {
+                CinemaData = Json.LoadFromJson();
+            }
+            catch (Exception ex)
+            {
+                CinemaData = new CinemaAssets();
+            }
+            Json.SaveToJson(CinemaData);
+
 
             ///<summary>
             /// Dit is de Fictorama demonstratieversie voor sprint review 2 op 8-4-2021

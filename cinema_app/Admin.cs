@@ -13,11 +13,12 @@ namespace cinema_app
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("addmovie", "Adds a movie to the list of movies.");
+            commands.Add("addhall", "Adds a cinema hall to the list of cinema halls.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
             commands.Add("exit", "Exits the admin panel.");
-            print("[[ADMIN PANEL]]");
+            Console.WriteLine("[[ADMIN PANEL]]");
             void AdminMenu()
             {
                 List<string> options = new List<string> { "help", "addmovie", "editaccount", "editreview", "stats" };
@@ -25,7 +26,7 @@ namespace cinema_app
                 while (!options.Contains(answer))
                 {
 
-                    print("\nType \"help\" to see available commands.\n");
+                    Console.WriteLine("\nType \"help\" to see available commands.\n");
                     answer = Console.ReadLine();
 
 
@@ -34,7 +35,7 @@ namespace cinema_app
 
                         foreach (KeyValuePair<string, string> command in commands)
                         {
-                            print($"{command.Key} : {command.Value}");
+                            Console.WriteLine($"{command.Key} : {command.Value}");
                         }
                         AdminMenu();
 
@@ -42,28 +43,43 @@ namespace cinema_app
                     else if (answer == "addmovie")
                     {
 
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.CreateMovie();
+                        Json.SaveToJson(CinemaData);
+
+                        AdminMenu();
+                    }
+
+                    else if (answer == "addhall")
+                    {
+
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.CreateCinemaHall() ;
+                        Json.SaveToJson(CinemaData);
+
                         AdminMenu();
                     }
                     else if (answer == "editaccount")
                     {
 
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
                         AdminMenu();
                     }
                     else if (answer == "editreview")
                     {
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
                         AdminMenu();
                     }
                     else if (answer == "stats")
                     {
-                        print($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
                         AdminMenu();
                     }
                     else if (answer == "exit")
                     {
-                        print("Returning to main menu ...\n");
+                        Console.WriteLine("Returning to main menu ...\n");
                         Console.ResetColor();
                         MainProgram.MainMenu();
 

@@ -41,7 +41,11 @@ namespace cinema_app
                     {
 
                         Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        //EmployeeMenu();
+                        change_password();
                         EmployeeMenu();
+
+
                     }
                     else if (answer == "editreview")
                     {
@@ -61,5 +65,36 @@ namespace cinema_app
             }
             EmployeeMenu();
         }
+        public static void change_password()
+        {
+            Console.WriteLine("You have selected the function: change password of costumer ");
+            Userlist.userlist = Userlist.saveUser.LoadFromJson2();
+            Console.WriteLine("What is the user name or full name of the custumer?");
+            string costumer_name = Console.ReadLine();
+            int index_user = 0;
+            bool user_found = false;
+            for(int i = 0; i < Userlist.userlist.Count; i++)
+            {
+                if(costumer_name == Userlist.userlist[i].userName || costumer_name.ToLower() == $"{Userlist.userlist[i].first_name.ToLower()} { Userlist.userlist[i].last_name.ToLower()}")
+                {
+                    index_user = i;
+                    user_found = true;
+                }
+            }
+            if (user_found)
+            {
+                Console.WriteLine("What will be the new password for {0} {1}?", Userlist.userlist[index_user].first_name, Userlist.userlist[index_user].last_name);
+                Userlist.userlist[index_user].password = Console.ReadLine();
+                Userlist.saveUser.SaveToJsonUser(Userlist.userlist);
+            }
+            else
+            {
+                Console.WriteLine("This user doesn't exist");
+                Console.WriteLine("Try again");
+                change_password();
+            }
+        }
+        
     }
+    
 }

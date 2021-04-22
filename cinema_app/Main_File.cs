@@ -10,6 +10,14 @@ namespace cinema_app
 
         public static void MainMenu()
         {
+           // User user1 = new User("Sydney", "Beek", "13-05-2003", "1014378@hr.nl", "0612345678", "sydneyb", "syd123");
+            //User user1 = new User("Brandan", "Beek", "13-05-2003", "1014378@hr.nl", "0612345678", "sydneyb", "syd123");
+           // List<User> listUser1 = new List<User>() ;
+            //listUser1.Add(user1);
+            //JsonAdd saveUser1 = new JsonAdd("sydney.json");
+           // saveUser1.SaveToJsonUser(listUser1);
+            //user1.password = "nieuw";
+            //saveUser1.SaveToJsonUser(listUser1);
 
             Console.WriteLine(" \n" +
 "▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +
@@ -26,9 +34,10 @@ namespace cinema_app
                 Console.WriteLine("Please choose what you want to do (type the numbers): \n" +
                 "1. See available movies\n" +
                 "2. Login\n" +
-                "3. Register\n" +
-                "4. Search movies\n" +
-                "5. Exit program\n"
+                "3. Signin\n" +
+                "4. Register\n" +
+                "5. Search movies\n" +
+                "6. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -41,6 +50,7 @@ namespace cinema_app
                 }
                 else if (answer == "2")
                 {
+                    
 
                     Login.LoginScreen();
 
@@ -48,17 +58,25 @@ namespace cinema_app
                 else if (answer == "3")
                 {
 
-                    Register.RegisterScreen();
+                    Signin.SigninScreen();
 
                 }
                 else if (answer == "4")
                 {
+
+                    Register.RegisterScreen();
+
+                }
+                
+                else if (answer == "5")
+                {
                     SearchFunction.Searchbar(MovieList.movielist);
                 }
-                else if (answer == "5")
+                else if (answer == "6")
                 {
                     Console.WriteLine("Shutting down...");
                 }
+                
 
                 else
                 {

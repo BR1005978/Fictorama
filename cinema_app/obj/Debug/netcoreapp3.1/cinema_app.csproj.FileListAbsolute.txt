@@ -11,19 +11,6 @@ C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/cinema_app/bin/Debug
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.dll
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.pdb
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.genruntimeconfig.cache
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.csprojAssemblyReference.cache
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.AssemblyInfoInputs.cache
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.AssemblyInfo.cs
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.csproj.CoreCompileInputs.cache
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.dll
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.pdb
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.exe
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.deps.json
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.runtimeconfig.json
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.runtimeconfig.dev.json
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.dll
-G:/Documenten/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/cinema_app.pdb
-G:/Documenten/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.genruntimeconfig.cache
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/Github/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.csprojAssemblyReference.cache
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/Github/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.AssemblyInfoInputs.cache
 C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Project B/Github/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.AssemblyInfo.cs
@@ -80,3 +67,17 @@ C:/Users/Gebruiker/OneDrive/School/Vakken/Project/Fictorama/Github/Fictorama/cin
 /Users/achraffaress/Documents/GitHub/Fictorama/cinema_app/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
 /Users/achraffaress/Documents/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.csproj.CopyComplete
 /Users/achraffaress/Documents/GitHub/Fictorama/cinema_app/obj/Debug/netcoreapp3.1/cinema_app.genruntimeconfig.cache
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.exe
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.deps.json
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.runtimeconfig.json
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.runtimeconfig.dev.json
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.dll
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\cinema_app.pdb
+G:\Documenten\GitHub\Fictorama\cinema_app\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.AssemblyInfoInputs.cache
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.AssemblyInfo.cs
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.csproj.CoreCompileInputs.cache
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.csproj.CopyComplete
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.dll
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.pdb
+G:\Documenten\GitHub\Fictorama\cinema_app\obj\Debug\netcoreapp3.1\cinema_app.genruntimeconfig.cache

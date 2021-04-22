@@ -48,24 +48,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/sydneybeek/.nuget/packages/": {}
+    "C:\\Users\\Younes\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sydneybeek/Documents/GitHub/Fictorama/cinema_app/cinema_app.csproj",
+      "projectUniqueName": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
       "projectName": "cinema_app",
-      "projectPath": "/Users/sydneybeek/Documents/GitHub/Fictorama/cinema_app/cinema_app.csproj",
-      "packagesPath": "/Users/sydneybeek/.nuget/packages/",
-      "outputPath": "/Users/sydneybeek/Documents/GitHub/Fictorama/cinema_app/obj/",
+      "projectPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
+      "packagesPath": "C:\\Users\\Younes\\.nuget\\packages\\",
+      "outputPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sydneybeek/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Younes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -104,7 +106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,6 +14,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("addmovie", "Adds a movie to the list of movies.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
+            commands.Add("editmovie", "Edits a existing movie .");
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
             commands.Add("exit", "Exits the admin panel.");
@@ -56,6 +57,11 @@ namespace cinema_app
                     {
                         Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
                         AdminMenu();
+                    }
+                    else if (answer == "editmovie")
+                    {
+                        Console.WriteLine($"You've selected {answer}.\n");
+                        EditMovie.MovieEditor();
                     }
                     else if (answer == "stats")
                     {

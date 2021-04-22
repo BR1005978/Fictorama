@@ -70,7 +70,7 @@ namespace cinema_app
             this.HallReservation.Add(Tuple.Create(Tuple.Create(day, month, year), Tuple.Create(hour, minute), movies[selsction], new bool[Rows, Colums]));
         }
 
-        public string GetHallSeatsScreen()
+        public void GetHallSeatsScreen()
         {
 
             string hall = "";
@@ -118,7 +118,7 @@ namespace cinema_app
             }
 
 
-            return hall;
+            Console.WriteLine(hall);
         }
 
         public void SetPrice()

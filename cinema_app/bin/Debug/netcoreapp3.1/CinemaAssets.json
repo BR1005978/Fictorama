@@ -1,8 +1,253 @@
 {
   "CinemaHallList": [
     {
-      "HallReservation": [],
-      "HallName": "Zaal1",
+      "HallReservation": [
+        {
+          "Item1": {
+            "Item1": 11,
+            "Item2": 11,
+            "Item3": 2021
+          },
+          "Item2": {
+            "Item1": 11,
+            "Item2": 30
+          },
+          "Item3": {
+            "review": null,
+            "Name": "Avengers",
+            "Info": "A group of supperheors",
+            "Year": "2012",
+            "Genre": [
+              "Aventuur"
+            ],
+            "Actors": "Robert downer junor",
+            "Duration": "112"
+          },
+          "Item4": [
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ]
+          ]
+        }
+      ],
+      "HallName": "Zaal3",
       "Rows": 20,
       "Colums": 9,
       "FirstClassPrice": 0.0,
@@ -124,11 +369,11 @@
           0.16,
           0.16,
           0.16,
-          0.16,
-          0.16,
-          0.16,
-          0.16,
-          0.16
+          6.99,
+          6.99,
+          6.99,
+          6.99,
+          6.99
         ],
         [
           0.16,

@@ -14,6 +14,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("addmovie", "Adds a movie to the list of movies.");
             commands.Add("addhall", "Adds a cinema hall to the list of cinema halls.");
+            commands.Add("edithall", "To change a cinema hall.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
@@ -61,6 +62,18 @@ namespace cinema_app
 
                         AdminMenu();
                     }
+
+                    else if (answer == "edithall")
+                    {
+
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.EditCinemaHall();
+                        Json.SaveToJson(CinemaData);
+
+                        AdminMenu();
+                    }
+
                     else if (answer == "editaccount")
                     {
 

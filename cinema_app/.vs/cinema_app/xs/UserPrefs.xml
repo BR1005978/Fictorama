@@ -2,25 +2,14 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Login.cs">
     <Files>
       <File FileName="JsonAdd.cs" Line="14" Column="10" />
-      <File FileName="Main_File.cs" Line="91" Column="21" />
-      <File FileName="CinemaHall.cs" Line="7" Column="12" />
-      <File FileName="User.cs" Line="28" Column="1" />
-      <File FileName="CinemaAssets.cs" Line="16" Column="50" />
-      <File FileName="Movie.cs" Line="1" Column="1" />
-      <File FileName="Admin.cs" Line="45" Column="37" />
-      <File FileName="Login.cs" Line="1" Column="1" />
+      <File FileName="Main_File.cs" />
+      <File FileName="CinemaHall.cs" />
+      <File FileName="User.cs" />
+      <File FileName="CinemaAssets.cs" />
+      <File FileName="Movie.cs" />
+      <File FileName="Admin.cs" />
+      <File FileName="Login.cs" Line="21" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="cinema_app" expanded="True">
-            <Node name="cinema_app" expanded="True">
-              <Node name="Login.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.cinema__app PreferredExecutionTarget="MonoDevelop.Default" />

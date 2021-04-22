@@ -40,11 +40,18 @@ namespace cinema_app
                             $"\nName: {MovieList.movielist[answerint].Name}\n" +
                             $"Description: {MovieList.movielist[answerint].Info}\n" +
                             $"Year of Release:  {MovieList.movielist[answerint].Year}\n" +
-                            $"Genre:  {MovieList.movielist[answerint].Genre}\n" +
+                            //$"Genre:  {MovieList.movielist[answerint].Genre}\n" +
                             $"Actors:  {MovieList.movielist[answerint].Actors}\n" +
-                            $"Duration: {MovieList.movielist[answerint].Duration}\n"
+                            $"Duration: {MovieList.movielist[answerint].Duration}"
                            );
 
+                        //hiermee print je alle genre's van een film
+                        Console.WriteLine($"Genre:  {MovieList.movielist[answerint].Genre[0]}");
+                        for (int i = 1; i < MovieList.movielist[answerint].Genre.Length; i++) {
+                            Console.WriteLine(MovieList.movielist[answerint].Genre[i]);
+
+
+                        }
                     }
                     else
                         Console.WriteLine("\nInput not recognised. Please try again.\n ");

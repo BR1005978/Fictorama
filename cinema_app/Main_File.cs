@@ -20,7 +20,8 @@ namespace cinema_app
 
             List<string> options = new List<string> { "1", "2", "3", "4", "5" };
             string answer = "";
-            while (!options.Contains(answer))
+            //EditMovie.MovieEditor();
+            while (!options.Contains(answer))   
             {
 
                 Console.WriteLine("Please choose what you want to do (type the numbers): \n" +

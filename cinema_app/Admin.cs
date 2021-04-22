@@ -13,6 +13,7 @@ namespace cinema_app
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("addmovie", "Adds a movie to the list of movies.");
+            commands.Add("editmovie", "Edits a existing movie.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
@@ -54,6 +55,11 @@ namespace cinema_app
                     else if (answer == "editreview")
                     {
                         Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        AdminMenu();
+                    }
+                    else if (answer == "editmovie")
+                    {
+                        EditMovie.MovieEditor();
                         AdminMenu();
                     }
                     else if (answer == "stats")

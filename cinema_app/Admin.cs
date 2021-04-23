@@ -67,7 +67,11 @@ namespace cinema_app
                     else if (answer == "editmovie")
                     {
                         Console.WriteLine($"You've selected {answer}.\n");
-                        EditMovie.MovieEditor();
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.EditMovie();
+                        Json.SaveToJson(CinemaData);
+                        AdminMenu();
                     }
                     else if (answer == "stats")
                     {

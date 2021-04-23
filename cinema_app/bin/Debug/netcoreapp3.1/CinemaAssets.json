@@ -1,4 +1,16 @@
 {
   "CinemaHallList": [],
-  "MovieList": []
+  "MovieList": [
+    {
+      "review": null,
+      "Name": "Avengers",
+      "Info": "Superheroes",
+      "Year": "2012",
+      "Genre": [
+        "Action"
+      ],
+      "Actors": "Robert",
+      "Duration": "120"
+    }
+  ]
 }

@@ -68,14 +68,15 @@ namespace cinema_app
         public static void change_password()
         {
             Console.WriteLine("You have selected the function: change password of costumer ");
-            Userlist.userlist = Userlist.saveUser.LoadFromJson2();
+            var UserJson = new JsonAdd("Users.json");
+            var UserData = UserJson.LoadFromJson2();
             Console.WriteLine("What is the user name or full name of the custumer?");
             string costumer_name = Console.ReadLine();
             int index_user = 0;
             bool user_found = false;
-            for(int i = 0; i < Userlist.userlist.Count; i++)
+            for(int i = 0; i < UserData.userlist.Count; i++)
             {
-                if(costumer_name == Userlist.userlist[i].userName || costumer_name.ToLower() == $"{Userlist.userlist[i].first_name.ToLower()} { Userlist.userlist[i].last_name.ToLower()}")
+                if(costumer_name == UserData.userlist[i].userName || costumer_name.ToLower() == $"{UserData.userlist[i].first_name.ToLower()} { UserData.userlist[i].last_name.ToLower()}")
                 {
                     index_user = i;
                     user_found = true;
@@ -83,9 +84,9 @@ namespace cinema_app
             }
             if (user_found)
             {
-                Console.WriteLine("What will be the new password for {0} {1}?", Userlist.userlist[index_user].first_name, Userlist.userlist[index_user].last_name);
-                Userlist.userlist[index_user].password = Console.ReadLine();
-                Userlist.saveUser.SaveToJsonUser(Userlist.userlist);
+                Console.WriteLine("What will be the new password for {0} {1}?", UserData.userlist[index_user].first_name, UserData.userlist[index_user].last_name);
+                UserData.userlist[index_user].password = Console.ReadLine();
+                UserJson.SaveToJsonUser(UserData);
             }
             else
             {

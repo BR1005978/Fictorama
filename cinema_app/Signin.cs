@@ -23,9 +23,12 @@ namespace cinema_app
             Console.WriteLine("What will be your password?");
             string password = Console.ReadLine();
 
-            Userlist.userlist = Userlist.saveUser.LoadFromJson2();
-            Userlist.userlist.Add(new User(fist_name, last_name, dateOfBirth, email, phone, username, password));
-            Userlist.saveUser.SaveToJsonUser(Userlist.userlist);
+
+            var UserJson = new JsonAdd("Users.json");
+            var UserData = UserJson.LoadFromJson2();
+            UserData.userlist.Add(new User(fist_name, last_name, dateOfBirth, email, phone, username, password));
+            UserJson.SaveToJsonUser(UserData);
+            
             MainProgram.MainMenu();
         }
     }

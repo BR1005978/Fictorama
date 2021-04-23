@@ -26,16 +26,16 @@ namespace cinema_app
         }
 
         // Extra 
-        public void SaveToJsonUser(List<User> item)
+        public void SaveToJsonUser(Userlist UserData)
         {
-            string file = Newtonsoft.Json.JsonConvert.SerializeObject(item, Newtonsoft.Json.Formatting.Indented);
+            string file = Newtonsoft.Json.JsonConvert.SerializeObject(UserData, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(Location, file);
         }
 
-        public List<User> LoadFromJson2()
+        public Userlist LoadFromJson2()
         {
-            List<User> Movielist = Newtonsoft.Json.JsonConvert.DeserializeObject<List<User>>(File.ReadAllText(Location));
-            return Movielist;
+            Userlist UserData = Newtonsoft.Json.JsonConvert.DeserializeObject<Userlist>(File.ReadAllText(Location));
+            return UserData;
         }
     }
 }

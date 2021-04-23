@@ -18,6 +18,9 @@ namespace cinema_app
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
             commands.Add("exit", "Exits the admin panel.");
+            commands.Add("addhall", "To add a cinema hall.");
+            commands.Add("edithall", "To edit a cinema hall.");
+            
             Console.WriteLine("[[ADMIN PANEL]]");
             void AdminMenu()
             {
@@ -43,7 +46,10 @@ namespace cinema_app
                     else if (answer == "addmovie")
                     {
 
-                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.CreateMovie();
+                        Json.SaveToJson(CinemaData);
                         AdminMenu();
                     }
                     else if (answer == "editaccount")
@@ -74,6 +80,22 @@ namespace cinema_app
                         Console.ResetColor();
                         MainProgram.MainMenu();
 
+                    }
+                    else if (answer == "addhall")
+                    {
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.CreateCinemaHall();
+                        Json.SaveToJson(CinemaData);
+                        AdminMenu();
+                    }
+                    else if (answer == "edithall")
+                    {
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.EditCinemaHall();
+                        Json.SaveToJson(CinemaData);
+                        AdminMenu();
                     }
                     else
                     { Console.WriteLine("Invalid command: " + answer); }

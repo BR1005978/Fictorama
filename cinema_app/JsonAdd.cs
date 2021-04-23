@@ -14,16 +14,15 @@ namespace cinema_app
             this.Location = location;
         }
 
-        public void SaveToJson(List<Movie> movies)
+        public void SaveToJson(CinemaAssets Assests)
         {
-            string file = Newtonsoft.Json.JsonConvert.SerializeObject(movies, Newtonsoft.Json.Formatting.Indented);
+            string file = Newtonsoft.Json.JsonConvert.SerializeObject(Assests, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(Location, file);
         }
-
-        public List<Movie> LoadFromJson()
+        public CinemaAssets LoadFromJson()
         {
-            List<Movie> Movielist = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Movie>>(File.ReadAllText(Location));
-            return Movielist;
+            CinemaAssets Assests = Newtonsoft.Json.JsonConvert.DeserializeObject<CinemaAssets>(File.ReadAllText(Location));
+            return Assests;
         }
 
         // Extra 

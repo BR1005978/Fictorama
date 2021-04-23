@@ -7,6 +7,8 @@ namespace cinema_app
     {
         public static void MovieBrowserMenu()
         {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
 
             string answer = "";
             while (answer != "exit")
@@ -14,7 +16,7 @@ namespace cinema_app
 
                 int counter = 0;
 
-                foreach (Movie film in MovieList.movielist)
+                foreach (Movie film in CinemaData.MovieList)
                 {
                     Console.WriteLine($"{counter}: {film.Name}");
                     counter++;
@@ -33,22 +35,22 @@ namespace cinema_app
 
                     // hiermee controleer je of het wel een int is
                     // en of hij niet langer is dan de lengte van de filmlijst
-                    if (int.TryParse(answer, out answerint) && int.Parse(answer) < MovieList.movielist.Count)
+                    if (int.TryParse(answer, out answerint) && int.Parse(answer) < CinemaData.MovieList.Count)
                     {
 
                         Console.WriteLine(
-                            $"\nName: {MovieList.movielist[answerint].Name}\n" +
-                            $"Description: {MovieList.movielist[answerint].Info}\n" +
-                            $"Year of Release:  {MovieList.movielist[answerint].Year}\n" +
+                            $"\nName: {CinemaData.MovieList[answerint].Name}\n" +
+                            $"Description: {CinemaData.MovieList[answerint].Info}\n" +
+                            $"Year of Release:  {CinemaData.MovieList[answerint].Year}\n" +
                             //$"Genre:  {MovieList.movielist[answerint].Genre}\n" +
-                            $"Actors:  {MovieList.movielist[answerint].Actors}\n" +
-                            $"Duration: {MovieList.movielist[answerint].Duration}"
+                            $"Actors:  {CinemaData.MovieList[answerint].Actors}\n" +
+                            $"Duration: {CinemaData.MovieList[answerint].Duration}"
                            );
 
                         //hiermee print je alle genre's van een film
-                        Console.WriteLine($"Genre:  {MovieList.movielist[answerint].Genre[0]}");
-                        for (int i = 1; i < MovieList.movielist[answerint].Genre.Length; i++) {
-                            Console.WriteLine(MovieList.movielist[answerint].Genre[i]);
+                        Console.WriteLine($"Genre:  {CinemaData.MovieList[answerint].Genre[0]}");
+                        for (int i = 1; i < CinemaData.MovieList[answerint].Genre.Length; i++) {
+                            Console.WriteLine(CinemaData.MovieList[answerint].Genre[i]);
 
 
                         }

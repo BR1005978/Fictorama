@@ -70,7 +70,9 @@ namespace cinema_app
                 
                 else if (answer == "5")
                 {
-                    SearchFunction.Searchbar(MovieList.movielist);
+                    var Json = new JsonAdd("CinemaAssets.json");
+                    var CinemaData = Json.LoadFromJson();
+                    SearchFunction.Searchbar(CinemaData.MovieList);
                 }
                 else if (answer == "6")
                 {

@@ -4,6 +4,7 @@ namespace cinema_app
 {
     public class CinemaAssets
     {
+        // Cinema Data
         public List<CinemaHall> CinemaHallList = new List<CinemaHall>();
         public List<Movie> MovieList = new List<Movie>();
 
@@ -150,7 +151,7 @@ namespace cinema_app
             string Duration = Console.ReadLine();
 
             this.MovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration));
-            Console.WriteLine("Done");
+            Console.WriteLine("Done...");
         }
 
         public void EditMovie()

@@ -1,5 +1,1320 @@
 {
-  "CinemaHallList": [],
+  "CinemaHallList": [
+    {
+      "HallReservation": [
+        {
+          "Item1": {
+            "Item1": 11,
+            "Item2": 11,
+            "Item3": 2021
+          },
+          "Item2": {
+            "Item1": 11,
+            "Item2": 30
+          },
+          "Item3": {
+            "review": null,
+            "Name": "Avengers",
+            "Info": "Superheroes",
+            "Year": "2012",
+            "Genre": [
+              "Action"
+            ],
+            "Actors": "Robert",
+            "Duration": "120"
+          },
+          "Item4": [
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ]
+          ]
+        }
+      ],
+      "HallName": "Zaal1",
+      "Rows": 20,
+      "Colums": 10,
+      "Price": 6.99,
+      "hallSeats": [
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ]
+      ]
+    }
+  ],
   "MovieList": [
     {
       "review": null,
@@ -11,6 +1326,17 @@
       ],
       "Actors": "Robert",
       "Duration": "120"
+    },
+    {
+      "review": null,
+      "Name": "ben",
+      "Info": "ben",
+      "Year": "2021",
+      "Genre": [
+        "action"
+      ],
+      "Actors": "ben",
+      "Duration": "220"
     }
   ]
 }

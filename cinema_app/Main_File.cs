@@ -116,11 +116,6 @@ namespace cinema_app
             Json.SaveToJson(CinemaData);
 
 
-            ///<summary>
-            /// Dit is de Fictorama demonstratieversie voor sprint review 2 op 8-4-2021
-            ///</summary>
-
-
             ///Hiermee wordt MainMenu aangeroepen en het programma dus geïnstantieerd
             MainMenu();
         }

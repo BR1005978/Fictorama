@@ -55,7 +55,7 @@ namespace cinema_app
                     else if (answer == "editaccount")
                     {
 
-                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        
                         Employee.change_password();
                         AdminMenu();
                     }

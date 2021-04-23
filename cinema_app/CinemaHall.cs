@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace cinema_app
 {
-    class CinemaHall
+    public class CinemaHall
     {
 
         //Movie related data
         public List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, Seats[,]>> HallReservation = new List<Tuple<Tuple<int, int, int>, Tuple<int, int>, Movie, Seats[,]>>();
 
         //Hall related data
+        public string HallName;
         public int Rows;
         public int Colums;
         public double Price;
         public Seats[,] hallSeats;
 
-
-        public CinemaHall(int rows, int colums, double price)
+        public CinemaHall(int rows, int colums, string name, double price)
         {
             this.Rows = rows;
+            this.HallName = name;
             this.Price = price;
             this.Colums = colums;
             this.hallSeats = new Seats[rows, colums];
@@ -33,8 +33,9 @@ namespace cinema_app
                 }
             }
 
-        }
 
+
+        }
 
         public void Addreservation(List<Movie> movies)
         {
@@ -75,7 +76,8 @@ namespace cinema_app
 
         }
 
-        public string GetHallSeatsScreen()
+        //Not working********
+        public void GetHallSeatsScreen()
         {
 
             string hall = "";
@@ -86,10 +88,9 @@ namespace cinema_app
                 Console.WriteLine("Please choice the movie, to see the seats status: ");
                 for (int i = 0; i < this.HallReservation.Count; i++)
                 {
-                    Console.WriteLine(i + " " + this.HallReservation[i].Item3.Name + " At "
-                        + this.HallReservation[i].Item1.Item1 + "-" + this.HallReservation[i].Item1.Item2
-                        + "-" + this.HallReservation[i].Item1.Item3 + ", and will begin at " + this.HallReservation[i].Item2.Item1 + ":" +
-                        this.HallReservation[i].Item2.Item2 + " hour.");
+                    Console.WriteLine($"{i} {this.HallReservation[i].Item3.Name} At {this.HallReservation[i].Item1.Item1}-" +
+                        $"{this.HallReservation[i].Item1.Item2}-{this.HallReservation[i].Item1.Item3}, and will begin at " +
+                        $"{this.HallReservation[i].Item2.Item1}:{this.HallReservation[i].Item2.Item2} hour.");
                 }
                 int choice = Convert.ToInt32(Console.ReadLine());
                 int count = 0;
@@ -120,12 +121,14 @@ namespace cinema_app
             }
             else
             {
-                hall = "There are now movie reservations";
+                hall = "There are no movie reservations";
             }
 
 
-            return hall;
+            Console.WriteLine(hall);
         }
+
+
 
         public void SetPrice()
         {

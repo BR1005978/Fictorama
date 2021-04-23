@@ -9,7 +9,7 @@ namespace cinema_app
         public static void LoginScreen()
         {
             Console.WriteLine("You picked \"2. Login\" \n");
-
+            Userlist.getUserlist();
             string username = "";
             string password = "";
 

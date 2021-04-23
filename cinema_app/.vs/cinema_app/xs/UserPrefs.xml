@@ -1,28 +1,29 @@
 ﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="userlist.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Employee.cs">
     <Files>
       <File FileName="Register.cs" Line="1" Column="1" />
       <File FileName="SearchFunction.cs" />
-      <File FileName="JsonAdd.cs" />
-      <File FileName="Main_File.cs" />
-      <File FileName="Movie.cs" />
+      <File FileName="JsonAdd.cs" Line="1" Column="1" />
+      <File FileName="Main_File.cs" Line="1" Column="1" />
+      <File FileName="Movie.cs" Line="1" Column="1" />
       <File FileName="CinemaHall.cs" />
-      <File FileName="User.cs" />
+      <File FileName="User.cs" Line="1" Column="1" />
       <File FileName="Seats.cs" />
       <File FileName="Admin.cs" />
-      <File FileName="Employee.cs" />
-      <File FileName="MovieBrowser.cs" />
-      <File FileName="Login.cs" />
-      <File FileName="signin.cs" />
+      <File FileName="Employee.cs" Line="58" Column="46" />
+      <File FileName="MovieBrowser.cs" Line="56" Column="43" />
+      <File FileName="Login.cs" Line="31" Column="44" />
+      <File FileName="Userlist.cs" Line="9" Column="45" />
       <File FileName="MovieList.cs" />
-      <File FileName="userlist.cs" Line="12" Column="1" />
+      <File FileName="EmptyClass.cs" Line="4" Column="19" />
+      <File FileName="Signin.cs" Line="17" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="cinema_app" expanded="True">
             <Node name="cinema_app" expanded="True">
-              <Node name="Userlist.cs" selected="True" />
+              <Node name="Employee.cs" selected="True" />
             </Node>
           </Node>
         </State>

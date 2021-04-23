@@ -50,7 +50,14 @@ namespace cinema_app
                         for (int i = 1; i < MovieList.movielist[answerint].Genre.Length; i++) {
                             Console.WriteLine(MovieList.movielist[answerint].Genre[i]);
 
+                        }
 
+                        Console.WriteLine("1. Make reservation for this movie\n" +
+                            "or type enter to continue");
+                        string resv = Console.ReadLine();
+                        if (resv == "1")
+                        {
+                            Reservation.make_reservation();
                         }
                     }
                     else

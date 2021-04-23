@@ -143,7 +143,7 @@ namespace cinema_app
             string info = Console.ReadLine();
             Console.WriteLine("From with year: ");
             string year = Console.ReadLine();
-            Console.WriteLine("Ehat is the genre: ");
+            Console.WriteLine("What is the genre: ");
             string genger = Console.ReadLine();
             Console.WriteLine("Who is the actor: ");
             string Actor = Console.ReadLine();

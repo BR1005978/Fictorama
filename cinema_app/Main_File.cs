@@ -78,7 +78,6 @@ namespace cinema_app
                 {
                     Console.WriteLine("Shutting down...");
                 }
-                
 
                 else
                 {

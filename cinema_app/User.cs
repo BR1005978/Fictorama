@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace cinema_app
 {
     
@@ -12,6 +13,7 @@ namespace cinema_app
             public string phone_number;
             public string userName;
             public string password;
+            public List<Reservation> reservations;
             
         public User(string First_name, string Last_name, string Date_of_birth, string Email, string Phone_number, string Username, string Password )
         {
@@ -31,6 +33,15 @@ namespace cinema_app
                 Console.WriteLine("welcome {0}", userName);
             }
 
+            public void PastReservation()
+            {
+                foreach (var reservation in this.reservations)
+                {
+                    Console.WriteLine(reservation.BasicInformation());
+                }
+            }
+
+
             
         }
-    }
+}

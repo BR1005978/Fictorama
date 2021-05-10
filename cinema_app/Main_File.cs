@@ -34,10 +34,9 @@ namespace cinema_app
                 Console.WriteLine("Please choose what you want to do (type the numbers): \n" +
                 "1. See available movies\n" +
                 "2. Login\n" +
-                "3. Signin\n" +
-                "4. Register\n" +
-                "5. Search movies\n" +
-                "6. Exit program\n"
+                "3. Register\n" +
+                "4. Search movies\n" +
+                "5. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -61,20 +60,15 @@ namespace cinema_app
                     Signin.SigninScreen();
 
                 }
-                else if (answer == "4")
-                {
-
-                    Register.RegisterScreen();
-
-                }
+              
                 
-                else if (answer == "5")
+                else if (answer == "4")
                 {
                     var Json = new JsonAdd("CinemaAssets.json");
                     var CinemaData = Json.LoadFromJson();
                     SearchFunction.Searchbar(CinemaData.MovieList);
                 }
-                else if (answer == "6")
+                else if (answer == "5")
                 {
                     Console.WriteLine("Shutting down...");
                 }

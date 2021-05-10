@@ -41,9 +41,16 @@ namespace cinema_app
             int shift = rnd.Next(26);
             for (int i = 0; i < a.Length; i++)
             {
-                int x = FindIndex(a[i], alphabet);
-                int y = Shifter(x, shift);
-                b += alphabet[y];
+                if (Char.IsLetter(a[i]))
+                {
+                    int x = FindIndex(a[i], alphabet);
+                    int y = Shifter(x, shift);
+                    b += alphabet[y];
+                }
+                else
+                {
+                    b += a[i];
+                }
             }
             return new Tuple<string, int>(b, shift);
         }

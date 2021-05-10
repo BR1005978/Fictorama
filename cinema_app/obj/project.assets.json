@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
+      "projectUniqueName": "C:\\Users\\Younes\\Documents\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
       "projectName": "cinema_app",
-      "projectPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
+      "projectPath": "C:\\Users\\Younes\\Documents\\GitHub\\Fictorama\\cinema_app\\cinema_app.csproj",
       "packagesPath": "C:\\Users\\Younes\\.nuget\\packages\\",
-      "outputPath": "G:\\Documenten\\GitHub\\Fictorama\\cinema_app\\obj\\",
+      "outputPath": "C:\\Users\\Younes\\Documents\\GitHub\\Fictorama\\cinema_app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Younes\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,7 +106,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

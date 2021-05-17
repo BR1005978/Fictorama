@@ -58,5 +58,22 @@ namespace cinema_app
                 return false;
             }
         }
+
+        public void SendEmail(string email, string name, double price, string zaal, string movie, string datum, int hour, int minute, Tuple<int,int>[] seats)
+        {
+            string seatsString = "";
+
+            foreach (var seat in seats)
+            {
+                seatsString += "Row " + seat.Item1 +" Seat "+ seat.Item2 + ", ";
+            }
+
+            this.mailClient.Send("fictorama@outlook.com", email, "Movie Reservation",$"Hi {name}, \n\n" +
+                $"Thank you for your reveration to {movie}. \n" +
+                $"The movie will be begin at {datum} on {hour}:{minute}.\n" +
+                $"Your expected be seated at {seatsString}{zaal};");
+
+        }
     }
 }
+

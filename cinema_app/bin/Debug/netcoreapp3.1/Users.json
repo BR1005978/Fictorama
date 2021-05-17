@@ -9,6 +9,16 @@
       "userName": "BigBoss",
       "password": "BigBoss2",
       "reservations": null
+    },
+    {
+      "first_name": "Achraf",
+      "last_name": "Faress",
+      "date_of_birth": "03-04-2000",
+      "email": "a.faress.010@gmail.com",
+      "phone_number": "66",
+      "userName": "test",
+      "password": "test",
+      "reservations": null
     }
   ]
 }

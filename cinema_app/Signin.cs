@@ -7,6 +7,8 @@ namespace cinema_app
     {
         public static void SigninScreen()
         {
+            Mail mailSystem = new Mail();
+
             Console.WriteLine("You picked \"4. Signin\" \n");
             Console.WriteLine("What is your first name?");
             string fist_name = Console.ReadLine();
@@ -14,8 +16,25 @@ namespace cinema_app
             string last_name = Console.ReadLine();
             Console.WriteLine("What is your date of birth?(00-00-2021)");
             string dateOfBirth = Console.ReadLine();
-            Console.WriteLine("What is your email?");
-            string email = Console.ReadLine();
+
+
+            bool isActic = false;
+            bool status = false;
+            string email = "";
+
+            while (!isActic)
+            {
+                Console.WriteLine("What is your email?");
+                email = Console.ReadLine();
+                status = mailSystem.controlEmail(email);
+
+                if (status)
+                {
+                    isActic = true;
+                }
+
+            }
+
             Console.WriteLine("What is your phone number?");
             string phone = Console.ReadLine();
             Console.WriteLine("what will be your username?");

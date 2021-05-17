@@ -29,6 +29,7 @@ namespace cinema_app
             Console.WriteLine("Press any key to continue... ");
             string cont = Console.ReadLine();
             MainProgram.MainMenu();
+            
         }
     }
 }

@@ -7,6 +7,16 @@ namespace cinema_app
 {
     class Employee
     {
+        public string Username;
+        public string Password;
+        public Employee(  
+            string username, 
+            string password)
+        {
+            this.Username = username;
+            this.Password = password; 
+
+        }
         public static void EmployeePanel()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;

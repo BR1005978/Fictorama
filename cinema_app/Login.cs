@@ -26,7 +26,7 @@ namespace cinema_app
             }
             else if (username == "employee" && password == "employee")
             {
-                Employee.EmployeePanel();
+                Employee.panel();
             }
             else if (username == "customer" && password == "customer")
             {

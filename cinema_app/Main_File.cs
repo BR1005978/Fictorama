@@ -108,6 +108,7 @@ namespace cinema_app
                 {
                     UserData = new Userlist();
                 }
+
             }
             // als er geen informatie geladen kan worden (omdat die informatie er nog niet is) van de cinemadata, dan 
             // maakt hij een nieuwe aan

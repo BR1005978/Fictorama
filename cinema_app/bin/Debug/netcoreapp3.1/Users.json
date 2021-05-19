@@ -19,6 +19,28 @@
       "userName": "test",
       "password": "test",
       "reservations": null
+    },
+    {
+      "first_name": "Henk",
+      "last_name": "de Vries",
+      "date_of_birth": "11-11-2000",
+      "email": "niks@niks.nl",
+      "phone_number": "065554432",
+      "userName": "Henkie",
+      "password": "henkwoord",
+      "reservations": null
+    }
+  ],
+  "employeelist": [
+    {
+      "first_name": "Peter",
+      "last_name": "de Vries",
+      "date_of_birth": "11-11-2000",
+      "email": "niks@niks.nl",
+      "phone_number": "065554398",
+      "userName": "boevenvanger123",
+      "password": "Peterwoord",
+      "reservations": null
     }
   ]
 }

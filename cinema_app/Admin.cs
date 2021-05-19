@@ -23,6 +23,7 @@ namespace cinema_app
             commands.Add("edithall", "To edit a cinema hall.");
             commands.Add("editcatering", "To edit the catering.");
 
+
             Console.WriteLine("[[ADMIN PANEL]]");
             void AdminMenu()
             {
@@ -102,6 +103,57 @@ namespace cinema_app
                         CinemaData.EditCinemaHall();
                         Json.SaveToJson(CinemaData);
                         AdminMenu();
+                    }
+                    else if (answer == "editcatering")
+                    {
+                        var CateringJson = new JsonAdd("Catering.json");
+                        Catering catering = CateringJson.LoadFromJsoncatering();
+                        catering.EditCatering();
+                        CateringJson.SaveToJsonCatering(catering);
+                        AdminMenu();
+                    }
+                    else if (answer == "createworker")
+                    {
+                        Mail mailSystem = new Mail();
+
+                        Console.WriteLine("You picked \"createworker\" \n");
+                        Console.WriteLine("What is the employee's first name?");
+                        string fist_name = Console.ReadLine();
+                        Console.WriteLine("What is the employee's last name?");
+                        string last_name = Console.ReadLine();
+                        Console.WriteLine("What is the employee's date of birth?(00-00-2021)");
+                        string dateOfBirth = Console.ReadLine();
+
+
+                        bool isActic = false;
+                        bool status = false;
+                        string email = "";
+
+                        while (!isActic)
+                        {
+                            Console.WriteLine("What is the employee's email?");
+                            email = Console.ReadLine();
+                            status = mailSystem.controlEmail(email);
+
+                            if (status || (Console.ReadLine() == "pass"))
+                            {
+                                isActic = true;
+                            }
+
+                        }
+
+                        Console.WriteLine("What is the employee's phone number?");
+                        string phone = Console.ReadLine();
+                        Console.WriteLine("what will be the employee's username?");
+                        string username = Console.ReadLine();
+                        Console.WriteLine("What will be the employee's password?");
+                        string password = Console.ReadLine();
+
+
+                        var UserJson = new JsonAdd("Users.json");
+                        var UserData = UserJson.LoadFromJson2();
+                        UserData.employeelist.Add(new Employee(fist_name, last_name, dateOfBirth, email, phone, username, password));
+                        UserJson.SaveToJsonUser(UserData);
                     }
                     else
                     { Console.WriteLine("Invalid command: " + answer); }

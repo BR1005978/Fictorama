@@ -5,7 +5,7 @@ namespace cinema_app
     public class Userlist
     {
         public  List<User> userlist = new List<User>();
-        public List<Employee> employeelist = new List<Employee>(); 
+        public List<Employee> employeelist = new List<Employee>();
     }
 }
 

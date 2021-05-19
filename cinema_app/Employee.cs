@@ -5,21 +5,30 @@ using static cinema_app.MainProgram;
 
 namespace cinema_app
 {
-    class Employee
+    public class Employee : User
     {
-        public string Username;
-        public string Password;
-        public Employee(  
-            string username, 
-            string password)
-        {
-            this.Username = username;
-            this.Password = password; 
 
-        }
-        public static void EmployeePanel()
+        public Employee(string First_name,
+            string Last_name,
+            string Date_of_birth,
+            string Email,
+            string Phone_number,
+            string Username,
+            string Password) :
+            base(First_name,
+                Last_name,
+                Date_of_birth,
+                Email, Phone_number,
+                Username,
+                Password)
+        { }
+
+
+        public static new void panel()
         {
+
             Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.Writeline("Welcome, {this.Username}");
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
@@ -50,7 +59,7 @@ namespace cinema_app
                     else if (answer == "editaccount")
                     {
 
-                       
+
                         //EmployeeMenu();
                         change_password();
                         EmployeeMenu();
@@ -84,9 +93,9 @@ namespace cinema_app
             string costumer_name = Console.ReadLine();
             int index_user = 0;
             bool user_found = false;
-            for(int i = 0; i < UserData.userlist.Count; i++)
+            for (int i = 0; i < UserData.userlist.Count; i++)
             {
-                if(costumer_name == UserData.userlist[i].userName || costumer_name.ToLower() == $"{UserData.userlist[i].first_name.ToLower()} { UserData.userlist[i].last_name.ToLower()}")
+                if (costumer_name == UserData.userlist[i].userName || costumer_name.ToLower() == $"{UserData.userlist[i].first_name.ToLower()} { UserData.userlist[i].last_name.ToLower()}")
                 {
                     index_user = i;
                     user_found = true;
@@ -105,7 +114,7 @@ namespace cinema_app
                 change_password();
             }
         }
-        
+
     }
-    
+
 }

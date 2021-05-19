@@ -7,7 +7,7 @@ namespace cinema_app
 {
     public class JsonAdd
     {
-
+       
         public string Location;
         public JsonAdd(string location)
         {

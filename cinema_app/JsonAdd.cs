@@ -37,5 +37,18 @@ namespace cinema_app
             Userlist UserData = Newtonsoft.Json.JsonConvert.DeserializeObject<Userlist>(File.ReadAllText(Location));
             return UserData;
         }
+
+        // catering 
+        public void SaveToJsonCatering(Catering UserData)
+        {
+            string file = Newtonsoft.Json.JsonConvert.SerializeObject(UserData, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(Location, file);
+        }
+
+        public Catering LoadFromJsoncatering()
+        {
+            Catering UserData = Newtonsoft.Json.JsonConvert.DeserializeObject<Catering>(File.ReadAllText(Location));
+            return UserData;
+        }
     }
 }

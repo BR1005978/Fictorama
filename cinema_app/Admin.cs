@@ -20,7 +20,8 @@ namespace cinema_app
             commands.Add("exit", "Exits the admin panel.");
             commands.Add("addhall", "To add a cinema hall.");
             commands.Add("edithall", "To edit a cinema hall.");
-            
+            commands.Add("editcatering", "To edit the catering.");
+
             Console.WriteLine("[[ADMIN PANEL]]");
             void AdminMenu()
             {
@@ -99,6 +100,14 @@ namespace cinema_app
                         var CinemaData = Json.LoadFromJson();
                         CinemaData.EditCinemaHall();
                         Json.SaveToJson(CinemaData);
+                        AdminMenu();
+                    }
+                    else if (answer == "editcatering")
+                    {
+                        var CateringJson = new JsonAdd("Catering.json");
+                        Catering catering = CateringJson.LoadFromJsoncatering();
+                        catering.EditCatering();
+                        CateringJson.SaveToJsonCatering(catering);
                         AdminMenu();
                     }
                     else

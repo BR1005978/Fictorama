@@ -26,7 +26,12 @@ namespace cinema_app
 
         public static new void panel()
         {
+            this.Username = username;
+            this.Password = password; 
 
+        }
+        public static void EmployeePanel()
+        {
             Console.ForegroundColor = ConsoleColor.Yellow;
             // Console.Writeline("Welcome, {this.Username}");
             Dictionary<string, string> commands = new Dictionary<string, string>();

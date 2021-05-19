@@ -58,7 +58,7 @@ namespace cinema_app
                     else if (answer == "editaccount")
                     {
 
-                        
+                        // verandert het wachtwoord van een klant 
                         Employee.change_password();
                         AdminMenu();
                     }

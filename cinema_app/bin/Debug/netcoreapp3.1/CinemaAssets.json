@@ -1313,11 +1313,71 @@
           }
         ]
       ]
+    },
+    {
+      "HallReservation": [],
+      "HallName": "zaal2",
+      "Rows": 3,
+      "Colums": 3,
+      "Price": 5.0,
+      "hallSeats": [
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          },
+          {
+            "Status": true
+          }
+        ]
+      ]
     }
   ],
   "MovieList": [
     {
-      "review": null,
+      "review": [
+        {
+          "Item1": "test",
+          "Item2": "2021-05-17T11:19:27.924687+02:00",
+          "Item3": {
+            "first_name": "test2",
+            "last_name": "test2",
+            "date_of_birth": "test2",
+            "email": "test2",
+            "phone_number": "test2",
+            "userName": "test2",
+            "password": {
+              "Item1": "paop2",
+              "Item2": 22
+            },
+            "reservations": null
+          }
+        }
+      ],
       "Name": "Avengers",
       "Info": "Superheroes",
       "Year": "2012",

@@ -14,7 +14,7 @@ namespace cinema_app
         public string Duration { get; set; }
         
 
-        public List<Tuple<string, DateTime, User>> review;
+        public List<Tuple<string, DateTime, User>> review = new List<Tuple<string, DateTime, User>>();
         public Movie(string name, string info, string year,string[] genre,string actors,string duration)
         {
             this.Name = name;
@@ -26,7 +26,17 @@ namespace cinema_app
             
 
         }
-        
+        public void addreview(string review, User user, DateTime date)
+        {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
+            Tuple<string, DateTime, User> Review = Tuple.Create(review, date, user);
+            List<Tuple<string, DateTime, User>> reviewList = new List<Tuple<string, DateTime, User>>();
+            reviewList.Add(Review);
+            this.review = reviewList;
+            
+            Json.SaveToJson(CinemaData);
+        }
         
     }
 

@@ -18,6 +18,8 @@ namespace cinema_app
 
             Console.WriteLine("Please enter password");
             password = Console.ReadLine();
+            
+            //Console.WriteLine(password);
 
             // primitieve typecheck
             if (username == "admin" && password == "admin")
@@ -28,12 +30,49 @@ namespace cinema_app
             {
                 Employee.EmployeePanel();
             }
-            else if (username == "customer" && password == "customer")
+            else 
             {
+                var UserJson = new JsonAdd("Users.json");
+                var UserData = UserJson.LoadFromJson2();
+                for (int i = 0; i < UserData.userlist.Count; i++)
+                {
+                    
+
+                    if (UserData.userlist[i].userName == username && UserData.userlist[i].password.Item1 == EncrpytPassword.Encryptpassword(password, UserData.userlist[i].password.Item2).Item1)
+                    {
+                        Console.WriteLine("login succes");
+                        Console.WriteLine($"welcome{UserData.userlist[i].userName}");
+                        MainProgram.onlineUser = UserData.userlist[i];
+                        Costumer.costumer();
+
+                    }
+                }
+                    
+                    
+                        Console.WriteLine("\nUsername or password is wrong!\n");
+                        List<string> options = new List<string> { "1", "2" };
+                        string answer = "";
+                        
+                        while (!options.Contains(answer))
+                        {
+                            
+                            Console.WriteLine("\nPlease choose what you want to do (type the numbers): \n" +
+                            "1. Try again\n" +
+                            "2. Go back to the home screen\n");
+                            
+                            answer = Console.ReadLine();
+                        }
+                        if(answer == "1")
+                        {
+                            LoginScreen();
+                        }
+                        else if (answer == "2")
+                        {
+                            MainProgram.MainMenu();
+                        }
+                    
                 
             }
-
-
         }
     }
 }

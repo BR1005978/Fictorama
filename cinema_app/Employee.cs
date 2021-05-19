@@ -85,7 +85,10 @@ namespace cinema_app
             if (user_found)
             {
                 Console.WriteLine("What will be the new password for {0} {1}?", UserData.userlist[index_user].first_name, UserData.userlist[index_user].last_name);
-                UserData.userlist[index_user].password = Console.ReadLine();
+                var newPasword = Console.ReadLine();
+                var x = EncrpytPassword.Encryptpassword(newPasword);
+                //var newTuple = Tuple.Create(newPasword, );
+                UserData.userlist[index_user].password = x;
                 UserJson.SaveToJsonUser(UserData);
             }
             else

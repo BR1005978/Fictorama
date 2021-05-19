@@ -6,7 +6,7 @@ namespace cinema_app
 
     class MainProgram
     {
-
+        public static User onlineUser = null;
 
         public static void MainMenu()
         {
@@ -45,6 +45,7 @@ namespace cinema_app
                 {
                     Console.WriteLine("\nYou picked \"1. See available movies\" \n\n");
                     MovieBrowser.MovieBrowserMenu();
+                    MainMenu();
 
                 }
                 else if (answer == "2")

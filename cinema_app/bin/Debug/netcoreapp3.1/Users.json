@@ -1,13 +1,29 @@
 {
   "userlist": [
     {
-      "first_name": "Achraf",
-      "last_name": "Faress",
-      "date_of_birth": "03-04-2000",
-      "email": "A.faress.010@gmail.com",
-      "phone_number": "0636308345",
-      "userName": "BigBoss",
-      "password": "BigBoss2",
+      "first_name": "test",
+      "last_name": "test",
+      "date_of_birth": "test",
+      "email": "test",
+      "phone_number": "test",
+      "userName": "test",
+      "password": {
+        "Item1": "ithi",
+        "Item2": 8
+      },
+      "reservations": null
+    },
+    {
+      "first_name": "test2",
+      "last_name": "test2",
+      "date_of_birth": "test2",
+      "email": "test2",
+      "phone_number": "test2",
+      "userName": "test2",
+      "password": {
+        "Item1": "paop2",
+        "Item2": 22
+      },
       "reservations": null
     }
   ]

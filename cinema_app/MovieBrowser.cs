@@ -54,6 +54,25 @@ namespace cinema_app
 
 
                         }
+                        if(MainProgram.onlineUser != null)
+                        {
+                            string choice = "";
+                            Console.WriteLine("Type 'res' to make a reservation for this movie.");
+                            //reservationscreen
+                            Console.WriteLine("Type 'review' to leave a comment.");
+                            //AddReview()
+                            choice = Console.ReadLine();
+                            if(choice == "res")
+                            {
+                                Reservation.reserveer(CinemaData.MovieList[answerint]);
+                            }
+                            else if (choice == "review")
+                            {
+                                
+                                AddReview.review(CinemaData.MovieList[answerint]);
+                                //Costumer.costumer();
+                            }
+                        }
                     }
                     else
                         Console.WriteLine("\nInput not recognised. Please try again.\n ");

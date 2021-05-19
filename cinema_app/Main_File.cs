@@ -85,11 +85,13 @@ namespace cinema_app
             // hier maakt het programma objecten aan van CinemaAssets, Userlist, en later EmployeeList
             CinemaAssets CinemaData = new CinemaAssets();
             Userlist UserData = new Userlist();
+            Catering catering = new Catering();
             // EmployeeList EmployeeData = new EmployeeList();
 
 
             var Json = new JsonAdd("CinemaAssets.json");
             var UserJson = new JsonAdd("Users.json");
+            var CateringJson = new JsonAdd("Catering.json");
             // var EmployeeJson = new JsonAdd("Employees.json");
 
 
@@ -102,7 +104,15 @@ namespace cinema_app
 
                 try // probeer data te laden van userlist UserData
                 {
-                    UserData = UserJson.LoadFromJson2(); 
+                    UserData = UserJson.LoadFromJson2();
+                    try
+                    {
+                        catering = CateringJson.LoadFromJsoncatering();
+                    }
+                    catch (Exception ex)
+                    {
+                        catering = new Catering();
+                    }
                 }
                 catch (Exception ex) // als die er niet is, dan maakt hij een nieuw object van Userlist aan
                 {
@@ -120,6 +130,7 @@ namespace cinema_app
             // hier slaat hij de informatie die in de lijsten staat, op in de JSON bestanden
             UserJson.SaveToJsonUser(UserData);
             Json.SaveToJson(CinemaData);
+            CateringJson.SaveToJsonCatering(catering);
 
 
             ///Hiermee wordt MainMenu aangeroepen en het programma dus geïnstantieerd

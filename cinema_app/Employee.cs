@@ -5,21 +5,29 @@ using static cinema_app.MainProgram;
 
 namespace cinema_app
 {
-    class Employee
+    public class Employee : User
     {
-        public string Username;
-        public string Password;
-        public Employee(  
-            string username, 
-            string password)
-        {
-            this.Username = username;
-            this.Password = password; 
 
-        }
-        public static void EmployeePanel()
+        public Employee(string First_name,
+            string Last_name,
+            string Date_of_birth,
+            string Email,
+            string Phone_number,
+            string Username,
+            string Password) :
+            base(First_name, 
+                Last_name, 
+                Date_of_birth, 
+                Email, Phone_number, 
+                Username, 
+                Password){ }
+
+
+        public static new void panel()
         {
+            
             Console.ForegroundColor = ConsoleColor.Yellow;
+            // Console.Writeline("Welcome, {this.Username}");
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");

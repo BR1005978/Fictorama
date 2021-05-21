@@ -36,7 +36,8 @@ namespace cinema_app
                 "2. Login\n" +
                 "3. Register\n" +
                 "4. Search movies\n" +
-                "5. Exit program\n"
+                "5. See upcoming movies\n"+
+                "6. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -69,6 +70,11 @@ namespace cinema_app
                     SearchFunction.Searchbar(CinemaData.MovieList);
                 }
                 else if (answer == "5")
+                {
+                    MovieBrowser.UpcomingMovieBrowserMenu();
+                }
+
+                else if (answer == "6")
                 {
                     Console.WriteLine("Shutting down...");
                 }

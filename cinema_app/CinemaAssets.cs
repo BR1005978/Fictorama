@@ -7,8 +7,8 @@ namespace cinema_app
         // Cinema Data
         public List<CinemaHall> CinemaHallList = new List<CinemaHall>();
         public List<Movie> MovieList = new List<Movie>();
+        public List<Movie> UpcomingMovieList = new List<Movie>();
 
-        
 
 
         // CinemaHall Control
@@ -151,6 +151,24 @@ namespace cinema_app
             string Duration = Console.ReadLine();
 
             this.MovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration));
+            Console.WriteLine("Done...");
+        }
+        public void CreateUpcomingMovie()
+        {
+            Console.WriteLine("What is the name of the movie: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("What is the movie about: ");
+            string info = Console.ReadLine();
+            Console.WriteLine("From with year: ");
+            string year = Console.ReadLine();
+            Console.WriteLine("What is the genre: ");
+            string genger = Console.ReadLine();
+            Console.WriteLine("Who is the actor: ");
+            string Actor = Console.ReadLine();
+            Console.WriteLine("What is the duration");
+            string Duration = Console.ReadLine();
+
+            this.UpcomingMovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration));
             Console.WriteLine("Done...");
         }
 

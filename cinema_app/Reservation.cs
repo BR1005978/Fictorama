@@ -111,7 +111,7 @@ namespace cinema_app
                 int ticket = int.Parse(tickets_amount);
                 var price = ticket * CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
                 Console.WriteLine();
-
+                Tuple<int, int>[] seats = new Tuple<int, int>[ticket];
                 for (int i = 0; i < ticket; i++)
                 {
                     
@@ -189,6 +189,7 @@ namespace cinema_app
                             if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Status)
                             {
                                 CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Change_status();
+                                seats[i] = Tuple.Create(row, colom);
                                 availeble = true;
 
                             }
@@ -217,30 +218,55 @@ namespace cinema_app
                                 }
                             }
                             CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Change_status();
+                            seats[i] = Tuple.Create(row, colom);
                             availeble = true;
                         }
 
                     }
                 }
+                Mail mailSystem = new Mail();
+                var data = $"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item1}/{ CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2}/{ CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item3}";
+                int min = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item2;
+                int hour = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item1;
                 if (MainProgram.onlineUser != null) {
                     
                     
                     Reservation res = new Reservation(movie, datum, price);
                     ReservationList.Add(res);
+                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
                     Console.WriteLine("\nReservation complete.\n");
                 }
                 else
                 {
-                    Console.WriteLine("Whats is your email.");
-                    string email = Console.ReadLine();
+                    bool isActic = false;
+                    bool status = false;
+                    string email = "";
+                    string name = "";
+                    Console.WriteLine("What is your name?");
+                    name = Console.ReadLine();
+                    while (!isActic)
+                    {
+                        Console.WriteLine("What is your email?");
+                        email = Console.ReadLine();
+                        status = mailSystem.controlEmail(email);
+
+                        if (status)
+                        {
+                            isActic = true;
+                        }
+
+                    }
+                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    
                     Console.WriteLine("\nReservation complete.\n");
                 }
             }
-
-            
             
 
-            
+
+
+
+
         }
         public static bool isNumeric(string numer)
         {

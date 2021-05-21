@@ -54,23 +54,28 @@ namespace cinema_app
 
 
                         }
-                        if(MainProgram.onlineUser != null)
-                        {
+                        //if(MainProgram.onlineUser != null)
+                        
                             string choice = "";
                             Console.WriteLine("Type 'res' to make a reservation for this movie.");
-                            //reservationscreen
+                        //reservationscreen
+                        if (MainProgram.onlineUser != null)
+                        {
                             Console.WriteLine("Type 'review' to leave a comment.");
-                            //AddReview()
-                            choice = Console.ReadLine();
-                            if(choice == "res")
+                        }
+                        
+                        choice = Console.ReadLine();
+                        if(choice == "res")
+                        {
+                             Reservation.reserveer(CinemaData.MovieList[answerint]);
+                        }
+                        if (MainProgram.onlineUser != null)
+                        {
+                            if (choice == "review")
                             {
-                                Reservation.reserveer(CinemaData.MovieList[answerint]);
-                            }
-                            else if (choice == "review")
-                            {
-                                
+
                                 AddReview.review(CinemaData.MovieList[answerint]);
-                                //Costumer.costumer();
+                                //User.panel();
                             }
                         }
                     }

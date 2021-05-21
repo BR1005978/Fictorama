@@ -1315,8 +1315,84 @@
       ]
     },
     {
-      "HallReservation": [],
-      "HallName": "zaal2",
+      "HallReservation": [
+        {
+          "Item1": {
+            "Item1": 12,
+            "Item2": 12,
+            "Item3": 2021
+          },
+          "Item2": {
+            "Item1": 12,
+            "Item2": 12
+          },
+          "Item3": {
+            "review": [
+              {
+                "Item1": "test",
+                "Item2": "2021-05-17T11:19:27.924687+02:00",
+                "Item3": {
+                  "first_name": "test2",
+                  "last_name": "test2",
+                  "date_of_birth": "test2",
+                  "email": "test2",
+                  "phone_number": "test2",
+                  "userName": "test2",
+                  "password": {
+                    "Item1": "paop2",
+                    "Item2": 22
+                  },
+                  "reservations": null
+                }
+              }
+            ],
+            "Name": "Avengers",
+            "Info": "Superheroes",
+            "Year": "2012",
+            "Genre": [
+              "Action"
+            ],
+            "Actors": "Robert",
+            "Duration": "120"
+          },
+          "Item4": [
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              },
+              {
+                "Status": true
+              }
+            ]
+          ]
+        }
+      ],
+      "HallName": "zaal2.1",
       "Rows": 3,
       "Colums": 3,
       "Price": 5.0,

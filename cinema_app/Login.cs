@@ -43,7 +43,7 @@ namespace cinema_app
                         Console.WriteLine("login succes");
                         Console.WriteLine($"welcome{UserData.userlist[i].userName}");
                         MainProgram.onlineUser = UserData.userlist[i];
-                        Costumer.costumer();
+                        User.panel();
 
                     }
                 }

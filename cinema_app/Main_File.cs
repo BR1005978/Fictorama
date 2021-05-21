@@ -77,6 +77,7 @@ namespace cinema_app
                 else if (answer == "6")
                 {
                     Console.WriteLine("Shutting down...");
+                    Environment.Exit(0);
                 }
 
                 else

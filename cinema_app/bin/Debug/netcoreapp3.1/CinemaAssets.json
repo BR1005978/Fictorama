@@ -1338,5 +1338,18 @@
       "Actors": "ben",
       "Duration": "220"
     }
+  ],
+  "UpcomingMovieList": [
+    {
+      "review": null,
+      "Name": "Venom: Let There Be Carnage",
+      "Info": "Plot unknown. Sequel to the 2018 film 'Venom'.",
+      "Year": "2021",
+      "Genre": [
+        "Sci-Fi Thriller"
+      ],
+      "Actors": "Tom hardy, Michelle Williams, Stephen Graham",
+      "Duration": "Unknown"
+    }
   ]
 }

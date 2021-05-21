@@ -13,6 +13,7 @@ namespace cinema_app
             Dictionary<string, string> commands = new Dictionary<string, string>();
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("addmovie", "Adds a movie to the list of movies.");
+            commands.Add("addupcomingmovie", "Adds upcoming movie to the list of movies.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("createworker", "Create a new worker account");
             commands.Add("editmovie", "Edits a existing movie .");
@@ -55,6 +56,16 @@ namespace cinema_app
                         Json.SaveToJson(CinemaData);
                         AdminMenu();
                     }
+                    else if (answer == "addupcomingmovie")
+                    {
+
+                        var Json = new JsonAdd("CinemaAssets.json");
+                        var CinemaData = Json.LoadFromJson();
+                        CinemaData.CreateUpcomingMovie();
+                        Json.SaveToJson(CinemaData);
+                        AdminMenu();
+                    }
+                    
                     else if (answer == "editaccount")
                     {
 

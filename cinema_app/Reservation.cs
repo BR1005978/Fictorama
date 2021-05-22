@@ -229,11 +229,27 @@ namespace cinema_app
                 int min = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item2;
                 int hour = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item1;
                 if (MainProgram.onlineUser != null) {
-                    
-                    
+                    // find user in user list
+                    var UserJson = new JsonAdd("Users.json");
+                    var UserData = UserJson.LoadFromJson2();
+                    int index_user = 0;
+                    for (int i = 0; i < UserData.userlist.Count; i++)
+                    {
+                        if (MainProgram.onlineUser.userName == UserData.userlist[i].userName)
+                        {
+                            index_user = i;
+                           
+                        }
+                    }
+
                     Reservation res = new Reservation(movie, datum, price);
                     ReservationList.Add(res);
+                    UserData.userlist[index_user].reservations = ReservationList;
+                    UserJson.SaveToJsonUser(UserData);
+
+
                     mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    Json.SaveToJson(CinemaData);
                     Console.WriteLine("\nReservation complete.\n");
                 }
                 else
@@ -257,8 +273,7 @@ namespace cinema_app
 
                     }
                     mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
-                    
-                    Console.WriteLine("\nReservation complete.\n");
+                    Json.SaveToJson(CinemaData);
                 }
             }
             

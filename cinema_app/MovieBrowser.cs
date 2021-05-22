@@ -44,7 +44,8 @@ namespace cinema_app
                             $"Year of Release:  {CinemaData.MovieList[answerint].Year}\n" +
                             //$"Genre:  {MovieList.movielist[answerint].Genre}\n" +
                             $"Actors:  {CinemaData.MovieList[answerint].Actors}\n" +
-                            $"Duration: {CinemaData.MovieList[answerint].Duration}"
+                            $"Duration: {CinemaData.MovieList[answerint].Duration}\n"+
+                            $"Duration: {CinemaData.MovieList[answerint].Link}"
                            );
 
                         //hiermee print je alle genre's van een film
@@ -54,11 +55,19 @@ namespace cinema_app
 
 
                         }
+                        Console.WriteLine("Press [0] to see trailer or any other key to exit.");
+                        string key = Console.ReadLine();
+                        if (key == "0")
+                        {
+                            Trailer.Seetrailer(CinemaData.MovieList[answerint].Link);
+
+                        }
                     }
                     else
                         Console.WriteLine("\nInput not recognised. Please try again.\n ");
+                        Console.WriteLine("Press any key to continue ...");
                 }
-                Console.WriteLine("Press any key to continue ...");
+                
 
                 Console.ReadLine();
 
@@ -105,7 +114,8 @@ namespace cinema_app
                             $"Year of Release:  {CinemaData.UpcomingMovieList[answerint].Year}\n" +
                             //$"Genre:  {MovieList.movielist[answerint].Genre}\n" +
                             $"Actors:  {CinemaData.UpcomingMovieList[answerint].Actors}\n" +
-                            $"Duration: {CinemaData.UpcomingMovieList[answerint].Duration}"
+                            $"Duration: {CinemaData.UpcomingMovieList[answerint].Duration}\n"+
+                            $"Duration: {CinemaData.MovieList[answerint].Link}"
                            );
 
                         //hiermee print je alle genre's van een film
@@ -116,11 +126,18 @@ namespace cinema_app
 
 
                         }
+                        Console.WriteLine("Press [0] to see trailer or any other key to exit.");
+                        string key=Console.ReadLine();
+                        if (key == "0") {
+                            Trailer.Seetrailer(CinemaData.UpcomingMovieList[answerint].Link);
+                        
+                        }
                     }
                     else
                         Console.WriteLine("\nInput not recognised. Please try again.\n ");
+                        Console.WriteLine("Press any key to continue ...");
                 }
-                Console.WriteLine("Press any key to continue ...");
+                
 
                 Console.ReadLine();
 

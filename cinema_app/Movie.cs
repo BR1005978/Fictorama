@@ -9,13 +9,14 @@ namespace cinema_app
         public string Name { get; set; }
         public string Info { get; set; }
         public string Year { get; set; }
+        public string Link { get; set; }
         public string[] Genre { get; set; }
         public string Actors{ get; set; }
         public string Duration { get; set; }
         
 
         public List<Tuple<string, DateTime, User>> review;
-        public Movie(string name, string info, string year,string[] genre,string actors,string duration)
+        public Movie(string name, string info, string year,string[] genre,string actors,string duration, string link)
         {
             this.Name = name;
             this.Info = info;
@@ -23,6 +24,7 @@ namespace cinema_app
             this.Genre = genre;
             this.Actors = actors;
             this.Duration= duration;
+            this.Link = link;
             
 
         }

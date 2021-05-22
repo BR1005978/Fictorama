@@ -149,8 +149,10 @@ namespace cinema_app
             string Actor = Console.ReadLine();
             Console.WriteLine("What is the duration");
             string Duration = Console.ReadLine();
+            Console.WriteLine("What is the trailer link");
+            string Link = Console.ReadLine();
 
-            this.MovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration));
+            this.MovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration,Link));
             Console.WriteLine("Done...");
         }
         public void CreateUpcomingMovie()
@@ -167,8 +169,10 @@ namespace cinema_app
             string Actor = Console.ReadLine();
             Console.WriteLine("What is the duration");
             string Duration = Console.ReadLine();
+            Console.WriteLine("What is the trailer link");
+            string Link = Console.ReadLine();
 
-            this.UpcomingMovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration));
+            this.UpcomingMovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration,Link));
             Console.WriteLine("Done...");
         }
 
@@ -213,7 +217,7 @@ namespace cinema_app
                 answer = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("What would you like to edit?\n[0] Name\n[1] Info\n[2] Duration\n[3] Release Year\n[4] Actors\n");
+            Console.WriteLine("What would you like to edit?\n[0] Name\n[1] Info\n[2] Duration\n[3] Release Year\n[4] Actors\n[5] Link\n");
             bool check2 = false;
             int answer2;
             answer2 = 0;
@@ -237,7 +241,7 @@ namespace cinema_app
             }
 
 
-            while (!(answer2 >= 0 && answer2 < 5))
+            while (!(answer2 >= 0 && answer2 < 6))
             {
                 Console.WriteLine("Field not found, try again.\n");
                 answer2 = int.Parse(Console.ReadLine());
@@ -266,6 +270,11 @@ namespace cinema_app
             {
                 Console.WriteLine("Who would you like the new actor(s) to be?\n");
                 this.MovieList[answer].Actors = Console.ReadLine();
+            }
+            else if (answer2 == 5)
+            {
+                Console.WriteLine("Enter the new trailer link. Please be carefull when changing the link as entering a invalid link may result in an error!\n");
+                this.MovieList[answer].Link = Console.ReadLine();
             }
             Console.WriteLine("Movie updated! Press enter to do more editing or any other key to go back to the main screen.\n");
             string a = Console.ReadLine();

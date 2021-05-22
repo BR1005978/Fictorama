@@ -1,27 +1,34 @@
 ﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Seats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CinemaHall.cs">
     <Files>
-      <File FileName="Main_File.cs" Line="114" Column="51" />
-      <File FileName="User.cs" Line="16" Column="36" />
-      <File FileName="Reservation.cs" Line="19" Column="10" />
-      <File FileName="Login.cs" />
-      <File FileName="Userlist.cs" />
-      <File FileName="Mail.cs" Line="62" Column="148" />
-      <File FileName="Register.cs" />
-      <File FileName="Signin.cs" Line="29" Column="49" />
-      <File FileName="Catering.cs" Line="107" Column="33" />
-      <File FileName="CinemaHall.cs" Line="11" Column="168" />
-      <File FileName="CinemaAssets.cs" Line="1" Column="1" />
-      <File FileName="JsonAdd.cs" Line="51" Column="29" />
-      <File FileName="Admin.cs" Line="22" Column="30" />
-      <File FileName="Seats.cs" Line="7" Column="29" />
+      <File FileName="Login.cs" Line="80" Column="1" />
+      <File FileName="Signin.cs" Line="45" Column="45" />
+      <File FileName="Main_File.cs" Line="13" Column="12" />
+      <File FileName="Reservation.cs" Line="261" Column="38" />
+      <File FileName="MovieBrowser.cs" Line="75" Column="30" />
+      <File FileName="CinemaAssets.cs" Line="12" Column="1" />
+      <File FileName="Movie.cs" Line="41" Column="1" />
+      <File FileName="EncrpytPassword.cs" Line="55" Column="22" />
+      <File FileName="AddReview.cs" Line="19" Column="14" />
+      <File FileName="User.cs" Line="85" Column="9" />
+      <File FileName="JsonAdd.cs" Line="1" Column="1" />
+      <File FileName="Admin.cs" Line="152" Column="30" />
+      <File FileName="Employee.cs" Line="118" Column="10" />
+      <File FileName="CinemaHall.cs" Line="8" Column="6" />
+      <File FileName="Seats.cs" Line="1" Column="1" />
+      <File FileName="Userlist.cs" Line="1" Column="1" />
+      <File FileName="mono_crash.11a6748113.0.json" />
+      <File FileName="Mail.cs" Line="71" Column="1" />
+      <File FileName="Register.cs" Line="1" Column="1" />
+      <File FileName="SearchFunction.cs" Line="1" Column="1" />
+      <File FileName="Catering.cs" Line="14" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="cinema_app" expanded="True">
             <Node name="cinema_app" expanded="True">
-              <Node name="Seats.cs" selected="True" />
+              <Node name="CinemaHall.cs" selected="True" />
             </Node>
           </Node>
         </State>

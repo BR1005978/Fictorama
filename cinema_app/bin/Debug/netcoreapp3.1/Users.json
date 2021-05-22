@@ -1,46 +1,18 @@
 {
   "userlist": [
     {
-      "first_name": "Achraf",
-      "last_name": "Faress",
-      "date_of_birth": "03-04-2000",
-      "email": "A.faress.010@gmail.com",
-      "phone_number": "0636308345",
-      "userName": "BigBoss",
-      "password": "BigBoss2",
-      "reservations": null
-    },
-    {
-      "first_name": "Achraf",
-      "last_name": "Faress",
-      "date_of_birth": "03-04-2000",
-      "email": "a.faress.010@gmail.com",
-      "phone_number": "66",
-      "userName": "test",
-      "password": "test",
-      "reservations": null
-    },
-    {
-      "first_name": "Henk",
-      "last_name": "de Vries",
-      "date_of_birth": "11-11-2000",
-      "email": "niks@niks.nl",
-      "phone_number": "065554432",
-      "userName": "Henkie",
-      "password": "henkwoord",
+      "first_name": "testS",
+      "last_name": "TestS",
+      "date_of_birth": "00-00-0000",
+      "email": "",
+      "phone_number": "0612345678",
+      "userName": "testS",
+      "password": {
+        "Item1": "mxlml",
+        "Item2": 19
+      },
       "reservations": null
     }
   ],
-  "employeelist": [
-    {
-      "first_name": "Peter",
-      "last_name": "de Vries",
-      "date_of_birth": "11-11-2000",
-      "email": "niks@niks.nl",
-      "phone_number": "065554398",
-      "userName": "boevenvanger123",
-      "password": "Peterwoord",
-      "reservations": null
-    }
-  ]
+  "employeelist": []
 }

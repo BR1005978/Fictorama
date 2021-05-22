@@ -27,7 +27,7 @@ namespace cinema_app
 
                 if (answer == "exit")
                 {
-                    MainProgram.MainMenu();
+                    
                 }
                 else
                 {
@@ -53,6 +53,30 @@ namespace cinema_app
                             Console.WriteLine(CinemaData.MovieList[answerint].Genre[i]);
 
 
+                        }
+                        string choice = "";
+
+                        Console.WriteLine("Type 'res' to make a reservation for this movie.");
+                        
+                        if (MainProgram.onlineUser != null)
+                        {
+                            Console.WriteLine("Type 'review' to leave a comment.");
+                        }
+
+                        choice = Console.ReadLine();
+                        if (choice == "res")
+                        {
+                            // ga naar de reservation screen
+                            Reservation.reserveer(CinemaData.MovieList[answerint]);
+                        }
+                        if (MainProgram.onlineUser != null)
+                        {
+                            if (choice == "review")
+                            {
+                                // ga naar de review screen
+                                AddReview.review(CinemaData.MovieList[answerint]);
+                                //User.panel();
+                            }
                         }
                     }
                     else
@@ -88,7 +112,7 @@ namespace cinema_app
 
                 if (answer == "exit")
                 {
-                    MainProgram.MainMenu();
+                    
                 }
                 else
                 {

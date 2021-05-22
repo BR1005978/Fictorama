@@ -32,7 +32,7 @@ namespace cinema_app
             }
             return 1;
         }
-        public static Tuple<string, int> Encryptpassword(string a)
+        public static Tuple<string, int> Encryptpassword(string a, int decrypt = -1)
         {
             char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             a = a.ToLower();
@@ -43,8 +43,17 @@ namespace cinema_app
             {
                 if (Char.IsLetter(a[i]))
                 {
+                    int y = 0;
                     int x = FindIndex(a[i], alphabet);
-                    int y = Shifter(x, shift);
+                    if (decrypt < 0)
+                    {
+                        y = Shifter(x, shift);
+                    }
+                    else
+                    {
+                        y = Shifter(x, decrypt);
+                    }
+                    
                     b += alphabet[y];
                 }
                 else

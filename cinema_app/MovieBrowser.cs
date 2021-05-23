@@ -55,13 +55,41 @@ namespace cinema_app
 
 
                         }
-                        Console.WriteLine("Press [0] to see trailer or any other key to exit.");
+                        Console.WriteLine("Press [0] to see trailer.");
+                        Console.WriteLine("Press [1] to make a reservation.");
+                        Console.WriteLine("Press [2] to leave a review. \nor type any other key to exit.");
                         string key = Console.ReadLine();
                         if (key == "0")
                         {
                             Trailer.Seetrailer(CinemaData.MovieList[answerint].Link);
 
                         }
+
+
+                        
+                        
+                        //go to reservationscreen
+                        if (MainProgram.onlineUser != null)
+                        {
+                            Console.WriteLine("Type 'review' to leave a comment.");
+                        }
+
+                        
+                        if (key == "1")
+                        {
+                            Reservation.reserveer(CinemaData.MovieList[answerint]);
+                        }
+                        if (MainProgram.onlineUser != null)
+                        {
+                            if (key == "2")
+                            {
+
+                                AddReview.review(CinemaData.MovieList[answerint]);
+                                User.panel();
+                            }
+                        }
+
+
                     }
                     else
                         Console.WriteLine("\nInput not recognised. Please try again.\n ");
@@ -126,11 +154,38 @@ namespace cinema_app
 
 
                         }
-                        Console.WriteLine("Press [0] to see trailer or any other key to exit.");
-                        string key=Console.ReadLine();
-                        if (key == "0") {
-                            Trailer.Seetrailer(CinemaData.UpcomingMovieList[answerint].Link);
-                        
+                        Console.WriteLine("Press [0] to see trailer.");
+                        Console.WriteLine("Press [1] to make a reservation.");
+                        Console.WriteLine("Press [2] to leave a review. \nor type any other key to exit.");
+                        string key = Console.ReadLine();
+                        if (key == "0")
+                        {
+                            Trailer.Seetrailer(CinemaData.MovieList[answerint].Link);
+
+                        }
+
+
+
+
+                        //go to reservationscreen
+                        if (MainProgram.onlineUser != null)
+                        {
+                            Console.WriteLine("Type 'review' to leave a comment.");
+                        }
+
+
+                        if (key == "1")
+                        {
+                            Reservation.reserveer(CinemaData.MovieList[answerint]);
+                        }
+                        if (MainProgram.onlineUser != null)
+                        {
+                            if (key == "2")
+                            {
+
+                                AddReview.review(CinemaData.MovieList[answerint]);
+                                User.panel();
+                            }
                         }
                     }
                     else

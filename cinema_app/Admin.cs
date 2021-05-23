@@ -158,7 +158,9 @@ namespace cinema_app
                         Console.WriteLine("what will be the employee's username?");
                         string username = Console.ReadLine();
                         Console.WriteLine("What will be the employee's password?");
-                        string password = Console.ReadLine();
+                        string password1 = Console.ReadLine();
+                        var x = EncrpytPassword.Encryptpassword(password1);
+                        Tuple<string, int> password = x;
 
 
                         var UserJson = new JsonAdd("Users.json");

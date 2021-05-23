@@ -6,18 +6,11 @@ namespace cinema_app
 
     class MainProgram
     {
-
+        public static User onlineUser = null;
 
         public static void MainMenu()
         {
-           // User user1 = new User("Sydney", "Beek", "13-05-2003", "1014378@hr.nl", "0612345678", "sydneyb", "syd123");
-            //User user1 = new User("Brandan", "Beek", "13-05-2003", "1014378@hr.nl", "0612345678", "sydneyb", "syd123");
-           // List<User> listUser1 = new List<User>() ;
-            //listUser1.Add(user1);
-            //JsonAdd saveUser1 = new JsonAdd("sydney.json");
-           // saveUser1.SaveToJsonUser(listUser1);
-            //user1.password = "nieuw";
-            //saveUser1.SaveToJsonUser(listUser1);
+           
 
             Console.WriteLine(" \n" +
 "▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +

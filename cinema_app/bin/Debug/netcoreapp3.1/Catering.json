@@ -1,28 +1,5 @@
 {
-  "Drinks": [
-    {
-      "Item1": "Cola 500ML",
-      "Item2": 3.5
-    },
-    {
-      "Item1": "Fanta",
-      "Item2": 3.5
-    }
-  ],
-  "Snacks": [
-    {
-      "Item1": "Snikers",
-      "Item2": 2.5
-    },
-    {
-      "Item1": "Ijshorn",
-      "Item2": 1.5
-    }
-  ],
-  "Food": [
-    {
-      "Item1": "Popcorn Salt",
-      "Item2": 2.5
-    }
-  ]
+  "Drinks": [],
+  "Snacks": [],
+  "Food": []
 }

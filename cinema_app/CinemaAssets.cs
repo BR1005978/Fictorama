@@ -8,6 +8,7 @@ namespace cinema_app
         public List<CinemaHall> CinemaHallList = new List<CinemaHall>();
         public List<Movie> MovieList = new List<Movie>();
         public List<Movie> UpcomingMovieList = new List<Movie>();
+        public List<Tuple<string, User, DateTime>> restaurantreviews = new List<Tuple<string, User, DateTime>>();
 
 
 

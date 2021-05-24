@@ -51,8 +51,9 @@ namespace cinema_app
                 Console.WriteLine("\nPlease choose what you want to do (type the number): \n" +
                 "1. See available movies\n" +
                 "2. Edit reviews\n" +
-                "3. Search movies\n" +
-                "4. Log out\n");
+                "3. Search movies\n"+
+                "4. Leave review on restaurant\n" +
+                "5. Log out\n");
                 answer = Console.ReadLine();
 
                 if (answer == "1")
@@ -74,6 +75,10 @@ namespace cinema_app
                     SearchFunction.Searchbar(CinemaData.MovieList);
                 }
                 else if (answer == "4")
+                {
+                    AddReview.RestaurantReview();
+                }
+                else if (answer == "5")
                 {
                     Console.WriteLine("\n You picked: 4. Log out\n\n");
                     MainProgram.onlineUser = null;

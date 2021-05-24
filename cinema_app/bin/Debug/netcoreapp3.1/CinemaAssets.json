@@ -1343,5 +1343,24 @@
       "Actors": "Tom hardy, Michelle Williams, Stephen Graham",
       "Duration": "Unknown"
     }
+  ],
+  "restaurantreviews": [
+    {
+      "Item1": "The restaurant was very nice. It had alot of variety and the staff was very helpfull.",
+      "Item2": {
+        "first_name": "Younes",
+        "last_name": "Simouh",
+        "date_of_birth": "20-05-2002",
+        "email": "younessimouh@hotmail.com",
+        "phone_number": "0628213804",
+        "userName": "prisonig",
+        "password": {
+          "Item1": "123456789",
+          "Item2": 2
+        },
+        "reservations": null
+      },
+      "Item3": "2021-05-24T23:35:41.1601789+02:00"
+    }
   ]
 }

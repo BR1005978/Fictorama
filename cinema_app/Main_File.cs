@@ -30,7 +30,8 @@ namespace cinema_app
                 "3. Register\n" +
                 "4. Search movies\n" +
                 "5. See upcoming movies\n"+
-                "6. Exit program\n"
+                "6. See restaurant reviews\n" +
+                "7. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -66,8 +67,11 @@ namespace cinema_app
                 {
                     MovieBrowser.UpcomingMovieBrowserMenu();
                 }
-
                 else if (answer == "6")
+                {
+                    AddReview.showresreviews();
+                }
+                else if (answer == "7")
                 {
                     Console.WriteLine("Shutting down...");
                     Environment.Exit(0);
@@ -77,7 +81,7 @@ namespace cinema_app
                 {
                     { Console.WriteLine("Your input was: " + answer + "\nInput not recognised. Please try again\n"); }
                 }
-                Console.WriteLine("Shutting down ...");
+                //Console.Clear();
             }
         }
         public static void Main()

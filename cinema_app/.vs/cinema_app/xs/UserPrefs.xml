@@ -6,7 +6,7 @@
       <File FileName="Reservation.cs" Line="495" Column="10" />
       <File FileName="Mail.cs" />
       <File FileName="Signin.cs" />
-      <File FileName="Seats.cs" Line="7" Column="15" />
+      <File FileName="Seats.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

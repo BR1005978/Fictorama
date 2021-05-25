@@ -195,11 +195,12 @@ namespace cinema_app
                                 seats[i] = Tuple.Create(row, colom);
                                 if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
                                 {
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                    
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
                                 }
                                 else
                                 {
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
                                 }
                                 availeble = true;
 

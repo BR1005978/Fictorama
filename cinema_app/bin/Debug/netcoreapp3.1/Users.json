@@ -104,15 +104,134 @@
                         },
                         "reservations": null
                       },
-                      "Price": 6.99
+                      "Price": 6.99,
+                      "Seat": null,
+                      "Food": null
                     }
                   ]
                 },
-                "Price": 6.99
+                "Price": 6.99,
+                "Seat": null,
+                "Food": null
               }
             ]
           },
-          "Price": 6.99
+          "Price": 6.99,
+          "Seat": null,
+          "Food": null
+        }
+      ]
+    },
+    {
+      "first_name": "sydney",
+      "last_name": "beek",
+      "date_of_birth": "13-05-2003",
+      "email": "1014378@hr.nl",
+      "phone_number": "0612345678",
+      "userName": "sydney",
+      "password": {
+        "Item1": "msxhys",
+        "Item2": 20
+      },
+      "reservations": [
+        {
+          "movie": {
+            "review": null,
+            "Name": "Avengers",
+            "Info": "Superheroes",
+            "Year": "2012",
+            "Link": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+            "Genre": [
+              "Action"
+            ],
+            "Actors": "Robert",
+            "Duration": "120"
+          },
+          "Date": "2021-11-11T11:30:00",
+          "user": {
+            "first_name": "sydney",
+            "last_name": "beek",
+            "date_of_birth": "13-05-2003",
+            "email": "1014378@hr.nl",
+            "phone_number": "0612345678",
+            "userName": "sydney",
+            "password": {
+              "Item1": "msxhys",
+              "Item2": 20
+            },
+            "reservations": [
+              {
+                "movie": {
+                  "review": null,
+                  "Name": "Avengers",
+                  "Info": "Superheroes",
+                  "Year": "2012",
+                  "Link": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+                  "Genre": [
+                    "Action"
+                  ],
+                  "Actors": "Robert",
+                  "Duration": "120"
+                },
+                "Date": "2021-11-11T11:30:00",
+                "user": {
+                  "first_name": "sydney",
+                  "last_name": "beek",
+                  "date_of_birth": "13-05-2003",
+                  "email": "1014378@hr.nl",
+                  "phone_number": "0612345678",
+                  "userName": "sydney",
+                  "password": {
+                    "Item1": "msxhys",
+                    "Item2": 20
+                  },
+                  "reservations": []
+                },
+                "Price": 20.0,
+                "Seat": [
+                  {
+                    "Item1": 0,
+                    "Item2": 9
+                  },
+                  {
+                    "Item1": 0,
+                    "Item2": 8
+                  }
+                ],
+                "Food": [
+                  {
+                    "Item1": "hamburger",
+                    "Item2": "cola",
+                    "Item3": "popcorn"
+                  },
+                  {
+                    "Item1": "hamburger",
+                    "Item2": "cola",
+                    "Item3": "popcorn"
+                  }
+                ]
+              }
+            ]
+          },
+          "Price": 20.0,
+          "Seat": [
+            {
+              "Item1": 0,
+              "Item2": 9
+            }
+          ],
+          "Food": [
+            {
+              "Item1": "hamburger",
+              "Item2": "cola",
+              "Item3": "popcorn"
+            },
+            {
+              "Item1": "hamburger",
+              "Item2": "cola",
+              "Item3": "popcorn"
+            }
+          ]
         }
       ]
     }

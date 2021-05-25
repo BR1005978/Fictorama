@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/achraffaress/.dotnet/store/|arch|/|tfm|",
-      "/Users/achraffaress/.nuget/packages"
+      "/Users/sydneybeek/.dotnet/store/|arch|/|tfm|",
+      "/Users/sydneybeek/.nuget/packages"
     ]
   }
 }

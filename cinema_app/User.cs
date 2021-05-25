@@ -53,7 +53,8 @@ namespace cinema_app
                 "2. Edit reviews\n" +
                 "3. Search movies\n"+
                 "4. Leave review on restaurant\n" +
-                "5. Log out\n");
+                "5. Previous reservations\n" + 
+                "6. Log out\n");
                 answer = Console.ReadLine();
 
                 if (answer == "1")
@@ -78,7 +79,11 @@ namespace cinema_app
                 {
                     AddReview.RestaurantReview();
                 }
-                else if (answer == "5")
+                else if(answer == "5")
+                {
+                    Reservation.PastReservation();
+                }
+                else if (answer == "6")
                 {
                     Console.WriteLine("\n You picked: 4. Log out\n\n");
                     MainProgram.onlineUser = null;

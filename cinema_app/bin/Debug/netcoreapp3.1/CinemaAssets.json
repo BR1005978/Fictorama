@@ -27,641 +27,841 @@
           "Item4": [
             [
               {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
+                "Price": 0.0,
                 "Status": false
               },
               {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              }
-            ],
-            [
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
+                "Price": 0.0,
                 "Status": false
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": false
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
                 "Status": false
               },
               {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
                 "Status": true
               }
             ],
             [
               {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
-                "Status": true
-              },
-              {
-                "Status": true
-              },
-              {
+                "Price": 0.0,
                 "Status": true
               }
             ],
             [
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               }
             ],
             [
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               }
             ],
             [
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               }
             ],
             [
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
                 "Status": true
               },
               {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": false
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
+                "Status": true
+              },
+              {
+                "Price": 0.0,
                 "Status": true
               }
             ]
@@ -675,641 +875,841 @@
       "hallSeats": [
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
-            "Status": true
-          }
-        ],
-        [
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
-            "Status": true
-          },
-          {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           }
         ],
         [
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
             "Status": true
           },
           {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
+            "Status": true
+          },
+          {
+            "Price": 0.0,
             "Status": true
           }
         ]

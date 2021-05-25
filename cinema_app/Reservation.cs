@@ -8,15 +8,18 @@ namespace cinema_app
         public DateTime Date;
         public User user;
         public double Price;
+        public Tuple<int, int>[] Seat;
+        public Tuple<string, string, string>[] Food;
         public static List<Reservation> ReservationList = new List<Reservation>();
 
-        public Reservation(Movie movie, DateTime date, double price)
+        public Reservation(Movie movie, DateTime date, double price, Tuple<int, int>[]seat,Tuple<string, string, string>[] food)
         {
             this.movie = movie;
             this.Date = date;
             this.user = MainProgram.onlineUser;
             this.Price = price;
-
+            this.Seat = seat;
+            this.Food = food;
         }
 
         public string BasicInformation()
@@ -105,11 +108,11 @@ namespace cinema_app
 
                 //hiermee bepaal de klant welke stoel hij wilt
 
-                Console.WriteLine($"\nThe price for each ticket is {CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price}");
+                
                 Console.WriteLine("\nHow many tickets do you want.");
                 var tickets_amount = Console.ReadLine();
                 int ticket = int.Parse(tickets_amount);
-                var price = ticket * CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                var price = 0.00;
                 Console.WriteLine();
                 Tuple<int, int>[] seats = new Tuple<int, int>[ticket];
                 for (int i = 0; i < ticket; i++)
@@ -190,6 +193,14 @@ namespace cinema_app
                             {
                                 CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Change_status();
                                 seats[i] = Tuple.Create(row, colom);
+                                if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
+                                {
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                }
+                                else
+                                {
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                }
                                 availeble = true;
 
                             }
@@ -219,15 +230,74 @@ namespace cinema_app
                             }
                             CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Change_status();
                             seats[i] = Tuple.Create(row, colom);
+
+                            price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
                             availeble = true;
                         }
 
                     }
                 }
+
+                // voeg een combi menu toe
+                Tuple<string, string, string>[] food = null;
+                bool foodOrder = true;
+                while (foodOrder)
+                {
+                    Console.WriteLine("Do you want to add a combo menu to your reservation?\n A combo menu costs 10 euro.");
+                    Console.WriteLine("Type the number:");
+                    Console.WriteLine("[0] Add combo menu.\n" +
+                        "[1] Continue without combo menu.");
+                    string menu = "";
+                    menu = Console.ReadLine();
+                    if (menu == "0")
+                    {
+
+                        var CateringJson = new JsonAdd("Catering.json");
+                        Catering catering = CateringJson.LoadFromJsoncatering();
+                        Console.WriteLine($"\nHow many combo menus do you want(Max {ticket} combo menus).");
+                        var menu_amount = Console.ReadLine();
+                        int menus = int.Parse(menu_amount);
+                        while (menus > ticket || menus < 0)
+                        {
+                            Console.WriteLine("Wrong input.");
+                            Console.WriteLine($"\nHow many combo menu(s) do you want(Max {ticket} combo menu(s)).");
+                            bool order = true;
+                            while (order)
+                            {
+                                menu = Console.ReadLine();
+                                if (isNumeric(menu))
+                                {
+                                    menus = MakeNumber(menu);
+                                    order = false;
+                                }
+                                
+                            }
+                        }
+                        food = new Tuple<string, string, string>[menus];
+                        for (int i = 0; i < menus; i++)
+                        {
+                            
+                            food[i] = catering.createMenu();
+                            
+                            price += 10;
+                            
+                        }
+                        
+                        foodOrder = false;
+                    }
+                    else if ( menu == "1")
+                    {
+                        foodOrder = false;
+                    }
+                }
+
+
+                // verstuur een email 
                 Mail mailSystem = new Mail();
                 var data = $"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item1}/{ CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2}/{ CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item3}";
                 int min = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item2;
                 int hour = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item1;
+                // verstruur email voor reservatie voor gebruikers zonder account
                 if (MainProgram.onlineUser != null)
                 {
                     // find user in user list
@@ -243,19 +313,20 @@ namespace cinema_app
                         }
                     }
 
-                    Reservation res = new Reservation(movie, datum, price);
+                    Reservation res = new Reservation(movie, datum, price, seats, food);
                     ReservationList.Add(res);
                     UserData.userlist[index_user].reservations = ReservationList;
                     UserJson.SaveToJsonUser(UserData);
 
-                    // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    Tuple<string,string,string>[] food = new Tuple<string, string, string>[1];
-                    food[0] = Tuple.Create("Test", "Test", "Test");
+                    
+                    //Tuple<string,string,string>[] food = new Tuple<string, string, string>[1];
+                    
 
-                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats,food,"4782t4hbf");
+                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats,food, randCode());
                     Json.SaveToJson(CinemaData);
 
                 }
+                // verstruur email voor reservatie voor gebruikers zonder account
                 else
                 {
                     bool isActic = false;
@@ -276,19 +347,141 @@ namespace cinema_app
                         }
 
                     }
-                    // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    Tuple<string, string, string>[] food = new Tuple<string, string, string>[1];
-                    food[0] = Tuple.Create("Test", "Test", "Test");
-                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats, food, "4782t4hbf");
+                    
+                    
+                    
+                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats, food, randCode());
                     Json.SaveToJson(CinemaData);
                     Console.WriteLine("\nReservation complete.\n");
                 }
             }
 
 
+        }
 
 
+        public static void PastReservation()
+        {
+            var UserJson = new JsonAdd("Users.json");
+            var UserData = UserJson.LoadFromJson2();
+            // find user index
+            int index_user = 0;
+            for (int i = 0; i < UserData.userlist.Count; i++)
+            {
+                if (MainProgram.onlineUser.userName == UserData.userlist[i].userName)
+                {
+                    index_user = i;
 
+                }
+            }
+            List<Reservation> ResList = new List<Reservation>();
+            if (UserData.userlist[index_user].reservations != null)
+
+            {
+                int counter = 0;
+                foreach (Reservation reservation in UserData.userlist[index_user].reservations)
+                {
+                    Console.WriteLine("You have got reservation(s) for this movie(s)");
+                    Console.WriteLine($"[{counter}] {reservation.movie.Name} at {reservation.Date}\n");
+
+                    counter++;
+                }
+            }
+            Console.WriteLine("Type the number of the movie to get more information about the reservation.\nType exit to go back.");
+            string answer2;
+            answer2 = Console.ReadLine();
+            if (answer2 == "exit")
+            {
+                User.panel();
+            }
+
+            if (isNumeric(answer2))
+            {
+                int num = MakeNumber(answer2);
+                if (num < UserData.userlist[index_user].reservations.Count && num > -1)
+                {
+                    Console.WriteLine(
+                       $" Movie: {UserData.userlist[index_user].reservations[num].movie.Name}\n" +
+                       $"Date: {UserData.userlist[index_user].reservations[num].Date} \n" +
+                       $"Tickets: {UserData.userlist[index_user].reservations[num].Seat.Length}"
+
+                        );
+                    int counter2 = 1;
+                    foreach (var seatnum in UserData.userlist[index_user].reservations[num].Seat)
+                    {
+                        Console.WriteLine($"Seat {counter2}. Row: {seatnum.Item1}   Seat number: {seatnum.Item2}");
+                        counter2++;
+                    }
+                    int counter3 = 1;
+                    foreach (var foodorder in UserData.userlist[index_user].reservations[num].Food)
+                    {
+                        Console.WriteLine($"Combo menu {counter3}. Drink: {foodorder.Item1}   Snack: {foodorder.Item2}   Food: {foodorder.Item3}");
+                    }
+                        Console.WriteLine($"Price: {UserData.userlist[index_user].reservations[num].Price}\n");
+                }
+
+
+                Console.WriteLine("Type 'cancel' to cancel te reservation or type any other key to continue. ");
+                string cancel = Console.ReadLine();
+                if (cancel.ToLower() == "cancel")
+                {
+                    
+                    var Json = new JsonAdd("CinemaAssets.json");
+                    var CinemaData = Json.LoadFromJson();
+                    
+                    List<Tuple<int, int>> hallList = new List<Tuple<int, int>>();
+                    
+
+                    int hall_index = 0;
+                    foreach (var hall in CinemaData.CinemaHallList)
+                    {
+
+
+                        int hallres_index = 0;
+                        foreach (var hallRes in hall.HallReservation)
+                        {
+                            if (UserData.userlist[index_user].reservations[num].movie.Name == hallRes.Item3.Name)
+                            {
+                                if (UserData.userlist[index_user].reservations[num].Date == DateTime.Parse($"{hallRes.Item1.Item1}/{hallRes.Item1.Item2}/{hallRes.Item1.Item3} {hallRes.Item2.Item1}:{hallRes.Item2.Item2}:00"))
+                                {
+                                    hallList.Add(Tuple.Create(hall_index, hallres_index));
+                                }
+                   
+                                
+                            }
+                            hallres_index++;
+                        }
+                        hall_index++;
+
+                    }
+                    for (int i = 0; i < UserData.userlist[index_user].reservations[num].Seat.Length; i++)
+                    {
+
+
+                        CinemaData.CinemaHallList[hallList[0].Item1].HallReservation[hallList[0].Item2].Item4[UserData.userlist[index_user].reservations[num].Seat[i].Item1, UserData.userlist[index_user].reservations[num].Seat[i].Item2].Status = true;
+                    }
+
+                    Json.SaveToJson(CinemaData);
+                    UserData.userlist[index_user].reservations.Remove(UserData.userlist[index_user].reservations[num]);
+
+                    UserJson.SaveToJsonUser(UserData);
+                }
+            }
+        }
+         
+        public static string randCode()
+        {
+
+            Random random = new Random();
+            string str = "";
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            int length = random.Next(10, 13);
+            for (int i = 0; i < length; i++)
+            {
+                int ch = random.Next(0, chars.Length + 1);
+                str += chars[ch];
+            }
+            return str;
 
         }
         public static bool isNumeric(string numer)

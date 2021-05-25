@@ -26,8 +26,8 @@ namespace cinema_app
             {
                 Console.WriteLine("What is your email?");
                 email = Console.ReadLine();
-                //status = mailSystem.controlEmail(email);
-                status = true;
+                status = mailSystem.controlEmail(email);
+                
                 if (status)
                 {
                     isActic = true;

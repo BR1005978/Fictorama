@@ -249,7 +249,7 @@ namespace cinema_app
                     UserJson.SaveToJsonUser(UserData);
 
  // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    //mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
                     Json.SaveToJson(CinemaData);
 
                 }
@@ -261,7 +261,7 @@ namespace cinema_app
                     string name = "";
                     Console.WriteLine("What is your name?");
                     name = Console.ReadLine();
-                    /*while (!isActic)
+                    while (!isActic)
                     {
                         Console.WriteLine("What is your email?");
                         email = Console.ReadLine();
@@ -272,9 +272,9 @@ namespace cinema_app
                             isActic = true;
                         }
 
-                    }*/
+                    }
  // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    //mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
                     Json.SaveToJson(CinemaData);
                     Console.WriteLine("\nReservation complete.\n");
                 }

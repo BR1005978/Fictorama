@@ -59,9 +59,22 @@ namespace cinema_app
             }
         }
 
-        public void SendEmail(string email, string name, double price, string zaal, string movie, string datum, int hour, int minute, Tuple<int,int>[] seats)
+        public void SendEmail(string email, string name, double price, string zaal, string movie, string datum, int hour, int minute, Tuple<int,int>[] seats, Tuple<string,string,string>[] food, string code)
         {
             string seatsString = "";
+            string menus = "";
+
+            if (food.Length == 0)
+            {
+                menus = "There are no menu's added.";
+            }
+            else
+            {
+                foreach (var menu in food)
+                {
+                    menus += menu.Item1 +  ", " + menu.Item2 +", "+ menu.Item3 + "\n ";
+                }
+            }
 
             foreach (var seat in seats)
             {
@@ -69,9 +82,12 @@ namespace cinema_app
             }
 
             this.mailClient.Send("fictorama@outlook.com", email, "Movie Reservation",$"Hi {name}, \n\n" +
-                $"Thank you for your reveration to {movie}. \n" +
+                $"Thank you for your reservation to {movie}. \n" +
                 $"The movie will be begin at {datum} on {hour}:{minute}.\n" +
-                $"Your expected be seated at {seatsString}{zaal};");
+                $"Your expected be seated at {seatsString}{zaal}." +
+                $"\n\nYour combie menus are:\n{menus}\n" +
+                $"The Total price is {price} euro, and your code is {code}.\n\n" +
+                $"Thank your for choosing Fictroma.");
 
         }
     }

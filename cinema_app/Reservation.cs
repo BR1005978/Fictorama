@@ -248,8 +248,11 @@ namespace cinema_app
                     UserData.userlist[index_user].reservations = ReservationList;
                     UserJson.SaveToJsonUser(UserData);
 
- // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
+                    Tuple<string,string,string>[] food = new Tuple<string, string, string>[1];
+                    food[0] = Tuple.Create("Test", "Test", "Test");
+
+                    mailSystem.SendEmail(MainProgram.onlineUser.email, MainProgram.onlineUser.first_name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats,food,"4782t4hbf");
                     Json.SaveToJson(CinemaData);
 
                 }
@@ -273,8 +276,10 @@ namespace cinema_app
                         }
 
                     }
- // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
-                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats);
+                    // de mail system werkt niet want hij geeft aan dat alle email addressen niet bestaan!!!!!
+                    Tuple<string, string, string>[] food = new Tuple<string, string, string>[1];
+                    food[0] = Tuple.Create("Test", "Test", "Test");
+                    mailSystem.SendEmail(email, name, price, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallName, CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item3.Name, data, hour, min, seats, food, "4782t4hbf");
                     Json.SaveToJson(CinemaData);
                     Console.WriteLine("\nReservation complete.\n");
                 }

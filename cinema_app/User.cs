@@ -43,7 +43,7 @@ namespace cinema_app
 
         public static void panel()
         {
-            List<string> options = new List<string> { "1", "2", "3", "4" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6" };
             string answer = "";
 
             while (!options.Contains(answer))
@@ -51,9 +51,10 @@ namespace cinema_app
                 Console.WriteLine("\nPlease choose what you want to do (type the number): \n" +
                 "1. See available movies\n" +
                 "2. Edit reviews\n" +
-                "3. Search movies\n"+
+                "3. Search movies\n" +
                 "4. Leave review on restaurant\n" +
-                "5. Log out\n");
+                "5. Previous reservations\n" +
+                "6. Log out\n");
                 answer = Console.ReadLine();
 
                 if (answer == "1")
@@ -79,6 +80,10 @@ namespace cinema_app
                     AddReview.RestaurantReview();
                 }
                 else if (answer == "5")
+                {
+                    Reservation.PastReservation();
+                }
+                else if (answer == "6")
                 {
                     Console.WriteLine("\n You picked: 4. Log out\n\n");
                     MainProgram.onlineUser = null;

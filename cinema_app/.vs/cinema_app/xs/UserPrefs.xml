@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Reservation.cs">
     <Files>
       <File FileName="Main_File.cs" Line="13" Column="12" />
-      <File FileName="User.cs" Line="86" Column="2" />
-      <File FileName="Reservation.cs" Line="24" Column="45" />
-      <File FileName="Mail.cs" Line="89" Column="48" />
-      <File FileName="Signin.cs" Line="35" Column="1" />
+      <File FileName="User.cs" />
+      <File FileName="Reservation.cs" Line="495" Column="10" />
+      <File FileName="Mail.cs" />
+      <File FileName="Signin.cs" />
+      <File FileName="Seats.cs" Line="7" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

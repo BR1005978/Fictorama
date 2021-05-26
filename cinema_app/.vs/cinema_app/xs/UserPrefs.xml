@@ -2,10 +2,12 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Reservation.cs">
     <Files>
       <File FileName="Main_File.cs" Line="13" Column="12" />
-      <File FileName="User.cs" Line="86" Column="2" />
-      <File FileName="Reservation.cs" Line="24" Column="45" />
-      <File FileName="Mail.cs" Line="89" Column="48" />
-      <File FileName="Signin.cs" Line="35" Column="1" />
+      <File FileName="User.cs" Line="1" Column="1" />
+      <File FileName="Signin.cs" Line="1" Column="1" />
+      <File FileName="Reservation.cs" Line="8" Column="27" />
+      <File FileName="CinemaAssets.cs" Line="10" Column="66" />
+      <File FileName="Mail.cs" Line="89" Column="74" />
+      <File FileName="CinemaHall.cs" Line="11" Column="168" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

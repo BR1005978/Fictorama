@@ -132,6 +132,10 @@ namespace cinema_app
 
         public void SetPrice()
         {
+
+            //selectie per tijd vak
+
+
             Console.WriteLine("There are " + this.Rows + " rows and " + this.Colums + " colums, Please select the range of colums in a row");
 
             Console.WriteLine("Which row: ");
@@ -156,6 +160,7 @@ namespace cinema_app
 
         public void SeePrice()
         {
+            //Selcetie per tijd vak
             string hall = "";
             for (int i = 0; i < this.Rows; i++)
             {

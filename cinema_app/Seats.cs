@@ -4,7 +4,7 @@ namespace cinema_app
     public class Seats
     {
 
-        private double Price;
+        public double Price;
         public bool Status = true;
 
         public Seats(double price)

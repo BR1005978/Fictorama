@@ -135,6 +135,16 @@ namespace cinema_app
 
             //selectie per tijd vak
 
+            Console.WriteLine("Please choice the movie, to chance the seats price: ");
+            for (int i = 0; i < this.HallReservation.Count; i++)
+            {
+                Console.WriteLine($"{i} {this.HallReservation[i].Item3.Name} At {this.HallReservation[i].Item1.Item1}-" +
+                    $"{this.HallReservation[i].Item1.Item2}-{this.HallReservation[i].Item1.Item3}, and will begin at " +
+                    $"{this.HallReservation[i].Item2.Item1}:{this.HallReservation[i].Item2.Item2} hour.");
+            }
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
 
             Console.WriteLine("There are " + this.Rows + " rows and " + this.Colums + " colums, Please select the range of colums in a row");
 
@@ -153,7 +163,8 @@ namespace cinema_app
 
             for (int i = beginColume; i <= endColume; i++)
             {
-                this.hallSeats[row, i].Change_price(price);
+                
+                this.HallReservation[choice].Item4[row, i].Change_price(price);
             }
 
         }
@@ -161,15 +172,35 @@ namespace cinema_app
         public void SeePrice()
         {
             //Selcetie per tijd vak
+            Console.WriteLine("Please choice the movie, to see the seats price: ");
+            for (int i = 0; i < this.HallReservation.Count; i++)
+            {
+                Console.WriteLine($"{i} {this.HallReservation[i].Item3.Name} At {this.HallReservation[i].Item1.Item1}-" +
+                    $"{this.HallReservation[i].Item1.Item2}-{this.HallReservation[i].Item1.Item3}, and will begin at " +
+                    $"{this.HallReservation[i].Item2.Item1}:{this.HallReservation[i].Item2.Item2} hour.");
+            }
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+
             string hall = "";
             for (int i = 0; i < this.Rows; i++)
             {
+                hall += "|";
+
                 for (int j = 0; j < this.Colums; j++)
                 {
-                    hall += "| " + this.hallSeats[i, j].Get_price(); ;
+
+                    hall += this.HallReservation[choice].Item4[i, j].Get_price() + "|";
+                    if (this.HallReservation[choice].Item4[i, j].Status)
+                    {
+                        count += 1;
+                    }
+
 
                 }
-                hall += " |\n";
+                hall += "\n";
+
             }
             Console.WriteLine(hall);
         }

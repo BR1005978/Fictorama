@@ -104,15 +104,21 @@
                         },
                         "reservations": null
                       },
-                      "Price": 6.99
+                      "Price": 6.99,
+                      "Seat": null,
+                      "Food": null
                     }
                   ]
                 },
-                "Price": 6.99
+                "Price": 6.99,
+                "Seat": null,
+                "Food": null
               }
             ]
           },
-          "Price": 6.99
+          "Price": 6.99,
+          "Seat": null,
+          "Food": null
         }
       ]
     }

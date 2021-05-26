@@ -13,7 +13,7 @@ namespace cinema_app
         public string phone_number;
         public string userName;
         public Tuple<string, int> password;
-        public List<Reservation> reservations;
+        public List<Reservation> reservations = new List<Reservation>();
 
         public User(string First_name, string Last_name, string Date_of_birth, string Email, string Phone_number, string Username, Tuple<string, int> Password)
         {

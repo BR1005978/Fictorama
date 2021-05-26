@@ -1,5 +1,20 @@
 {
-  "Drinks": [],
-  "Snacks": [],
-  "Food": []
+  "Drinks": [
+    {
+      "Item1": "Cola 500ml",
+      "Item2": 3.4
+    }
+  ],
+  "Snacks": [
+    {
+      "Item1": "Snickers",
+      "Item2": 2.6
+    }
+  ],
+  "Food": [
+    {
+      "Item1": "popcorn small",
+      "Item2": 3.5
+    }
+  ]
 }

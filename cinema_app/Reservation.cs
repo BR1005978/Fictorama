@@ -96,10 +96,21 @@ namespace cinema_app
 
                 }
                 // maak een DateTime van de tijd en datum.
-                string Data = ($"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item1}/{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2}/{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item3}");
+                string Data = "";
+                if ( CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2 == 2)
+                {
+                     Data = ($"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item1}/{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2}/{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item3}");
+
+                }
+                else
+                {
+
+                     Data = ($"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item1}/0{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item2}/{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item1.Item3}");
+                }
+
                 string time = ($"{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item1}:{CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item2.Item2}:00");
                 string date = Data + " " + time;
-                datum = DateTime.Parse(date);
+                datum = DateTime.ParseExact(Data, "dd/MM/yyyy", null);
 
 
 
@@ -316,7 +327,7 @@ namespace cinema_app
 
                     Reservation res = new Reservation(movie, datum, price, seats, food);
                     ReservationList.Add(res);
-                    UserData.userlist[index_user].reservations = ReservationList;
+                    UserData.userlist[index_user].reservations.Add(res);
                     UserJson.SaveToJsonUser(UserData);
 
 
@@ -479,7 +490,7 @@ namespace cinema_app
             int length = random.Next(10, 13);
             for (int i = 0; i < length; i++)
             {
-                int ch = random.Next(0, chars.Length + 1);
+                int ch = random.Next(0, chars.Length );
                 str += chars[ch];
             }
             return str;

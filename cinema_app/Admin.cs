@@ -222,7 +222,11 @@ namespace cinema_app
 
                     else if (answer == "stats")
                     {
-                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        var rev = new Statics();
+                        rev.SeeRevenu();
+
+                        Console.WriteLine("Press any key to go back");
+                        Console.ReadLine();
                         Console.Clear();
                         AdminMenu();
                     }

@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="CinemaHall.cs">
     <Files>
       <File FileName="Admin.cs" Line="227" Column="1" />
-      <File FileName="Statics.cs" Line="18" Column="1" />
-      <File FileName="User.cs" Line="16" Column="72" />
-      <File FileName="Userlist.cs" Line="1" Column="1" />
-      <File FileName="Reservation.cs" Line="102" Column="60" />
-      <File FileName="Movie.cs" Line="1" Column="1" />
-      <File FileName="MovieBrowser.cs" Line="80" Column="50" />
-      <File FileName="Catering.cs" Line="80" Column="1" />
-      <File FileName="Mail.cs" Line="67" Column="1" />
+      <File FileName="Statics.cs" />
+      <File FileName="User.cs" />
+      <File FileName="Userlist.cs" />
+      <File FileName="Reservation.cs" />
+      <File FileName="Movie.cs" />
+      <File FileName="MovieBrowser.cs" />
+      <File FileName="Catering.cs" />
+      <File FileName="Mail.cs" />
       <File FileName="CinemaHall.cs" Line="11" Column="154" />
     </Files>
     <Pads>
@@ -20,13 +20,6 @@
               <Node name="CinemaHall.cs" selected="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>reservation</Value>
-          <Value>cos</Value>
-          <Value>curretDate</Value>
         </State>
       </Pad>
     </Pads>

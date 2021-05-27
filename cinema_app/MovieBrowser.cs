@@ -57,7 +57,8 @@ namespace cinema_app
                         }
                         Console.WriteLine("Press [0] to see trailer.");
                         Console.WriteLine("Press [1] to make a reservation.");
-                        Console.WriteLine("Press [2] to leave a review. \nor type any other key to exit.");
+                        Console.WriteLine("Press [2] to see reviews about this movie.");
+                        Console.WriteLine("Press [3] to leave a review. \nor type any other key to exit.");
                         string key = Console.ReadLine();
                         if (key == "0")
                         {
@@ -68,25 +69,29 @@ namespace cinema_app
 
                         
                         
-                        //go to reservationscreen
-                        if (MainProgram.onlineUser != null)
-                        {
-                            Console.WriteLine("Type 'review' to leave a comment.");
-                        }
+                       
+                        
 
                         
                         if (key == "1")
                         {
                             Reservation.reserveer(CinemaData.MovieList[answerint]);
                         }
-                        if (MainProgram.onlineUser != null)
+                        if (key == "2")
                         {
-                            if (key == "2")
-                            {
+                            //see reviews
+                            AddReview.showreviews(answerint);
+                        }
+                        if (key == "3" && MainProgram.onlineUser != null)
+                        {
 
-                                AddReview.review(CinemaData.MovieList[answerint]);
-                                User.panel();
-                            }
+                            AddReview.review(answerint);
+                            User.panel();
+
+                        }
+                        else {
+                            Console.WriteLine("Sorry, you are not logged in.");
+                            MainProgram.MainMenu();
                         }
 
 
@@ -183,7 +188,7 @@ namespace cinema_app
                             if (key == "2")
                             {
 
-                                AddReview.review(CinemaData.MovieList[answerint]);
+                                AddReview.review(answerint);
                                 User.panel();
                             }
                         }

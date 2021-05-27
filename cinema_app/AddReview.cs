@@ -8,13 +8,36 @@ namespace cinema_app
     {
 
 
-        public static void review(Movie movie)
+        public static void review(int i)
         {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
             Console.WriteLine("Please type the review:");
             string comment = "";
             comment = Console.ReadLine();
-            movie.addreview(comment, MainProgram.onlineUser, DateTime.Now);
+            Tuple<string,DateTime, User> tup= new Tuple<string, DateTime, User>(comment, DateTime.Now, MainProgram.onlineUser);
+            CinemaData.MovieList[i].review.Add(tup);
+            Json.SaveToJson(CinemaData);
             //Costumer.costumer();
+        }
+        public static void showreviews(int i)
+        {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
+            if (CinemaData.MovieList[i].review == null)
+            {
+                Console.WriteLine("Sorry, there are no reviews yet");
+            }
+            else
+            {
+                foreach (Tuple<string, DateTime, User> rev in CinemaData.MovieList[i].review)
+                {
+                    Console.WriteLine($"{rev.Item3.userName}: {rev.Item1}");
+                }
+            }
+            Console.WriteLine("\nPress any button to leave.\n");
+            Console.ReadLine();
+            Console.Clear();
         }
         public static void RestaurantReview()
         {

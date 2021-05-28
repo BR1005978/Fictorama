@@ -6,7 +6,73 @@ namespace cinema_app
 {
     public class AddReview
     {
+        // voor de admin
+        public static void DelReview()
+        {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
 
+            string answer = "";
+            while (answer != "exit")
+            {
+                int counter = 0;
+                foreach (Movie film in CinemaData.MovieList)
+                {
+                    Console.WriteLine($"{counter}: {film.Name}");
+                    counter++;
+                }
+                Console.WriteLine("Select a movie to delete reviews, or type 'exit' to go back.");
+                answer = Console.ReadLine();
+                if (answer == "exit")
+                {
+                    MainProgram.MainMenu();
+                }
+                else
+                {
+                    int answerint;
+
+                    // hiermee controleer je of het wel een int is
+                    // en of hij niet langer is dan de lengte van de filmlijst
+                    if (int.TryParse(answer, out answerint) && int.Parse(answer) < CinemaData.MovieList.Count)
+                    {
+                        bool continueTF = true;
+                        while (continueTF)
+                        {
+                            Console.WriteLine($"This are the review for the movie {CinemaData.MovieList[answerint].Name}\n");
+                            counter = 0;
+                            foreach (var review in CinemaData.MovieList[answerint].review)
+                            {
+                                Console.WriteLine($"{counter}. {review.Item3.userName}: {review.Item1}");
+                                counter++;
+                            }
+                            Console.WriteLine("Select a review, or type 'exit' to go back.");
+                            answer = Console.ReadLine();
+                            if (answer == "exit")
+                            {
+                                MainProgram.MainMenu();
+                            }
+                            else
+                            {
+                                if (int.TryParse(answer, out answerint) && int.Parse(answer) < CinemaData.MovieList[answerint].review.Count)
+                                {
+                                    CinemaData.MovieList[answerint].review.Remove(CinemaData.MovieList[answerint].review[answerint]);
+                                    continueTF = false;
+                                    Json.SaveToJson(CinemaData);
+                                    Admin.AdminPanel();
+                                }
+                                else
+                                    Console.WriteLine("\nInput not recognised. Please try again.\n ");
+                            }
+                        }
+                    }
+                    else
+                        Console.WriteLine("\nInput not recognised. Please try again.\n ");
+                }
+            }
+
+
+
+        }
 
         public static void review(int i)
         {

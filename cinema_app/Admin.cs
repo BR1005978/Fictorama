@@ -17,7 +17,7 @@ namespace cinema_app
             commands.Add("Cinemahall", "To see the cinemahall based options.");
             commands.Add("Account", "To see the account based options.");
             commands.Add("Catering", "To edit the catering.");
-            commands.Add("exit", "Exits the admin panel.");
+            commands.Add("exit", "Logs out and exits the admin panel.");
 
 
             Console.WriteLine("[[ADMIN PANEL]]");

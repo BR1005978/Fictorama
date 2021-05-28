@@ -32,7 +32,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
-            commands.Add("exit", "Exits the admin panel.");
+            commands.Add("exit", "Logs out and exits the employee panel. ");
             Console.WriteLine("[[EMPLOYEE PANEL]]");
             void EmployeeMenu()
             {

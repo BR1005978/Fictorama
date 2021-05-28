@@ -48,6 +48,7 @@ namespace cinema_app
 
 
                 int hallres_index = 0;
+                Console.WriteLine($"this are/is the date(s) and time(s) for the movie {movie.Name}\n");
                 foreach (var hallRes in hall.HallReservation)
                 {
                     if (movie.Name == hallRes.Item3.Name)
@@ -65,7 +66,7 @@ namespace cinema_app
             //als de film niet in een zaal is togevoed geeft deze if statment dat aan.
             if (!go_on)
             {
-                Console.WriteLine("You can not make a reservation for this movie.");
+                Console.WriteLine("\nYou can not make a reservation for this movie.\n");
             }
             else
             {
@@ -133,6 +134,7 @@ namespace cinema_app
                     while (!availeble)
                     {
                         // hiermee print je alle stoelen en laat je zien welke stoelen nog beschikbaar zijn.
+                        Console.Clear();
                         string ss = "";
                         for (int j = 0; j < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Rows; j++)
                         {

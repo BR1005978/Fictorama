@@ -27,7 +27,7 @@ namespace cinema_app
 
                 if (answer == "exit")
                 {
-                    MainProgram.MainMenu();
+                    //MainProgram.MainMenu();
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace cinema_app
                     // en of hij niet langer is dan de lengte van de filmlijst
                     if (int.TryParse(answer, out answerint) && int.Parse(answer) < CinemaData.MovieList.Count)
                     {
-
+                        Console.Clear();
                         Console.WriteLine(
                             $"\nName: {CinemaData.MovieList[answerint].Name}\n" +
                             $"Description: {CinemaData.MovieList[answerint].Info}\n" +
@@ -58,10 +58,13 @@ namespace cinema_app
                         Console.WriteLine("Press [0] to see trailer.");
                         Console.WriteLine("Press [1] to make a reservation.");
                         Console.WriteLine("Press [2] to see reviews about this movie.");
-                        Console.WriteLine("Press [3] to leave a review. \nor type any other key to exit.");
+                        if (MainProgram.onlineUser != null)
+                            Console.WriteLine("Press [3] to leave a review. \nor type any other key to exit.");
                         string key = Console.ReadLine();
                         if (key == "0")
                         {
+                            Console.Clear();
+                            Console.WriteLine("\nYou picked \"0. See trailer.\" \n\n");
                             Trailer.Seetrailer(CinemaData.MovieList[answerint].Link);
 
                         }
@@ -75,24 +78,27 @@ namespace cinema_app
                         
                         if (key == "1")
                         {
+                            Console.Clear();
+                            Console.WriteLine("\nYou picked \"1. Make a reservation.\" \n\n");
                             Reservation.reserveer(CinemaData.MovieList[answerint]);
                         }
                         if (key == "2")
                         {
                             //see reviews
+                            Console.Clear();
+                            Console.WriteLine("\nYou picked \"2. See reviews about the movie.\" \n\n");
                             AddReview.showreviews(answerint);
                         }
                         if (key == "3" && MainProgram.onlineUser != null)
                         {
-
+                            Console.Clear();
+                            Console.WriteLine("\nYou picked \"3. Leave a review.\" \n\n");
                             AddReview.review(answerint);
                             User.panel();
 
                         }
-                        else {
-                            Console.WriteLine("Sorry, you are not logged in.");
-                            MainProgram.MainMenu();
-                        }
+                        
+                        
 
 
                     }
@@ -130,7 +136,7 @@ namespace cinema_app
 
                 if (answer == "exit")
                 {
-                    MainProgram.MainMenu();
+                    //MainProgram.MainMenu();
                 }
                 else
                 {
@@ -140,7 +146,7 @@ namespace cinema_app
                     // en of hij niet langer is dan de lengte van de filmlijst
                     if (int.TryParse(answer, out answerint) && int.Parse(answer) < CinemaData.UpcomingMovieList.Count)
                     {
-
+                        Console.Clear();
                         Console.WriteLine(
                             $"\nName: {CinemaData.UpcomingMovieList[answerint].Name}\n" +
                             $"Description: {CinemaData.UpcomingMovieList[answerint].Info}\n" +
@@ -175,21 +181,22 @@ namespace cinema_app
                         //go to reservationscreen
                         if (MainProgram.onlineUser != null)
                         {
-                            Console.WriteLine("Type 'review' to leave a comment.");
-                        }
 
 
-                        if (key == "1")
-                        {
-                            Reservation.reserveer(CinemaData.MovieList[answerint]);
-                        }
-                        if (MainProgram.onlineUser != null)
-                        {
-                            if (key == "2")
+
+
+                            if (key == "1")
                             {
+                                Reservation.reserveer(CinemaData.MovieList[answerint]);
+                            }
+                            if (MainProgram.onlineUser != null)
+                            {
+                                if (key == "2")
+                                {
 
-                                AddReview.review(answerint);
-                                User.panel();
+                                    AddReview.review(answerint);
+                                    User.panel();
+                                }
                             }
                         }
                     }

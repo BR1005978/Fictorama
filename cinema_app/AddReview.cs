@@ -103,7 +103,7 @@ namespace cinema_app
             }
             Console.WriteLine("\nPress any button to leave.\n");
             Console.ReadLine();
-            Console.Clear();
+            
         }
         public static void RestaurantReview()
         {
@@ -116,11 +116,12 @@ namespace cinema_app
             var CinemaData = Json.LoadFromJson();
             CinemaData.restaurantreviews.Add(tup);
             Json.SaveToJson(CinemaData);
-            Console.Clear();
+            //Console.Clear();
             User.panel();
             //Costumer.costumer();
         }
         public static void showresreviews() {
+            
             var Json = new JsonAdd("CinemaAssets.json");
             var CinemaData = Json.LoadFromJson();
             if (CinemaData.restaurantreviews.Count == 0)
@@ -134,7 +135,7 @@ namespace cinema_app
             }
             Console.WriteLine("\nPress any button to leave.\n");
             Console.ReadLine();
-            Console.Clear();
+            //Console.Clear();
         }
 
         public static void editReview()

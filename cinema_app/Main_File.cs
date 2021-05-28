@@ -10,8 +10,8 @@ namespace cinema_app
 
         public static void MainMenu()
         {
-           
 
+            Console.Clear();
             Console.WriteLine(" \n" +
 "▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +
 "▒█▀▀▀ ▒█░ ▒█░░░ ░▒█░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█▒█▒█ ▒█▄▄█ \n" +
@@ -38,20 +38,23 @@ namespace cinema_app
 
                 if (answer == "1")
                 {
+                    Console.Clear();
                     Console.WriteLine("\nYou picked \"1. See available movies\" \n\n");
                     MovieBrowser.MovieBrowserMenu();
 
                 }
                 else if (answer == "2")
                 {
-                    
 
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"2. Login\" \n\n");
                     Login.LoginScreen();
 
                 }
                 else if (answer == "3")
                 {
-
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"3. Register\" \n\n");
                     Signin.SigninScreen();
 
                 }
@@ -59,6 +62,8 @@ namespace cinema_app
                 
                 else if (answer == "4")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"4. S\" \n\n");
                     var Json = new JsonAdd("CinemaAssets.json");
                     var CinemaData = Json.LoadFromJson();
                     SearchFunction.Searchbar(CinemaData.MovieList);

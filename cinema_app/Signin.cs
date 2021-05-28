@@ -9,7 +9,6 @@ namespace cinema_app
         {
             Mail mailSystem = new Mail();
 
-            Console.WriteLine("You picked \"4. Signin\" \n");
             Console.WriteLine("What is your first name?");
             string fist_name = Console.ReadLine();
             Console.WriteLine("What is your last name?");
@@ -32,6 +31,7 @@ namespace cinema_app
                 {
                     isActic = true;
                 }
+                
 
             }
 

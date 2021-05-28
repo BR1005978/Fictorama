@@ -16,7 +16,7 @@ namespace cinema_app
             Console.WriteLine("Please enter username: ");
             username = Console.ReadLine();
 
-            Console.WriteLine("Please enter password");
+            Console.WriteLine("\nPlease enter password");
             password = Console.ReadLine();
 
             // primitieve typecheck

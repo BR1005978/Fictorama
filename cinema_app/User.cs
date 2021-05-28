@@ -43,6 +43,7 @@ namespace cinema_app
 
         public static void panel()
         {
+            Console.Clear();
             List<string> options = new List<string> { "1", "2", "3", "4", "5", "6","7" };
             string answer = "";
 
@@ -60,37 +61,52 @@ namespace cinema_app
 
                 if (answer == "1")
                 {
+                    Console.Clear();
                     Console.WriteLine("\n You picked: 1. See available movies\n\n");
                     MovieBrowser.MovieBrowserMenu();
                     panel();
                 }
                 else if (answer == "2")
                 {
+                    Console.Clear();
                     Console.WriteLine("\n You picked: 2. Edit reviews\n\n");
+                    panel();
                     //AddReview.editReview();
                 }
                 else if (answer == "3")
                 {
+                    Console.Clear();
                     Console.WriteLine("\n You picked: 3. Search movie\n\n");
                     var Json = new JsonAdd("CinemaAssets.json");
                     var CinemaData = Json.LoadFromJson();
                     SearchFunction.Searchbar(CinemaData.MovieList);
+                    panel();
                 }
                 else if (answer == "4")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n You picked: 4. Leave review on restaurant\n\n");
                     AddReview.RestaurantReview();
+                    panel();
                 }
                 else if (answer == "5")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n You picked: 5. Previous reservations\n\n");
                     Reservation.PastReservation();
+                    panel();
                 }
                 else if (answer == "6")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n You picked: 6. See restaurant reviews\n\n");
                     AddReview.showresreviews();
+                    panel();
                 }
                 else if (answer == "7")
                 {
-                    Console.WriteLine("\n You picked: 4. Log out\n\n");
+                    Console.Clear();
+                    Console.WriteLine("\n You picked: 7. Log out\n\n");
                     MainProgram.onlineUser = null;
                     MainProgram.MainMenu();
                 }

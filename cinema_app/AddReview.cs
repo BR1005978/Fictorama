@@ -84,7 +84,7 @@ namespace cinema_app
             Tuple<string,DateTime, User> tup= new Tuple<string, DateTime, User>(comment, DateTime.Now, MainProgram.onlineUser);
             CinemaData.MovieList[i].review.Add(tup);
             Json.SaveToJson(CinemaData);
-            //Costumer.costumer();
+            //customer.customer();
         }
         public static void showreviews(int i)
         {
@@ -118,7 +118,7 @@ namespace cinema_app
             Json.SaveToJson(CinemaData);
             //Console.Clear();
             User.panel();
-            //Costumer.costumer();
+            //customer.customer();
         }
         public static void showresreviews() {
             

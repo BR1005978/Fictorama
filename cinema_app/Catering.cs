@@ -113,7 +113,7 @@ namespace cinema_app
                 "\n2: For adding food" +
                 "\n3: For exit");
 
-            Console.WriteLine("Please type the number of te option: ");
+            Console.WriteLine("Please type the number of the option: ");
             string input = Console.ReadLine();
             if (input == "0")
             {

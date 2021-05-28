@@ -97,8 +97,11 @@ namespace cinema_app
                             User.panel();
 
                         }
-                        
-                        
+
+                        else {
+                            MainProgram.MainMenu();
+                        }
+
 
 
                     }

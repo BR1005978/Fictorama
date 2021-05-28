@@ -10,14 +10,15 @@ namespace cinema_app
 
         public static void MainMenu()
         {
-           
+            Console.ForegroundColor = ConsoleColor.White;
+
 
             Console.WriteLine(" \n" +
 "▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +
 "▒█▀▀▀ ▒█░ ▒█░░░ ░▒█░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█▒█▒█ ▒█▄▄█ \n" +
 "▒█░░░ ▄█▄ ▒█▄▄█ ░▒█░░ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█░░▒█ ▒█░▒█ \n");
             Console.WriteLine("\nWelcome to Fictorama! \n" +
-                "This is Fictoram Interface 0.03\n\n");
+                "This is Fictoram Interface 0.5\n\n");
 
             List<string> options = new List<string> { "1", "2", "3", "4", "5" ,"6","7"};
             string answer = "";

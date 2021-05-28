@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using static cinema_app.MainProgram;
 
 
 namespace cinema_app
@@ -20,9 +19,10 @@ namespace cinema_app
             commands.Add("exit", "Logs out and exits the admin panel.");
 
 
-            Console.WriteLine("[[ADMIN PANEL]]");
+
             void AdminMenu()
             {
+                Console.WriteLine("[[ADMIN PANEL]]");
                 List<string> options = new List<string> { "help", "addmovie", "editaccount", "editreview", "stats" };
                 string answer = "";
                 while (!options.Contains(answer))
@@ -49,7 +49,7 @@ namespace cinema_app
                         while (answer != "back")
                         {
                             Console.WriteLine("\n[Movie]\n");
-                            Console.WriteLine("Type \"help\" to see available commands.\n");
+                            Console.WriteLine("Type \"help\" to see available [Movie] commands.\n");
                             answer = Console.ReadLine();
                             Console.WriteLine();
 
@@ -58,7 +58,7 @@ namespace cinema_app
                                 Console.WriteLine("addmovie, Adds a movie to the list of movies.\n" +
                                     "addupcomingmovie, Adds upcoming movie to the list of movies.\n" +
                                     "editmovie, Edits a existing movie.\n" +
-                                    "editreview", "Edit a review left by a customer.\n" +
+                                    "editreview, Edit a review left by a customer.\n" +
                                     "back, To go back to the admin screen");
                             }
 
@@ -98,8 +98,15 @@ namespace cinema_app
                                 Json.SaveToJson(CinemaData);
                                 AdminMenu();
                             }
+                            else if (answer == "back")
+                            {
+                                Console.WriteLine("Returning to admin panel ...");
+                                AdminMenu();
+                            }
                             else
-                            { Console.WriteLine("Invalid command: " + answer); }
+                            {
+                                Console.WriteLine("Invalid command: " + answer);
+                            }
 
                         }
 
@@ -113,7 +120,7 @@ namespace cinema_app
 
 
                             Console.WriteLine("\n[Cinemahall]\n");
-                            Console.WriteLine("Type \"help\" to see available commands.\n");
+                            Console.WriteLine("Type \"help\" to see available [Cinemahall] commands.\n");
                             answer = Console.ReadLine();
                             Console.WriteLine();
 
@@ -142,6 +149,15 @@ namespace cinema_app
                                 Console.Clear();
                                 AdminMenu();
                             }
+                            else if (answer == "back")
+                            {
+                                Console.WriteLine("Returning to admin panel ...");
+                                AdminMenu();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid command: " + answer);
+                            }
                         }
                     }
 
@@ -150,9 +166,9 @@ namespace cinema_app
                         while (answer != "back")
                         {
 
- 
+
                             Console.WriteLine("\n[Account]\n");
-                            Console.WriteLine("Type \"help\" to see available commands.\n");
+                            Console.WriteLine("Type \"help\" to see available [Account] commands.\n");
                             answer = Console.ReadLine();
                             Console.WriteLine();
 
@@ -218,6 +234,15 @@ namespace cinema_app
                                 UserJson.SaveToJsonUser(UserData);
                                 Console.Clear();
                             }
+                            else if (answer == "back")
+                            {
+                                Console.WriteLine("Returning to admin panel ...");
+                                AdminMenu();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid command: " + answer);
+                            }
                         }
                     }
 
@@ -251,7 +276,9 @@ namespace cinema_app
                     else
                     {
                         Console.WriteLine("Invalid command: " + answer);
-                        Console.Clear();
+                        Console.WriteLine("Press any key to continue...");
+                        Console.ReadLine();
+                        //Console.Clear();
                     }
                 }
             }

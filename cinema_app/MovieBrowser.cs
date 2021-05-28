@@ -90,7 +90,6 @@ namespace cinema_app
 
                         }
                         else {
-                            Console.WriteLine("Sorry, you are not logged in.");
                             MainProgram.MainMenu();
                         }
 

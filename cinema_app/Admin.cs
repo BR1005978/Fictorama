@@ -19,7 +19,7 @@ namespace cinema_app
             commands.Add("editmovie", "Edits a existing movie .");
             commands.Add("editreview", "Edit a review left by a customer.");
             commands.Add("stats", "Opens the menu for Fictorama statistics.");
-            commands.Add("exit", "Exits the admin panel.");
+            commands.Add("exit", "Logs out and exits the admin panel.");
             commands.Add("addhall", "To add a cinema hall.");
             commands.Add("edithall", "To edit a cinema hall.");
             commands.Add("editcatering", "To edit the catering.");

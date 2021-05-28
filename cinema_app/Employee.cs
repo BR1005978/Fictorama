@@ -32,7 +32,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
-            commands.Add("exit", "Exits the admin panel.");
+            commands.Add("exit", "Logs out and exits the employee panel.");
             Console.WriteLine("[[EMPLOYEE PANEL]]");
             void EmployeeMenu()
             {
@@ -88,7 +88,7 @@ namespace cinema_app
             Console.WriteLine("You have selected the function: change password of costumer ");
             var UserJson = new JsonAdd("Users.json");
             var UserData = UserJson.LoadFromJson2();
-            Console.WriteLine("What is the user name or full name of the custumer?");
+            Console.WriteLine("What is the user name or full name of the customer?");
             string costumer_name = Console.ReadLine();
             int index_user = 0;
             bool user_found = false;

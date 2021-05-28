@@ -19,7 +19,7 @@ namespace cinema_app
             Console.WriteLine("\nWelcome to Fictorama! \n" +
                 "This is Fictoram Interface 0.03\n\n");
 
-            List<string> options = new List<string> { "1", "2", "3", "4", "5" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6", "7" };
             string answer = "";
             while (!options.Contains(answer))
             {

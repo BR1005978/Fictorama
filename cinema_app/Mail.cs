@@ -26,15 +26,15 @@ namespace cinema_app
                 int controlNumber = ramdom.Next(10000, 99999);
 
 
-                this.mailClient.Send("fictorama@outlook.com", email, "Email Controll", $"Hi there, \n\nThank you for joining the fictorama familie.\nPlease type this code in the system: {controlNumber}");
-                Console.WriteLine("Please type the code we send it to your mail");
+                this.mailClient.Send("fictorama@outlook.com", email, "Fictorama registration code", $"Hi there, \n\nThank you for joining the Fictorama family.\nPlease type this code in the system: {controlNumber}");
+                Console.WriteLine("Please type the code we sent to your mail");
 
                 try
                 {
                     int userCode = System.Convert.ToInt32(Console.ReadLine());
                     if (controlNumber == userCode)
                     {
-                        Console.WriteLine("Email activation is succusvol");
+                        Console.WriteLine("Email activation is succesfull");
                         return true;
                     }
                     else
@@ -64,7 +64,7 @@ namespace cinema_app
             string seatsString = "";
             string menus = "";
 
-            if (food.Length == 0)
+            if (food == null)
             {
                 menus = "There are no menu's added.";
             }

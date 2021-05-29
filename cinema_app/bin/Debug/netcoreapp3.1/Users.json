@@ -19426,6 +19426,19 @@
           ]
         }
       ]
+    },
+    {
+      "first_name": "sydney",
+      "last_name": "beek",
+      "date_of_birth": "13-05-2003",
+      "email": "1014378@hr.nl",
+      "phone_number": "0612345678",
+      "userName": "sydney",
+      "password": {
+        "Item1": "ntyizt",
+        "Item2": 21
+      },
+      "reservations": []
     }
   ],
   "employeelist": []

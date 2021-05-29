@@ -10,16 +10,19 @@ namespace cinema_app
 
         public static void MainMenu()
         {
-           
 
+            Console.ForegroundColor = ConsoleColor.White;
+
+
+            Console.Clear();
             Console.WriteLine(" \n" +
 "▒█▀▀▀ ▀█▀ ▒█▀▀█ ▀▀█▀▀ ▒█▀▀▀█ ▒█▀▀█ ░█▀▀█ ▒█▀▄▀█ ░█▀▀█ \n" +
 "▒█▀▀▀ ▒█░ ▒█░░░ ░▒█░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█▒█▒█ ▒█▄▄█ \n" +
 "▒█░░░ ▄█▄ ▒█▄▄█ ░▒█░░ ▒█▄▄▄█ ▒█░▒█ ▒█░▒█ ▒█░░▒█ ▒█░▒█ \n");
             Console.WriteLine("\nWelcome to Fictorama! \n" +
-                "This is Fictoram Interface 0.03\n\n");
+                "This is Fictoram Interface 0.5\n\n");
 
-            List<string> options = new List<string> { "1", "2", "3", "4", "5" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5" ,"6","7"};
             string answer = "";
             while (!options.Contains(answer))
             {
@@ -38,38 +41,53 @@ namespace cinema_app
 
                 if (answer == "1")
                 {
+                    Console.Clear();
                     Console.WriteLine("\nYou picked \"1. See available movies\" \n\n");
                     MovieBrowser.MovieBrowserMenu();
+                    MainMenu();
 
                 }
                 else if (answer == "2")
                 {
-                    
 
+                    Console.Clear();
+                    
                     Login.LoginScreen();
+                    MainMenu();
 
                 }
                 else if (answer == "3")
                 {
-
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"3. Register\" \n\n");
                     Signin.SigninScreen();
+                    MainMenu();
 
                 }
               
                 
                 else if (answer == "4")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"4. Search movies\" \n\n");
                     var Json = new JsonAdd("CinemaAssets.json");
                     var CinemaData = Json.LoadFromJson();
                     SearchFunction.Searchbar(CinemaData.MovieList);
+                    MainMenu();
                 }
                 else if (answer == "5")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"5. See upcoming movies\" \n\n");
                     MovieBrowser.UpcomingMovieBrowserMenu();
+                    MainMenu();
                 }
                 else if (answer == "6")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\nYou picked \"6. See restaurant reviews\" \n\n");
                     AddReview.showresreviews();
+                    MainMenu();
                 }
                 else if (answer == "7")
                 {

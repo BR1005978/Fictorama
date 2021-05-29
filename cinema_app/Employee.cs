@@ -32,7 +32,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
-            commands.Add("exit", "Exits the admin panel.");
+            commands.Add("exit", "Logs out and exits the employee panel. ");
             Console.WriteLine("[[EMPLOYEE PANEL]]");
             void EmployeeMenu()
             {
@@ -85,16 +85,16 @@ namespace cinema_app
         }
         public static void change_password()
         {
-            Console.WriteLine("You have selected the function: change password of costumer ");
+            Console.WriteLine("You have selected the function: change password of customer ");
             var UserJson = new JsonAdd("Users.json");
             var UserData = UserJson.LoadFromJson2();
-            Console.WriteLine("What is the user name or full name of the custumer?");
-            string costumer_name = Console.ReadLine();
+            Console.WriteLine("What is the user name or full name of the customer? (type 'exit' to cancel)");
+            string customer_name = Console.ReadLine();
             int index_user = 0;
             bool user_found = false;
             for (int i = 0; i < UserData.userlist.Count; i++)
             {
-                if (costumer_name == UserData.userlist[i].userName || costumer_name.ToLower() == $"{UserData.userlist[i].first_name.ToLower()} { UserData.userlist[i].last_name.ToLower()}")
+                if (customer_name == UserData.userlist[i].userName || customer_name.ToLower() == $"{UserData.userlist[i].first_name.ToLower()} { UserData.userlist[i].last_name.ToLower()}")
                 {
                     index_user = i;
                     user_found = true;
@@ -108,6 +108,11 @@ namespace cinema_app
                 
                 UserData.userlist[index_user].password = x;
                 UserJson.SaveToJsonUser(UserData);
+            }
+            else if (customer_name == "exit")
+            {
+                Console.WriteLine("Exiting...");
+                panel();
             }
             else
             {

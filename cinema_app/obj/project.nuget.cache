@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qe6uTYGkSH4/kjHW6vSL4W4X38CpgUwhZtnLsch+bn5rGrB5hiEeHdJLV4X4U+Gam5byGNnG7pgiEF9L0+lDAQ==",
+  "dgSpecHash": "hDreOg34pHW0clspYJzyoJEZFlzNzCOAUvI4oYvGVCX7sxpRin9lkPwZw9LZKv8tcGB9H1ov4bw9k78ngsL9ow==",
   "success": true,
-  "projectFilePath": "/Users/sydneybeek/Documents/GitHub/Fictorama/cinema_app/cinema_app.csproj",
+  "projectFilePath": "/Users/achraffaress/Documents/GitHub/Fictorama/cinema_app/cinema_app.csproj",
   "expectedPackageFiles": [
-    "/Users/sydneybeek/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+    "/Users/achraffaress/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

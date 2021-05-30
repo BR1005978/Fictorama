@@ -58,7 +58,71 @@ namespace cinema_app
                 return false;
             }
         }
+        public void Changepassword(string email)
+        {
+            try
+            {
+                System.Random ramdom = new System.Random();
+                int controlNumber = ramdom.Next(10000, 99999);
 
+
+                this.mailClient.Send("fictorama@outlook.com", email, "Fictorama password reset code", $"Hi there, \n\nHere is your request for a password reset, if this wasn't you please ignore this email.\nPlease type this code in the system: {controlNumber}");
+                Console.WriteLine("Please type the code we sent to your mail");
+
+                try
+                {
+                    int userCode = System.Convert.ToInt32(Console.ReadLine());
+                    if (controlNumber == userCode)
+                    {
+                        Console.WriteLine("Email verification  is succesfull\n");
+                        Console.WriteLine("Please enter your new password\n");
+                        var UserJson = new JsonAdd("Users.json");
+                        var UserData = UserJson.LoadFromJson2();
+                        string newpass = Console.ReadLine();
+                        int index_user = 0;
+                        bool user_found = false;
+                        for (int i = 0; i < UserData.userlist.Count; i++)
+                        {
+                            if (email == UserData.userlist[i].email )
+                            {
+                                index_user = i;
+                                user_found = true;
+                            }
+                        }
+                        if (user_found)
+                        {
+                            
+                            
+                            var x = EncrpytPassword.Encryptpassword(newpass);
+
+                            UserData.userlist[index_user].password = x;
+                            UserJson.SaveToJsonUser(UserData);
+                        }
+
+
+                        User.panel();
+                    }
+                    else
+                    {
+                        Console.WriteLine("The code is wrong!");
+                        
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("The code is wrong!");
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Mail does not exists!");
+                
+            }
+        }
         public void SendEmail(string email, string name, double price, string zaal, string movie, string datum, int hour, int minute, Tuple<int,int>[] seats, Tuple<string,string,string>[] food, string code)
         {
             string seatsString = "";

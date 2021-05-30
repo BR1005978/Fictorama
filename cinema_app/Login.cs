@@ -38,13 +38,28 @@ namespace cinema_app
 
                     if (UserData.userlist[i].userName == username && UserData.userlist[i].password.Item1 == EncrpytPassword.Encryptpassword(password, UserData.userlist[i].password.Item2).Item1)
                     {
+
                         Console.WriteLine("login succes");
                         Console.WriteLine($"welcome {UserData.userlist[i].userName}");
                         MainProgram.onlineUser = UserData.userlist[i];
                         User.panel();
 
                     }
+                    
                 }
+                for (int i = 0; i < UserData.employeelist.Count; i++)
+                {
+                     if (UserData.employeelist[i].userName == username && UserData.employeelist[i].password.Item1 == EncrpytPassword.Encryptpassword(password, UserData.employeelist[i].password.Item2).Item1)
+                    {
+                        Console.WriteLine("login succes");
+                        Console.WriteLine($"welcome {UserData.employeelist[i].userName}");
+                        MainProgram.onlineUser = UserData.employeelist[i];
+                        Employee.panel();
+
+                    }
+
+                }
+
 
 
                 Console.WriteLine("\nUsername or password is wrong!\n");

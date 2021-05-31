@@ -22,7 +22,7 @@ namespace cinema_app
             Console.WriteLine("\nWelcome to Fictorama! \n" +
                 "This is Fictoram Interface 0.5\n\n");
 
-            List<string> options = new List<string> { "1", "2", "3", "4", "5" ,"6","7","8"};
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
             string answer = "";
             while (!options.Contains(answer))
             {
@@ -32,10 +32,11 @@ namespace cinema_app
                 "2. Login\n" +
                 "3. Register\n" +
                 "4. Search movies\n" +
-                "5. See upcoming movies\n"+
+                "5. See upcoming movies\n" +
                 "6. See restaurant reviews\n" +
                 "7. Reset password\n" +
-                "8. Exit program\n"
+                "8. See cinema information\n" +
+                "9. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -52,7 +53,7 @@ namespace cinema_app
                 {
 
                     Console.Clear();
-                    
+
                     Login.LoginScreen();
                     MainMenu();
 
@@ -65,8 +66,8 @@ namespace cinema_app
                     MainMenu();
 
                 }
-              
-                
+
+
                 else if (answer == "4")
                 {
                     Console.Clear();
@@ -97,7 +98,7 @@ namespace cinema_app
                     try
                     {
                         Console.WriteLine("Please enter your email.");
-                        string email=Console.ReadLine();
+                        string email = Console.ReadLine();
                         mail.Changepassword(email);
                     }
                     catch (Exception)
@@ -107,9 +108,26 @@ namespace cinema_app
 
                     }
 
-                    
+
                 }
                 else if (answer == "8")
+                {
+                    Console.Clear();
+                    Console.WriteLine(
+                        "Cinema information \n\n" +
+                        "FICTORAMA\n" +
+                        "Address   : Hogebaanweg 956\n" +
+                        "            3015 AB\n" +
+                        "            Rotterdam\n\n" +
+                        "Telephone : 010 45 78 32 569\n\n" +
+                        "E-mail    : info@fictorama.com\n"
+                        );
+                    Console.WriteLine("Press any key to continue ...");
+                    Console.ReadLine();
+                    Console.Clear();
+                    MainMenu();
+                }
+                else if (answer == "9")
                 {
                     Console.WriteLine("Shutting down...");
                     Environment.Exit(0);

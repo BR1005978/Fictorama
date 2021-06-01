@@ -44,7 +44,7 @@ namespace cinema_app
         public static void panel()
         {
             Console.Clear();
-            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6","7","8" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6","7","8","9" };
             string answer = "";
 
             while (!options.Contains(answer))
@@ -57,7 +57,8 @@ namespace cinema_app
                 "5. Leave review on restaurant\n" +
                 "6. Previous reservations\n" +
                 "7. See restaurant reviews\n"+
-                "8. Log out\n");
+                "8. See Restaurant Menu\n"+
+                "9. Log out\n");
                 answer = Console.ReadLine();
 
                 if (answer == "1")
@@ -112,6 +113,13 @@ namespace cinema_app
                     panel();
                 }
                 else if (answer == "8")
+                {
+                    var CateringJson = new JsonAdd("Catering.json");
+                    Catering catering = CateringJson.LoadFromJsoncatering();
+                    catering.ShowMenu();
+
+                }
+                else if (answer == "9")
                 {
                     Console.Clear();
                     Console.WriteLine("\n You picked: 7. Log out\n\n");

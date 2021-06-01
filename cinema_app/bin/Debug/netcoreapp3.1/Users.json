@@ -1,4 +1,18 @@
 {
-  "userlist": [],
+  "userlist": [
+    {
+      "first_name": "younes",
+      "last_name": "simouh",
+      "date_of_birth": "20-05-2002",
+      "email": "younessimouh@hotmail.com",
+      "phone_number": "0628213804",
+      "userName": "prisonig",
+      "password": {
+        "Item1": "Alza123",
+        "Item2": 7
+      },
+      "reservations": []
+    }
+  ],
   "employeelist": []
 }

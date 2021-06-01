@@ -22,7 +22,7 @@ namespace cinema_app
             Console.WriteLine("\nWelcome to Fictorama! \n" +
                 "This is Fictoram Interface 0.5\n\n");
 
-            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6", "7", "8", "9","10" };
             string answer = "";
             while (!options.Contains(answer))
             {
@@ -36,7 +36,8 @@ namespace cinema_app
                 "6. See restaurant reviews\n" +
                 "7. Reset password\n" +
                 "8. See cinema information\n" +
-                "9. Exit program\n"
+                "9. See restaurant Menu\n" +
+                "10. Exit program\n"
                 );
                 answer = Console.ReadLine();
 
@@ -128,6 +129,13 @@ namespace cinema_app
                     MainMenu();
                 }
                 else if (answer == "9")
+                {
+                    var CateringJson = new JsonAdd("Catering.json");
+                    Catering catering = CateringJson.LoadFromJsoncatering();
+                    catering.ShowMenu();
+
+                }
+                else if (answer == "10")
                 {
                     Console.WriteLine("Shutting down...");
                     Environment.Exit(0);

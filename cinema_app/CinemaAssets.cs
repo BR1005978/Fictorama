@@ -162,15 +162,15 @@ namespace cinema_app
             string name = Console.ReadLine();
             Console.WriteLine("What is the movie about: ");
             string info = Console.ReadLine();
-            Console.WriteLine("From with year: ");
+            Console.WriteLine("Movie year: ");
             string year = Console.ReadLine();
-            Console.WriteLine("What is the genre: ");
+            Console.WriteLine("Movie genre: ");
             string genger = Console.ReadLine();
-            Console.WriteLine("Who is the actor: ");
+            Console.WriteLine("Name of the actors: ");
             string Actor = Console.ReadLine();
-            Console.WriteLine("What is the duration");
+            Console.WriteLine("Movie duration: ");
             string Duration = Console.ReadLine();
-            Console.WriteLine("What is the trailer link");
+            Console.WriteLine("Link to the movie trailer: ");
             string Link = Console.ReadLine();
 
             this.UpcomingMovieList.Add(new Movie(name, info, year, new string[] { genger }, Actor, Duration,Link));

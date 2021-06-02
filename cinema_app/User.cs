@@ -71,6 +71,7 @@ namespace cinema_app
                 {
                     Console.Clear();
                     Console.WriteLine("\n You picked: 2. Edit reviews\n\n");
+                    AddReview.EDitreview();
                     panel();
                     //AddReview.editReview();
                 }

@@ -7,11 +7,12 @@ namespace cinema_app
     class MainProgram
     {
         public static User onlineUser = null;
+        public static int onlineEmployee = 0;
 
         public static void MainMenu()
         {
 
-            Console.ForegroundColor = ConsoleColor.White;
+           // Console.ForegroundColor = ConsoleColor.White;
 
 
             Console.Clear();

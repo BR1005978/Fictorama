@@ -82,7 +82,16 @@ namespace cinema_app
             string comment = "";
             comment = Console.ReadLine();
             Tuple<string,DateTime, User> tup= new Tuple<string, DateTime, User>(comment, DateTime.Now, MainProgram.onlineUser);
-            CinemaData.MovieList[i].review.Add(tup);
+            if (CinemaData.MovieList[i].review == null)
+            {
+                var listrev = new List<Tuple<string, DateTime, User>>();
+                listrev.Add(tup);
+                CinemaData.MovieList[i].review = listrev;
+            }
+            else
+            {
+                CinemaData.MovieList[i].review.Add(tup);
+            }
             Json.SaveToJson(CinemaData);
             //customer.customer();
         }
@@ -208,6 +217,160 @@ namespace cinema_app
             }
 
 
+        }
+        public static void EditReview(int MovieIndex, int ReviewIndex)
+        {
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
+            if (CinemaData.MovieList[MovieIndex].review[ReviewIndex].Item3.userName == MainProgram.onlineUser.userName)
+            {
+                Console.WriteLine("[0] Delete review.\n " +
+                    "[1] Edit review.\n" +
+                    "[2] Go back.");
+                string choice = Console.ReadLine();
+                if (!Reservation.isNumeric(choice))
+                {
+                    Console.WriteLine("[0] Delete review.\n " +
+                    "[1] Edit review.\n" +
+                    "[2] Go back.");
+                    choice = Console.ReadLine();
+
+                }
+                int choiceint = Reservation.MakeNumber(choice);
+                if (choiceint == 0)
+                {
+                    CinemaData.MovieList[MovieIndex].review.Remove((CinemaData.MovieList[MovieIndex].review[ReviewIndex]));
+                }
+                else if (choiceint == 1)
+                {
+                    CinemaData.MovieList[MovieIndex].review.Remove((CinemaData.MovieList[MovieIndex].review[ReviewIndex]));
+                    string rev = Console.ReadLine();
+                    CinemaData.MovieList[MovieIndex].review.Add(Tuple.Create(rev, DateTime.Now, MainProgram.onlineUser));
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("This is not your review, so you can not edit this review.");
+            }
+        }
+        public static void EDitreview()
+        {
+            
+            var Json = new JsonAdd("CinemaAssets.json");
+            var CinemaData = Json.LoadFromJson();
+
+            string answer = "";
+            while (answer != "exit")
+            {
+
+                int counter = 0;
+
+                foreach (Movie film in CinemaData.MovieList)
+                {
+                    Console.WriteLine($"{counter}: {film.Name}");
+                    counter++;
+                }
+
+                Console.WriteLine("Select a movie to edit the review, or type 'exit' to go back.");
+                answer = Console.ReadLine();
+
+                if (answer == "exit")
+                {
+                    //MainProgram.MainMenu();
+                }
+                else
+                {
+                    if (!Reservation.isNumeric(answer))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("wrong input\n");
+                        EDitreview();
+                    }
+                    else
+                    {
+                        int movieIndex = Reservation.MakeNumber(answer);
+                        counter = 0;
+                       
+                        Console.Clear();
+                        answer = "";
+                        while (!Reservation.isNumeric(answer))
+                        {
+                            
+                             
+                            if (CinemaData.MovieList[movieIndex].review != null) {
+                                foreach (var review in CinemaData.MovieList[movieIndex].review)
+                                {
+                                    Console.WriteLine($"[{counter}] {review.Item3.userName}: {review.Item1}");
+                                }
+                                Console.WriteLine("Select a review to edit, or type 'exit' to go back.");
+                                answer = Console.ReadLine();
+
+                                if (answer.ToLower() == "exit")
+                                {
+                                    User.panel();
+                                }
+                                else
+                                {
+                                    if (!Reservation.isNumeric(answer))
+                                    {
+                                        // again
+                                    }
+                                    else
+                                    {
+                                        int reviewIndex = Reservation.MakeNumber(answer);
+                                        if (CinemaData.MovieList[movieIndex].review[reviewIndex].Item3.userName == MainProgram.onlineUser.userName)
+                                        {
+                                            Console.WriteLine("[0] Delete review\n" +
+                                                "[1] Edit review\n" +
+                                                "press any other key to exit");
+                                            string ans = Console.ReadLine();
+
+                                            if (ans == "0")
+                                            {
+                                                CinemaData.MovieList[movieIndex].review.Remove(CinemaData.MovieList[movieIndex].review[reviewIndex]);
+                                                Console.WriteLine("Delete review succes");
+                                                Json.SaveToJson(CinemaData);
+                                                Console.WriteLine("Press any key to continue...");
+                                                Console.ReadLine();
+                                            }
+                                            else if (ans == "1")
+                                            {
+                                                CinemaData.MovieList[movieIndex].review.Remove(CinemaData.MovieList[movieIndex].review[reviewIndex]);
+                                                Console.WriteLine("type the new review.");
+                                                string newreview = Console.ReadLine();
+                                                Tuple<string, DateTime, User>revtup = Tuple.Create(newreview, DateTime.Now, MainProgram.onlineUser);
+                                                CinemaData.MovieList[movieIndex].review.Add(revtup);
+                                                Json.SaveToJson(CinemaData);
+                                                Console.WriteLine("Edit review succes");
+                                                Console.WriteLine("Press any key to continue...");
+                                                Console.ReadLine();
+                                            }
+                                            
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("This is not your review, so you can not edit this review.");
+                                            answer = "";
+                                            Console.ReadLine();
+                                            Console.Clear();
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("There are no reviews for this movie.");
+                                Console.WriteLine("Press any key to continue...");
+                                answer = "0";
+                                Console.ReadLine();
+                            }
+                        }
+
+
+                    }
+                }
+            }
         }
     }
 }

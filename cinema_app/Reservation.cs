@@ -208,13 +208,13 @@ namespace cinema_app
                                 seats[i] = Tuple.Create(row, colom);
                                 if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
                                 {
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
 
                                 }
                                 else
                                 {
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
                                     
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
                                 }
                                 availeble = true;
 
@@ -248,13 +248,14 @@ namespace cinema_app
 
                             if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
                             {
-                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
 
                             }
                             else
                             {
 
-                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                
+                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
                             }
                             availeble = true;
                         }
@@ -353,6 +354,11 @@ namespace cinema_app
 
                 // bevestig reservation
                 Console.Clear();
+                if (MainProgram.onlineEmployee == 1)
+                {
+                    Console.WriteLine("You get a 10% discount.");
+                    price *= 0.90;
+                }
                 Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
                 Console.WriteLine("[0] Continue with this reservation.\n" +
                     "[1] Cancel this reservation.\n");

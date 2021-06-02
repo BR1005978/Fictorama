@@ -74,6 +74,7 @@ namespace cinema_app
                     {
                         Console.WriteLine("Returning to main menu ...\n");
                         Console.ResetColor();
+                        MainProgram.onlineEmployee = 0;
                         MainProgram.MainMenu();
 
                     }

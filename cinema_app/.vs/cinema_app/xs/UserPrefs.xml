@@ -1,17 +1,27 @@
 ﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AddReview.cs">
     <Files>
-      <File FileName="Admin.cs" Line="227" Column="1" />
+      <File FileName="Admin.cs" Line="98" Column="33" />
       <File FileName="Statics.cs" />
       <File FileName="User.cs" />
       <File FileName="Userlist.cs" />
-      <File FileName="Reservation.cs" Line="109" Column="151" />
+      <File FileName="Reservation.cs" />
       <File FileName="Movie.cs" />
       <File FileName="MovieBrowser.cs" />
       <File FileName="Catering.cs" />
       <File FileName="Mail.cs" />
       <File FileName="CinemaHall.cs" />
-      <File FileName="AddReview.cs" Line="85" Column="1" />
+      <File FileName="AddReview.cs" Line="211" Column="10" />
+      <File FileName="Main_File.cs" />
+      <File FileName="Login.cs" />
+      <File FileName="SearchFunction.cs" />
+      <File FileName="CinemaAssets.cs" />
+      <File FileName="Employee.cs" />
+      <File FileName="EncrpytPassword.cs" />
+      <File FileName="JsonAdd.cs" />
+      <File FileName="Seats.cs" />
+      <File FileName="Signin.cs" />
+      <File FileName="Trailer.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,13 +31,6 @@
               <Node name="AddReview.cs" selected="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>reservation</Value>
-          <Value>cos</Value>
-          <Value>curretDate</Value>
         </State>
       </Pad>
     </Pads>

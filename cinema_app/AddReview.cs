@@ -181,7 +181,7 @@ namespace cinema_app
                     {
                         Console.Clear();
                         Console.WriteLine("wrong input\n");
-                        EDitreview();
+                        editreview();
                     }
                     else
                     {

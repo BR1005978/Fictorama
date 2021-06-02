@@ -7,6 +7,7 @@ namespace cinema_app
     class MainProgram
     {
         public static User onlineUser = null;
+        public static bool onlineEmployee = false;
 
         public static void MainMenu()
         {

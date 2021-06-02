@@ -351,8 +351,16 @@ namespace cinema_app
 
                 }
 
-                // bevestig reservation
                 Console.Clear();
+                // korting voor employee
+                if (MainProgram.onlineEmployee)
+                {
+                    Console.WriteLine("You are an employee, so you get a 10% discount.");
+                    price = price * 0.9;
+                }
+
+                // bevestig reservation
+                
                 Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
                 Console.WriteLine("[0] Continue with this reservation.\n" +
                     "[1] Cancel this reservation.\n");

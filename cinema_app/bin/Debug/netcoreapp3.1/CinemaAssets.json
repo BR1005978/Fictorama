@@ -1,6 +1,895 @@
 {
-  "CinemaHallList": [],
-  "MovieList": [],
+  "CinemaHallList": [
+    {
+      "HallReservation": [
+        {
+          "Item1": {
+            "Item1": 12,
+            "Item2": 7,
+            "Item3": 2021
+          },
+          "Item2": {
+            "Item1": 13,
+            "Item2": 23
+          },
+          "Item3": {
+            "review": [],
+            "Name": "Venom",
+            "Info": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+            "Year": "",
+            "Link": "https://www.imdb.com/video/vi1186773529?playlistId=tt1270797&ref_=tt_ov_vi",
+            "Genre": [
+              "Sci-Fi"
+            ],
+            "Actors": "Tom Hardy, Michelle Williams, Riz Ahmed",
+            "Duration": "112"
+          },
+          "Item4": [
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": false
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ],
+            [
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              },
+              {
+                "Price": 13.45,
+                "Status": true
+              }
+            ]
+          ]
+        }
+      ],
+      "HallName": "Main Hall",
+      "Rows": 10,
+      "Colums": 10,
+      "Price": 13.45,
+      "hallSeats": [
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ],
+        [
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          },
+          {
+            "Price": 13.45,
+            "Status": true
+          }
+        ]
+      ]
+    }
+  ],
+  "MovieList": [
+    {
+      "review": [],
+      "Name": "Venom",
+      "Info": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+      "Year": "",
+      "Link": "https://www.imdb.com/video/vi1186773529?playlistId=tt1270797&ref_=tt_ov_vi",
+      "Genre": [
+        "Sci-Fi"
+      ],
+      "Actors": "Tom Hardy, Michelle Williams, Riz Ahmed",
+      "Duration": "112"
+    }
+  ],
   "UpcomingMovieList": [],
   "restaurantreviews": []
 }

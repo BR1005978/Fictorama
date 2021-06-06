@@ -11,7 +11,44 @@
         "Item1": "Alza123",
         "Item2": 7
       },
-      "reservations": []
+      "reservations": [
+        {
+          "movie": {
+            "review": [],
+            "Name": "Venom",
+            "Info": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.",
+            "Year": "",
+            "Link": "https://www.imdb.com/video/vi1186773529?playlistId=tt1270797&ref_=tt_ov_vi",
+            "Genre": [
+              "Sci-Fi"
+            ],
+            "Actors": "Tom Hardy, Michelle Williams, Riz Ahmed",
+            "Duration": "112"
+          },
+          "Date": "2021-07-12T00:00:00",
+          "user": {
+            "first_name": "younes",
+            "last_name": "simouh",
+            "date_of_birth": "20-05-2002",
+            "email": "younessimouh@hotmail.com",
+            "phone_number": "0628213804",
+            "userName": "prisonig",
+            "password": {
+              "Item1": "Alza123",
+              "Item2": 7
+            },
+            "reservations": []
+          },
+          "Price": 13.45,
+          "Seat": [
+            {
+              "Item1": 8,
+              "Item2": 8
+            }
+          ],
+          "Food": null
+        }
+      ]
     }
   ],
   "employeelist": []

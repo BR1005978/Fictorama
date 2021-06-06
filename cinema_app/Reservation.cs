@@ -430,6 +430,7 @@ namespace cinema_app
                 // verstruur email voor reservatie voor gebruikers zonder account
                 else
                 {
+                    Console.Clear();
                     bool isActic = false;
                     bool status = false;
                     string email = "";

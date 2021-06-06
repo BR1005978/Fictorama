@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{796BAF1F-3875-401F-8468-54C78481497C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AddReview.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Reservation.cs">
     <Files>
       <File FileName="User.cs" Line="75" Column="29" />
       <File FileName="Userlist.cs" />
-      <File FileName="Reservation.cs" />
+      <File FileName="Reservation.cs" Line="1" Column="1" />
       <File FileName="Movie.cs" />
       <File FileName="MovieBrowser.cs" />
       <File FileName="Catering.cs" />
@@ -26,7 +26,7 @@
         <State name="__root__">
           <Node name="cinema_app" expanded="True">
             <Node name="cinema_app" expanded="True">
-              <Node name="AddReview.cs" selected="True" />
+              <Node name="Reservation.cs" selected="True" />
             </Node>
           </Node>
         </State>

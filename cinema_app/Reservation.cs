@@ -138,23 +138,60 @@ namespace cinema_app
                         string ss = "";
                         for (int j = 0; j < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Rows; j++)
                         {
-                            string s = $"{j}: ";
+                            // prijs indicatie voor elke stoel
+                            string v = "$: ";
+                            if (j >= 10)
+                                v += " ";
+                            double z = 0;
                             for (int g = 0; g < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Colums; g++)
                             {
+
+                                if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price <= 0.0)
+                                {
+                                    v += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price + ", ";
+                                    z = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                }
+                                else
+                                {
+                                    v += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price + ", ";
+                                    z = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price;
+                                }
+                            }
+                            v += "\n";
+
+                            string s = $"{j}:";
+                            for (int g = 0; g < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Colums; g++)
+                            {
+                                string a = "" + z;
+                                for (int d = 0; d < a.Length; d++)
+                                {
+                                    s += " ";
+                                }
+
                                 // print voor een stoel die beschik baar is 'O'
                                 // print voor een stoel die niet beschik baar is 'X'
                                 if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Status)
                                 {
-                                    s += "O, ";
+                                    s += "O,";
                                 }
                                 else
                                 {
-                                    s += "X, ";
+                                    s += "X,";
                                 }
+
 
                             }
                             s += "\n";
+                            string x = "";
+                            for (int k = 0; k < s.Length; k++)
+                            {
+                                x += "-";
+
+                            }
+                            x += "\n";
                             ss += s;
+                            ss += v;
+                            ss += x;
 
                         }
                         Console.WriteLine(ss);

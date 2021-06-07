@@ -352,6 +352,49 @@ namespace cinema_app
                     }
                 }
 
+                // korting voor employee
+                if (MainProgram.onlineEmployee)
+                {
+                    Console.WriteLine("You are an employee, so you get a 10% discount.");
+                    price = price * 0.9;
+                }
+
+                // bevestig reservation
+
+                Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
+                Console.WriteLine("[0] Continue with this reservation.\n" +
+                    "[1] Cancel this reservation.\n");
+                Console.WriteLine("Please type the number.");
+                string resnum = Console.ReadLine();
+                if (!isNumeric(resnum))
+                {
+                    while (!isNumeric(resnum))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Wrong input!");
+                        Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
+                        Console.WriteLine("[0] Continue with this reservation.\n" +
+                            "[1] Cancel this reservation.\n");
+                        Console.WriteLine("Please type the number.");
+                        resnum = Console.ReadLine();
+
+                    }
+                }
+                int resint = MakeNumber(resnum);
+                if (resint == 0)
+                {
+                    Console.WriteLine();
+                }
+                else if (resint == 1)
+                {
+                    if (MainProgram.onlineEmployee == true)
+                        Employee.panel();
+                    else if (MainProgram.onlineUser != null)
+                        User.panel();
+                    else
+                        MainProgram.MainMenu();
+                }
+
 
                 // verstuur een email 
                 Mail mailSystem = new Mail();
@@ -388,50 +431,8 @@ namespace cinema_app
 
                 }
 
-                Console.Clear();
-                // korting voor employee
-                if (MainProgram.onlineEmployee)
-                {
-                    Console.WriteLine("You are an employee, so you get a 10% discount.");
-                    price = price * 0.9;
-                }
-
-                // bevestig reservation
                 
-                Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
-                Console.WriteLine("[0] Continue with this reservation.\n" +
-                    "[1] Cancel this reservation.\n");
-                Console.WriteLine("Please type the number.");
-                string resnum = Console.ReadLine();
-                if (!isNumeric(resnum))
-                {
-                    while (!isNumeric(resnum))
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Wrong input!");
-                        Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
-                        Console.WriteLine("[0] Continue with this reservation.\n" +
-                            "[1] Cancel this reservation.\n");
-                        Console.WriteLine("Please type the number.");
-                        resnum = Console.ReadLine();
-
-                    }
-                }
-                int resint = MakeNumber(resnum);
-                if (resint == 0)
-                {
-                    Console.WriteLine();
-                }
-                else if (resint == 1)
-                {
-                    if (MainProgram.onlineEmployee == true)
-                        Employee.panel();
-                    else if (MainProgram.onlineUser != null)
-                        User.panel();
-                    else
-                        MainProgram.MainMenu();
-                }
-
+                
                 // verstruur email voor reservatie voor gebruikers zonder account
                 else
                 {

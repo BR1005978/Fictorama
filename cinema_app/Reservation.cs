@@ -424,7 +424,12 @@ namespace cinema_app
                 }
                 else if (resint == 1)
                 {
-                    User.panel();
+                    if (MainProgram.onlineEmployee == true)
+                        Employee.panel();
+                    else if (MainProgram.onlineUser != null)
+                        User.panel();
+                    else
+                        MainProgram.MainMenu();
                 }
 
                 // verstruur email voor reservatie voor gebruikers zonder account

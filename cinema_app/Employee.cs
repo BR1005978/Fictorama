@@ -26,6 +26,7 @@ namespace cinema_app
 
         public static new void panel()
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             // Console.Writeline("Welcome, {this.Username}");
             Dictionary<string, string> commands = new Dictionary<string, string>();
@@ -74,6 +75,7 @@ namespace cinema_app
                     {
                         Console.WriteLine("Returning to main menu ...\n");
                         Console.ResetColor();
+                        MainProgram.onlineEmployee = false;
                         MainProgram.MainMenu();
 
                     }

@@ -76,20 +76,20 @@ namespace cinema_app
                         
 
                         
-                        if (key == "1")
+                        else if (key == "1")
                         {
                             Console.Clear();
                             Console.WriteLine("\nYou picked \"1. Make a reservation.\" \n\n");
                             Reservation.reserveer(CinemaData.MovieList[answerint]);
                         }
-                        if (key == "2")
+                        else if (key == "2")
                         {
                             //see reviews
                             Console.Clear();
                             Console.WriteLine("\nYou picked \"2. See reviews about the movie.\" \n\n");
                             AddReview.showreviews(answerint);
                         }
-                        if (key == "3" && MainProgram.onlineUser != null)
+                        else if (key == "3" && MainProgram.onlineUser != null)
                         {
                             Console.Clear();
                             Console.WriteLine("\nYou picked \"3. Leave a review.\" \n\n");
@@ -99,7 +99,15 @@ namespace cinema_app
                         }
 
                         else {
-                            MainProgram.MainMenu();
+                            if (MainProgram.onlineUser!=null)
+                            {
+                                User.panel();
+                            }
+                            else
+                            {
+                                MainProgram.MainMenu();
+                            }
+                            
                         }
 
 

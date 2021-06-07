@@ -1,20 +1,88 @@
 {
   "Drinks": [
     {
-      "Item1": "Cola 500ml",
-      "Item2": 3.4
+      "Item1": "Coffee",
+      "Item2": 2.5
+    },
+    {
+      "Item1": "Hot Chocomel",
+      "Item2": 2.7
+    },
+    {
+      "Item1": "Tea",
+      "Item2": 2.0
+    },
+    {
+      "Item1": "Coca-Cola",
+      "Item2": 2.8
+    },
+    {
+      "Item1": "Tonic",
+      "Item2": 2.7
+    },
+    {
+      "Item1": "Jus D'Orange",
+      "Item2": 3.5
+    },
+    {
+      "Item1": "Ice Tea",
+      "Item2": 2.4
+    },
+    {
+      "Item1": "Cassis",
+      "Item2": 2.6
+    },
+    {
+      "Item1": "Fanta",
+      "Item2": 2.6
     }
   ],
   "Snacks": [
     {
-      "Item1": "Snickers",
-      "Item2": 2.6
+      "Item1": "Snicker",
+      "Item2": 1.8
+    },
+    {
+      "Item1": "Twix",
+      "Item2": 1.8
+    },
+    {
+      "Item1": "Appelkoek",
+      "Item2": 2.0
+    },
+    {
+      "Item1": "Brownie",
+      "Item2": 2.1
+    },
+    {
+      "Item1": "Muffin",
+      "Item2": 2.0
+    },
+    {
+      "Item1": "Popcorn",
+      "Item2": 3.0
     }
   ],
   "Food": [
     {
-      "Item1": "popcorn small",
+      "Item1": "Bitterbal",
+      "Item2": 4.5
+    },
+    {
+      "Item1": "Frikandelbroodje",
+      "Item2": 2.0
+    },
+    {
+      "Item1": "Tosti with Bacon",
+      "Item2": 5.0
+    },
+    {
+      "Item1": "Chicken Wrap",
       "Item2": 3.5
+    },
+    {
+      "Item1": "Chicken nuggets (6 pcs.)",
+      "Item2": 4.5
     }
   ]
 }

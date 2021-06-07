@@ -138,23 +138,60 @@ namespace cinema_app
                         string ss = "";
                         for (int j = 0; j < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Rows; j++)
                         {
-                            string s = $"{j}: ";
+                            // prijs indicatie voor elke stoel
+                            string v = "$: ";
+                            if (j >= 10)
+                                v += " ";
+                            double z = 0;
                             for (int g = 0; g < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Colums; g++)
                             {
+
+                                if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price <= 0.0)
+                                {
+                                    v += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price + ", ";
+                                    z = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                }
+                                else
+                                {
+                                    v += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price + ", ";
+                                    z = CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Price;
+                                }
+                            }
+                            v += "\n";
+
+                            string s = $"{j}:";
+                            for (int g = 0; g < CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Colums; g++)
+                            {
+                                string a = "" + z;
+                                for (int d = 0; d < a.Length; d++)
+                                {
+                                    s += " ";
+                                }
+
                                 // print voor een stoel die beschik baar is 'O'
                                 // print voor een stoel die niet beschik baar is 'X'
                                 if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[j, g].Status)
                                 {
-                                    s += "O, ";
+                                    s += "O,";
                                 }
                                 else
                                 {
-                                    s += "X, ";
+                                    s += "X,";
                                 }
+
 
                             }
                             s += "\n";
+                            string x = "";
+                            for (int k = 0; k < s.Length; k++)
+                            {
+                                x += "-";
+
+                            }
+                            x += "\n";
                             ss += s;
+                            ss += v;
+                            ss += x;
 
                         }
                         Console.WriteLine(ss);
@@ -208,13 +245,13 @@ namespace cinema_app
                                 seats[i] = Tuple.Create(row, colom);
                                 if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
                                 {
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
-
+                                    
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
                                 }
                                 else
                                 {
-                                    
-                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                    price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+
                                 }
                                 availeble = true;
 
@@ -248,13 +285,13 @@ namespace cinema_app
 
                             if (CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price <= 0.0)
                             {
-                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
 
                             }
                             else
                             {
-
-                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].Price;
+                                price += CinemaData.CinemaHallList[hallList[Selected_hall].Item1].HallReservation[hallList[Selected_hall].Item2].Item4[row, colom].Price;
+                                
                             }
                             availeble = true;
                         }
@@ -315,6 +352,49 @@ namespace cinema_app
                     }
                 }
 
+                // korting voor employee
+                if (MainProgram.onlineEmployee)
+                {
+                    Console.WriteLine("You are an employee, so you get a 10% discount.");
+                    price = price * 0.9;
+                }
+
+                // bevestig reservation
+
+                Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
+                Console.WriteLine("[0] Continue with this reservation.\n" +
+                    "[1] Cancel this reservation.\n");
+                Console.WriteLine("Please type the number.");
+                string resnum = Console.ReadLine();
+                if (!isNumeric(resnum))
+                {
+                    while (!isNumeric(resnum))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Wrong input!");
+                        Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
+                        Console.WriteLine("[0] Continue with this reservation.\n" +
+                            "[1] Cancel this reservation.\n");
+                        Console.WriteLine("Please type the number.");
+                        resnum = Console.ReadLine();
+
+                    }
+                }
+                int resint = MakeNumber(resnum);
+                if (resint == 0)
+                {
+                    Console.WriteLine();
+                }
+                else if (resint == 1)
+                {
+                    if (MainProgram.onlineEmployee == true)
+                        Employee.panel();
+                    else if (MainProgram.onlineUser != null)
+                        User.panel();
+                    else
+                        MainProgram.MainMenu();
+                }
+
 
                 // verstuur een email 
                 Mail mailSystem = new Mail();
@@ -351,40 +431,12 @@ namespace cinema_app
 
                 }
 
-                // bevestig reservation
-                Console.Clear();
-                Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
-                Console.WriteLine("[0] Continue with this reservation.\n" +
-                    "[1] Cancel this reservation.\n");
-                Console.WriteLine("Please type the number.");
-                string resnum = Console.ReadLine();
-                if (!isNumeric(resnum))
-                {
-                    while (!isNumeric(resnum))
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Wrong input!");
-                        Console.WriteLine($"Your total price is {Math.Round(Convert.ToDecimal(price), 2)} euro.");
-                        Console.WriteLine("[0] Continue with this reservation.\n" +
-                            "[1] Cancel this reservation.\n");
-                        Console.WriteLine("Please type the number.");
-                        resnum = Console.ReadLine();
-
-                    }
-                }
-                int resint = MakeNumber(resnum);
-                if (resint == 0)
-                {
-                    Console.WriteLine();
-                }
-                else if (resint == 1)
-                {
-                    User.panel();
-                }
-
+                
+                
                 // verstruur email voor reservatie voor gebruikers zonder account
                 else
                 {
+                    Console.Clear();
                     bool isActic = false;
                     bool status = false;
                     string email = "";

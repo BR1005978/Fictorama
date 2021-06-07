@@ -26,6 +26,7 @@ namespace cinema_app
             }
             else if (username == "employee" && password == "employee")
             {
+                MainProgram.onlineEmployee = true;
                 Employee.panel();
             }
             else

@@ -44,7 +44,7 @@ namespace cinema_app
         public static void panel()
         {
             Console.Clear();
-            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6","7" };
+            List<string> options = new List<string> { "1", "2", "3", "4", "5", "6","7","8","9" };
             string answer = "";
 
             while (!options.Contains(answer))
@@ -52,11 +52,13 @@ namespace cinema_app
                 Console.WriteLine("\nPlease choose what you want to do (type the number): \n" +
                 "1. See available movies\n" +
                 "2. Edit reviews\n" +
-                "3. Search movies\n" +
-                "4. Leave review on restaurant\n" +
-                "5. Previous reservations\n" +
-                "6. See restaurant reviews\n"+
-                "7. Log out\n");
+                "3. Search movies\n"+
+                "4. See upcoming movies\n" +
+                "5. Leave review on restaurant\n" +
+                "6. Previous reservations\n" +
+                "7. See restaurant reviews\n"+
+                "8. See Restaurant Menu\n"+
+                "9. Log out\n");
                 answer = Console.ReadLine();
 
                 if (answer == "1")
@@ -85,25 +87,39 @@ namespace cinema_app
                 else if (answer == "4")
                 {
                     Console.Clear();
+                    Console.WriteLine("\nYou picked \"5. See upcoming movies\" \n\n");
+                    MovieBrowser.UpcomingMovieBrowserMenu();
+                    MainProgram.MainMenu();
+                }
+                else if (answer == "5")
+                {
+                    Console.Clear();
                     Console.WriteLine("\n You picked: 4. Leave review on restaurant\n\n");
                     AddReview.RestaurantReview();
                     panel();
                 }
-                else if (answer == "5")
+                else if (answer == "6")
                 {
                     Console.Clear();
                     Console.WriteLine("\n You picked: 5. Previous reservations\n\n");
                     Reservation.PastReservation();
                     panel();
                 }
-                else if (answer == "6")
+                else if (answer == "7")
                 {
                     Console.Clear();
                     Console.WriteLine("\n You picked: 6. See restaurant reviews\n\n");
                     AddReview.showresreviews();
                     panel();
                 }
-                else if (answer == "7")
+                else if (answer == "8")
+                {
+                    var CateringJson = new JsonAdd("Catering.json");
+                    Catering catering = CateringJson.LoadFromJsoncatering();
+                    catering.ShowMenu();
+
+                }
+                else if (answer == "9")
                 {
                     Console.Clear();
                     Console.WriteLine("\n You picked: 7. Log out\n\n");

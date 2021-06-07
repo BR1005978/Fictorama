@@ -32,6 +32,69 @@ namespace cinema_app
             Console.WriteLine("Done...");
 
         }
+        public void ShowMenu() {
+            List<string> options = new List<string> { "0", "1", "2" }; 
+            Console.WriteLine("What would you like to see?\n[0] Drinks\n[1] Snacks\n[2] Food\n");
+            string choice = "";
+            while (!options.Contains(choice)) {
+                choice = Console.ReadLine();
+                if (choice=="0")
+                {
+                    foreach (Tuple<string, double> drink in Drinks) {
+                        Console.WriteLine($"{drink.Item1}, ${drink.Item2}");
+                    }
+                    Console.WriteLine("\nPress enter to leave");
+                    Console.ReadLine();
+                    if (MainProgram.onlineUser!=null)
+                    {
+                        User.panel();
+                    }
+                    else
+                    {
+                        MainProgram.MainMenu();
+                    }
+
+                }
+                if (choice == "1")
+                {
+                    foreach (Tuple<string, double> snack in Snacks)
+                    {
+                        Console.WriteLine($"{snack.Item1}, ${snack.Item2}");
+                    }
+                    Console.WriteLine("\nPress enter to leave");
+                    Console.ReadLine();
+                    if (MainProgram.onlineUser != null)
+                    {
+                        User.panel();
+                    }
+                    else
+                    {
+                        MainProgram.MainMenu();
+                    }
+                }
+                if (choice == "2")
+                {
+                    foreach (Tuple<string, double> foods in Food)
+                    {
+                        Console.WriteLine($"{foods.Item1}, ${foods.Item2}");
+                    }
+                    Console.WriteLine("\nPress enter to leave");
+                    Console.ReadLine();
+                    if (MainProgram.onlineUser != null)
+                    {
+                        User.panel();
+                    }
+                    else
+                    {
+                        MainProgram.MainMenu();
+                    }
+                }
+                else
+                {
+                    { Console.WriteLine("Your input was: " + choice + "\nInput not recognised. Please try again\n"); }
+                }
+            }
+        }
 
         public void addSnack()
         {

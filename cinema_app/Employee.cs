@@ -33,6 +33,7 @@ namespace cinema_app
             commands.Add("help", "Displays a list of available commands.");
             commands.Add("editaccount", "Edit a customer account or an employee account.");
             commands.Add("editreview", "Edit a review left by a customer.");
+            commands.Add("ownaccount", "Make your own reservation.");
             commands.Add("exit", "Logs out and exits the employee panel. ");
             Console.WriteLine("[[EMPLOYEE PANEL]]");
             void EmployeeMenu()
@@ -68,8 +69,13 @@ namespace cinema_app
                     }
                     else if (answer == "editreview")
                     {
-                        Console.WriteLine($"You've selected {answer}, but I don't know how to do that yet. Please check back later.");
+                        Console.WriteLine($"You've selected {answer}.\n");
+                        AddReview.DelReview();
                         EmployeeMenu();
+                    }
+                    else if (answer == "ownaccount")
+                    {
+                        MovieBrowser.MovieBrowserMenu();
                     }
                     else if (answer == "exit")
                     {

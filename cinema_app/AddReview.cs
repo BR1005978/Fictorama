@@ -25,7 +25,10 @@ namespace cinema_app
                 answer = Console.ReadLine();
                 if (answer == "exit")
                 {
-                    MainProgram.MainMenu();
+                    if (MainProgram.onlineEmployee)
+                        Employee.panel();
+                    else
+                        Admin.AdminPanel();
                 }
                 else
                 {

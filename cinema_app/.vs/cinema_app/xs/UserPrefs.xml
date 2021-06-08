@@ -14,7 +14,7 @@
       <File FileName="Login.cs" />
       <File FileName="SearchFunction.cs" />
       <File FileName="CinemaAssets.cs" />
-      <File FileName="Employee.cs" Line="77" Column="1" />
+      <File FileName="Employee.cs" />
       <File FileName="EncrpytPassword.cs" />
       <File FileName="JsonAdd.cs" />
       <File FileName="Seats.cs" />
